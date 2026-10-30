@@ -1,0 +1,36 @@
+{
+  "name": "baswiki",
+  "version": "0.1.0",
+  "description": "A Wiki for Building Automation System, especially focused on Siemens, and Phoenix Control product lines.",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome lint src tests",
+    "lint:fix": "biome lint --write src tests",
+    "format": "biome format --write src tests",
+    "format:check": "biome format src tests",
+    "knip": "knip",
+    "depcruise": "tsc && depcruise dist --config .dependency-cruiser.cjs",
+    "check": "npm run typecheck && npm run lint && npm run depcruise && npm run test",
+    "start": "tsx src/index.ts"
+  },
+  "devDependencies": {
+    "@ast-grep/cli": "^0.51.0",
+    "@biomejs/biome": "^2.6.4",
+    "@types/node": "^26.6.5",
+    "@vitest/coverage-v8": "^5.0.5",
+    "dependency-cruiser": "^18.7.0",
+    "knip": "^6.43.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4"
+  },
+  "dependencies": {
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
+  }
+}
