@@ -7,13 +7,14 @@
     - desigo
     - pxc100-e-d
     - pxc200-e-d
+    - tx-io-modules
   docId: A6V11272745
   language: en
   status: downloaded
-  note: Downloaded through a browser
   sha256: 9dcb57575c81e719b47029d451900690ca497946cc5456d8e4cd51a5aec2b67b
   bytes: 446816
   retrieved: 2026-10-30
+  note: Downloaded through a browser
 - id: siemens-a6v11272742
   title: Desigo PX data sheet (title unconfirmed)
   kind: datasheet
@@ -24,10 +25,10 @@
   docId: A6V11272742
   language: de
   status: downloaded
-  note: German edition (served for this document ID)
   sha256: ca523565fdfe32b93441326090a60f34f48136730cd70d1701ef1b624c7ceda9
   bytes: 461018
   retrieved: 2026-10-30
+  note: German edition (served for this document ID)
 - id: siemens-a6v10066459
   title: Desigo PX mounting and installation (Swedish)
   kind: installation-guide
@@ -40,10 +41,10 @@
   docId: A6V10066459
   language: sv
   status: downloaded
-  note: Downloaded through a browser
   sha256: 0d5a418f3e2fa44c6a194cd1d1c6db3d7cec8e9332fea690a1e97df2a5615cc3
   bytes: 2185123
   retrieved: 2026-10-30
+  note: Downloaded through a browser
 - id: siemens-a6v10356040
   title: "VAV compact controller G..B181.1E/3, modular controller ASV181.1E/3: basic documentation"
   kind: other
@@ -55,10 +56,10 @@
   docId: A6V10356040
   language: de
   status: downloaded
-  note: German edition (served for this document ID); covers GDB181.1E/3, GLB181.1E/3, ASV181.1E/3
   sha256: cab789a09a132ef80370537de482bc794b4172dfad6aab339807d8ae9b1a34e3
   bytes: 2268942
   retrieved: 2026-10-30
+  note: German edition (served for this document ID); covers GDB181.1E/3, GLB181.1E/3, ASV181.1E/3
 - id: siemens-a6v10631832
   title: VAV compact controller Modbus RTU G..B181.1E/MO data sheet
   kind: datasheet
@@ -70,10 +71,10 @@
   docId: A6V10631832
   language: de
   status: downloaded
-  note: German edition (served for this document ID)
   sha256: a3755c931b58f6b0b322ae13d4f789d79cd3a0eb39a3bb60ed112a1763561849
   bytes: 698512
   retrieved: 2026-10-30
+  note: German edition (served for this document ID)
 - id: siemens-a6v10435963
   title: TEC terminal box (VAV) controller technical specification sheet
   kind: datasheet
@@ -84,10 +85,10 @@
   docId: A6V10435963
   language: en
   status: downloaded
-  note: Downloaded through a browser
   sha256: 552e6bd847a504c830307dcd76da71057874a357106dfa569a6e29bf8eb9398f
   bytes: 146851
   retrieved: 2026-10-30
+  note: Downloaded through a browser
 - id: siemens-a6v10447210
   title: Smoke control BACnet PTEC terminal box (VAV) controller installation instructions
   kind: installation-guide
@@ -98,10 +99,10 @@
   docId: A6V10447210
   language: en
   status: downloaded
-  note: Downloaded through a browser
   sha256: c84c82e301abac75dee4eef600f458a10dc8e63c39a0606ac8db634e06da9730
   bytes: 1252161
   retrieved: 2026-10-30
+  note: Downloaded through a browser
 - id: siemens-a6v10443354
   title: BACnet PTEC VAV with series fan and 3-stage electric heat installation instructions
   kind: installation-guide
@@ -112,10 +113,10 @@
   docId: A6V10443354
   language: en
   status: downloaded
-  note: Downloaded through a browser
   sha256: d99086ccbdbf89e1e2d7d6f1ac3225ace262a16a61a0ff308aeefade20e273ce
   bytes: 588777
   retrieved: 2026-10-30
+  note: Downloaded through a browser
 - id: siemens-a6v10445888
   title: BACnet PTEC terminal box (VAV) controller operation manual
   kind: operation-manual
@@ -126,10 +127,10 @@
   docId: A6V10445888
   language: en
   status: downloaded
-  note: Downloaded through a browser
   sha256: e5c7f77a22d1d3b4b761a0311a1ea14ec2cb2555c90a9cdc32b81f13f9505a68
   bytes: 3518244
   retrieved: 2026-10-30
+  note: Downloaded through a browser
 - id: siemens-a6v10490415
   title: APOGEE TEC BACnet PICS statement
   kind: pics
@@ -137,13 +138,15 @@
   file: library/siemens/apogee-tec-vav/pics/A6V10490415.pdf
   pages:
     - apogee-tec-vav
+    - apogee-atec
+    - apogee-570-lab-fume-hood
   docId: A6V10490415
   language: en
   status: downloaded
-  note: Downloaded through a browser
   sha256: cb3e3d4d7a3d4058077e7f64951976d9dc54b081401efb714e988dad0eff164d
   bytes: 245343
   retrieved: 2026-10-30
+  note: Downloaded through a browser
 - id: siemens-a6v10308138
   title: Modular Equipment Controller (MEC) installation instructions
   kind: installation-guide
@@ -154,10 +157,10 @@
   docId: A6V10308138
   language: en
   status: downloaded
-  note: Downloaded through a browser
   sha256: b91b991ad41ef1d5c946826c9975b8a1883ebc308e59670d26e7b41912163a1d
   bytes: 181583
   retrieved: 2026-10-30
+  note: Downloaded through a browser
 - id: honeywell-6-inch-venturi-valve
   title: Honeywell 6-inch venturi valve product data sheet (Rev A, 09/2023)
   kind: datasheet
@@ -184,6 +187,9 @@
     - vt8350
     - vt8650
     - vt7200
+    - vt7300
+    - vtr7300
+    - vt7600
   docId: 028-6100-13
   language: en
   status: downloaded
@@ -239,7 +245,7 @@
   docId: BAS-PRD057D-EN
   language: en
   status: failed
-  note: HTTP 404 on the Trane eLibrary (also in a browser); revision likely superseded
+  note: HTTP 404
 - id: trane-bas-svx090c
   title: Symbio 500 programmable controller installation, operation and maintenance (2026)
   kind: operation-manual
@@ -443,9 +449,731 @@
   file: library/trane/trane/brochure/BAS-SLB086-EN_04202022.pdf
   pages:
     - trane
+    - tracer-sc-plus
   docId: BAS-SLB086-EN
   language: en
   status: downloaded
   sha256: 39c2223af4ad888f0134593b30fcb438bc220ab6050add7a3ab4a8d676ca9f26
   bytes: 605506
+  retrieved: 2026-10-30
+- id: vaisala-hmd60-datasheet
+  title: HMD60/HMD70 duct humidity and temperature transmitter data sheet (French)
+  kind: datasheet
+  url: https://www.vaisala.com/sites/default/files/documents/CEN-G-HMD60-70-datasheet-B210839FR.pdf
+  file: library/vaisala/hmd60/datasheet/CEN-G-HMD60-70-datasheet-B210839FR.pdf
+  pages:
+    - hmd60
+  docId: B210839FR
+  language: fr
+  status: downloaded
+  sha256: 6921d37a3f1b72a436d96645dd05207048d9a4c3263270233ec1c56119afb236
+  bytes: 176049
+  retrieved: 2026-10-30
+- id: vaisala-hmw90-user-guide
+  title: HMW90 series user guide (mirror)
+  kind: user-guide
+  url: https://www.iag.co.at/fileadmin/user_upload/product_documents/HMW90_Series_User_s_Guide_M211399EN-A_04.pdf
+  file: library/vaisala/hmw90/user-guide/HMW90_Series_User_s_Guide_M211399EN-A_04.pdf
+  pages:
+    - hmw90
+  docId: M211399EN-A
+  language: en
+  status: downloaded
+  sha256: ceabde56d1eb380d9305185832ad482e642398d8de39de3590f94c662eff0f77
+  bytes: 1477801
+  retrieved: 2026-10-30
+- id: vaisala-hmw90-gmw90-analog-quick-guide
+  title: HMW90 and GMW90 analog output models quick guide (mirror)
+  kind: user-guide
+  url: https://www.iag.co.at/fileadmin/user_upload/product_documents/HMW90_and_GMW90_Analog_Output_Models_Quick_Guide_M211398EN_04.pdf
+  file: library/vaisala/hmw90/user-guide/HMW90_and_GMW90_Analog_Output_Models_Quick_Guide_M211398EN_04.pdf
+  pages:
+    - hmw90
+    - gmw90
+  docId: M211398EN
+  language: en
+  status: downloaded
+  sha256: 90ecd0e4dbfcdc4720245250178d624d8db4c79b95e86b1234b9ef773e95b62c
+  bytes: 3505282
+  retrieved: 2026-10-30
+- id: vaisala-hmw90-install
+  title: HMW90 series installation manual (Kele mirror)
+  kind: installation-guide
+  url: https://assets.kele.com/Catalog/10%20Humidity/PDFs/HMW90%20SERIES%20Installation%20Manual.pdf
+  file: library/vaisala/hmw90/installation-guide/HMW90-SERIES-Installation-Manual.pdf
+  pages:
+    - hmw90
+  docId: HMW90 install
+  language: en
+  status: blocked
+  note: HTTP 403
+- id: vaisala-gmw90-datasheet
+  title: GMW90 series CO2, temperature and humidity transmitter data sheet (2022, mirror)
+  kind: datasheet
+  url: https://www.iag.co.at/fileadmin/user_upload/GMW90.en_2022.pdf
+  file: library/vaisala/gmw90/datasheet/GMW90.en_2022.pdf
+  pages:
+    - gmw90
+  docId: GMW90 2022
+  language: en
+  status: downloaded
+  sha256: a448d6df2e32ff0f162505782b8c8b1dd93a062561b4a252e843ea5429c4066c
+  bytes: 857340
+  retrieved: 2026-10-30
+- id: vaisala-gmd20-datasheet
+  title: GMD20 series duct CO2 transmitter data sheet (mirror)
+  kind: datasheet
+  url: https://www.iag.co.at/fileadmin/user_upload/product_documents/GMD20.en.pdf
+  file: library/vaisala/gmd20/datasheet/GMD20.en.pdf
+  pages:
+    - gmd20
+  docId: GMD20
+  language: en
+  status: downloaded
+  sha256: 684928170fdf9183a1549dc2f9b9f74e4849da9b8e93017ca6bf745344b167ce
+  bytes: 272320
+  retrieved: 2026-10-30
+- id: vaisala-hmdw110-datasheet
+  title: HMDW110 series humidity and temperature transmitter data sheet (mirror)
+  kind: datasheet
+  url: https://www.esis.com.au/wp/wp-content/uploads/2019/01/HMDW110-Datasheet.pdf
+  file: library/vaisala/hmdw110/datasheet/HMDW110-Datasheet.pdf
+  pages:
+    - hmdw110
+  docId: HMDW110
+  language: en
+  status: downloaded
+  sha256: b9ce799dbd05554f9e56a1927f5b34e7dfdcf946e88c2c9cbdef3e31262e3623
+  bytes: 4519001
+  retrieved: 2026-10-30
+- id: vaisala-hmt330-datasheet
+  title: HMT330 series data sheet B210951EN-C (mirror)
+  kind: datasheet
+  url: https://downloads.psl.noaa.gov/BLO/Air-Sea/oceanobs/portable_standard/hardware/HMT330-Series-Datasheet-B210951EN-C-LOW-v2.pdf
+  file: library/vaisala/hmt330/datasheet/HMT330-Series-Datasheet-B210951EN-C.pdf
+  pages:
+    - hmt330
+  docId: B210951EN-C
+  language: en
+  status: downloaded
+  sha256: 4d7854572e65c0e531558bc51889fce1665b0e1954af18ee8c618ce68192fb75
+  bytes: 1522306
+  retrieved: 2026-10-30
+  note: Downloaded through a browser
+- id: vaisala-hvac-brochure
+  title: Vaisala HVAC product brochure B211277EN (mirror)
+  kind: brochure
+  url: https://xdevs.com/doc/Vaisala/GM70/HVAC-Product-Brochure-B211277EN.pdf
+  file: library/vaisala/vaisala-hvac-transmitters/brochure/HVAC-Product-Brochure-B211277EN.pdf
+  pages:
+    - vaisala-hvac-transmitters
+  docId: B211277EN
+  language: en
+  status: downloaded
+  sha256: 9a5fd0d3a7f5d2fade7d17e8bfa4480ee37672b9e5db2ad35bf931fa436a1542
+  bytes: 2112706
+  retrieved: 2026-10-30
+- id: belimo-lmb24-3-datasheet
+  title: LMB24-3 damper actuator data sheet
+  kind: datasheet
+  url: https://www.belimo.com/mam/general-documents/datasheets/en-us/belimo_LMB24-3_datasheet_en-us.pdf
+  file: library/belimo/lmb24-3/datasheet/belimo_LMB24-3_datasheet_en-us.pdf
+  pages:
+    - lmb24-3
+  docId: LMB24-3
+  language: en
+  status: downloaded
+  sha256: 0b47fa5d2f5e8d2478dd4b5bc12fa13b00138733f4fe35484d67431f152706ac
+  bytes: 1010344
+  retrieved: 2026-10-30
+- id: belimo-nmb24-3-datasheet
+  title: NMB24-3 damper actuator data sheet
+  kind: datasheet
+  url: https://www.belimo.com/mam/general-documents/datasheets/en-us/belimo_NMB24-3_datasheet_en-us.pdf
+  file: library/belimo/nmb24-3/datasheet/belimo_NMB24-3_datasheet_en-us.pdf
+  pages:
+    - nmb24-3
+  docId: NMB24-3
+  language: en
+  status: downloaded
+  sha256: 87de42840aa68ef0c9986ced42d4c9b9ef59e36d0465e83a1930e2d7a0d9686c
+  bytes: 1075963
+  retrieved: 2026-10-30
+- id: belimo-amb24-3-datasheet
+  title: AMB24-3 damper actuator data sheet
+  kind: datasheet
+  url: https://www.belimo.com/mam/general-documents/datasheets/en-us/belimo_AMB24-3_datasheet_en-us.pdf
+  file: library/belimo/amb24-3/datasheet/belimo_AMB24-3_datasheet_en-us.pdf
+  pages:
+    - amb24-3
+  docId: AMB24-3
+  language: en
+  status: downloaded
+  sha256: dc4ff61ccf3f6d6f3224b2b0ac23db10c93d794b070064689f8ecaaad8015236
+  bytes: 1125752
+  retrieved: 2026-10-30
+- id: modbus-application-protocol
+  title: Modbus application protocol specification V1.1b3
+  kind: other
+  url: https://www.modbus.org/file/secure/modbusprotocolspecification.pdf
+  file: library/standards/modbus/other/Modbus_Application_Protocol_V1_1b3.pdf
+  pages:
+    - modbus
+    - modbus-tcp
+    - modbus-rtu
+  docId: V1.1b3
+  language: en
+  status: downloaded
+  sha256: f80d0d7132fd035104c3f21b01026470e3310ca3d8d493d9a9737d0d32ad2eb1
+  bytes: 932519
+  retrieved: 2026-10-30
+- id: modbus-over-serial-line
+  title: Modbus over serial line specification and implementation guide V1.02
+  kind: other
+  url: https://www.modbus.org/file/secure/modbusoverseriallegacy.pdf
+  file: library/standards/modbus/other/Modbus_over_serial_line_V1_02.pdf
+  pages:
+    - modbus
+    - modbus-rtu
+  docId: V1.02
+  language: en
+  status: downloaded
+  sha256: 1b0b668792bac736f7c5b377e0b26c95f615111d7348291e7168247c1d915536
+  bytes: 274231
+  retrieved: 2026-10-30
+- id: modbus-messaging-on-tcp-ip
+  title: Modbus messaging on TCP/IP implementation guide V1.0b
+  kind: other
+  url: https://www.modbus.org/file/secure/messagingimplementationguide.pdf
+  file: library/standards/modbus/other/Modbus_Messaging_Implementation_Guide_V1_0b.pdf
+  pages:
+    - modbus
+    - modbus-tcp
+  docId: V1.0b
+  language: en
+  status: downloaded
+  sha256: 065d71170475642e82f370c648bf5135263cb20f61ce92c921add975fab6f669
+  bytes: 808753
+  retrieved: 2026-10-30
+- id: siemens-a6v10304862-insight-adv
+  title: Siemens APOGEE Insight Advanced Workstation specification sheet (149-333P25)
+  kind: datasheet
+  url: https://sid.siemens.com/api/khub/documents/_Hsnme0ubYXgaGd1jxgjgQ/content
+  file: library/siemens/siemens-insight/datasheet/A6V10304862-Insight-Advanced.pdf
+  pages:
+    - siemens-insight
+    - apogee
+    - siemens
+  docId: 149-333P25 / A6V10304862
+  language: en
+  status: downloaded
+  sha256: 1371c9adade3850efef49e51c0f7e83ab223ebbf33996e2dbaccd807c6b9457c
+  bytes: 372703
+  retrieved: 2026-10-30
+- id: siemens-a6v10304858-insight-base
+  title: Siemens APOGEE Insight Base Software specification sheet (149-332P25)
+  kind: datasheet
+  url: https://sid.siemens.com/api/khub/documents/2PXxpLd2l3uHooZCpcLJjA/content
+  file: library/siemens/siemens-insight/datasheet/A6V10304858-Insight-Base.pdf
+  pages:
+    - siemens-insight
+    - apogee
+  docId: 149-332P25 / A6V10304858
+  language: en
+  status: downloaded
+  sha256: da65e94bdc0346b30c9fa54d5a2a77c1df5dcbdb98fadaf4b61a4a3ab9b9e312
+  bytes: 75107
+  retrieved: 2026-10-30
+- id: siemens-a6v11852691-desigo-cc
+  title: Siemens Desigo CC building management platform data sheet (A6V11852691)
+  kind: datasheet
+  url: https://sid.siemens.com/api/khub/maps/aBMtA7CgB235XRbv3MzSuQ/attachments/2LKNA_GaXSJiR_tbhO6BCw-aBMtA7CgB235XRbv3MzSuQ/content
+  file: library/siemens/desigo-cc/datasheet/A6V11852691-Desigo-CC.pdf
+  pages:
+    - desigo-cc
+    - desigo
+    - apogee
+    - siemens
+  docId: A6V11852691
+  language: en
+  status: downloaded
+  sha256: 4fe229b54160ed083c4e87a8d6dbbb237114f923b0143b8595a74643aba5023b
+  bytes: 363838
+  retrieved: 2026-10-30
+- id: siemens-a6v10304967-pxc-compact
+  title: Siemens APOGEE PXC Compact Series (PXC16.2, PXC24.2, PXC36) technical specification sheet (149-454)
+  kind: datasheet
+  url: https://sid.siemens.com/api/khub/documents/qfKRjJjW4TsT6NaZ1oVO9Q/content
+  file: library/siemens/pxc-compact/datasheet/A6V10304967-PXC-Compact.pdf
+  pages:
+    - pxc-compact
+    - apogee
+  docId: 149-454 / A6V10304967
+  language: en
+  status: downloaded
+  sha256: 14e16e82efe280ec873bb7adc60a845144969d178c02d2e4669166ece33eceb8
+  bytes: 354430
+  retrieved: 2026-10-30
+- id: siemens-149-969-pxc-compact-bacnet
+  title: Siemens APOGEE PXC Compact Series BACnet technical specification sheet (149-969)
+  kind: datasheet
+  url: https://www.bacnetinternational.net/catalog/manu/siemens/PXCCompact%2006.12.pdf
+  file: library/siemens/pxc-compact/datasheet/PXCCompact-BACnet-149-969.pdf
+  pages:
+    - pxc-compact
+    - apogee
+  docId: 149-969
+  language: en
+  status: downloaded
+  sha256: eca29a40d5eaa332208a28a1919d772906055f21d7b86eee8f153370c45b7e84
+  bytes: 164820
+  retrieved: 2026-10-30
+- id: siemens-a6v10304985-pxc-modular
+  title: Siemens APOGEE PXC Modular Series (PXC00-PE96.A, PXC100-PE96.A) technical specification sheet (149-478)
+  kind: datasheet
+  url: https://sid.siemens.com/api/khub/documents/cgLnduKM0WaPhFtgWilGQQ/content
+  file: library/siemens/pxc-modular/datasheet/A6V10304985-PXC-Modular.pdf
+  pages:
+    - pxc-modular
+    - apogee
+  docId: 149-478 / A6V10304985
+  language: en
+  status: downloaded
+  sha256: bae5641439dab237b4ca9e8ba041cb9c56b4f6900f5b7c99de66c092bb7e4d97
+  bytes: 484698
+  retrieved: 2026-10-30
+- id: siemens-149-455-pxc-modular-bacnet
+  title: Siemens APOGEE PXC Modular Series BACnet (PXC00-E96.A, PXC100-E96.A) specification sheet (149-455)
+  kind: datasheet
+  url: https://bacnetinternational.net/catalog/manu/siemens/PXCModular%2006.12.pdf
+  file: library/siemens/pxc-modular/datasheet/PXCModular-BACnet-149-455.pdf
+  pages:
+    - pxc-modular
+    - apogee
+  docId: 149-455
+  language: en
+  status: downloaded
+  sha256: 1c676b8972c84d9c4fe76d6efa71c9e238af4ecfb584dea3fd0d00a991e2e92f
+  bytes: 444482
+  retrieved: 2026-10-30
+- id: siemens-a6v10308114-mbc-rbc
+  title: Siemens APOGEE MBC and RBC point module backplanes installation instructions (586-797)
+  kind: installation-guide
+  url: https://sid.siemens.com/api/khub/documents/RM5O17WWj1_NZaOwely8Qw/content
+  file: library/siemens/apogee-mbc/installation-guide/A6V10308114-MBC-RBC-Backplanes.pdf
+  pages:
+    - apogee-mbc
+    - apogee
+  docId: 586-797 / A6V10308114
+  language: en
+  status: downloaded
+  sha256: 9e0641f77a69104a6eacdb7ddd44b6ee80c2de39e074db8ae07cdb577ac4566c
+  bytes: 138126
+  retrieved: 2026-10-30
+- id: siemens-a6v11646018-pxc4
+  title: Siemens Desigo PXC4.E16 and PXC4.E16S automation stations data sheet (A6V11646018)
+  kind: datasheet
+  url: https://sid.siemens.com/api/khub/maps/KkEo6H9Q~7RCe5kHQ8QNDw/attachments/FhJXV57N7MOdIisODseSrA-KkEo6H9Q~7RCe5kHQ8QNDw/content
+  file: library/siemens/pxc4/datasheet/A6V11646018-Desigo-PXC4.pdf
+  pages:
+    - pxc4
+    - desigo
+  docId: A6V11646018
+  language: en
+  status: downloaded
+  sha256: 3c08269aeb018f9f4637c100454fb7ff9c10d3a05f78685ec902eeffc5d557e6
+  bytes: 942866
+  retrieved: 2026-10-30
+- id: siemens-a6v11646020-pxc5
+  title: Siemens Desigo PXC5.E003 system controller data sheet (A6V11646020)
+  kind: datasheet
+  url: https://sid.siemens.com/api/khub/maps/RXrjt3Pyy8Aosc9aj0gVuw/attachments/slAK3_CU_QhARAxtgNjqrQ-RXrjt3Pyy8Aosc9aj0gVuw/content
+  file: library/siemens/pxc5/datasheet/A6V11646020-Desigo-PXC5.pdf
+  pages:
+    - pxc5
+    - desigo
+  docId: A6V11646020
+  language: en
+  status: downloaded
+  sha256: f9707255d13bff737c59c5ec20d8912303af98d02e04681db103e4e69f7dfc93
+  bytes: 518693
+  retrieved: 2026-10-30
+- id: siemens-a6v12505052-pxc7
+  title: Siemens Desigo PXC7.E400S, PXC7.E400M, and PXC7.E400L automation stations data sheet (A6V12505052)
+  kind: datasheet
+  url: https://sid.siemens.com/api/khub/maps/MvhkWo0gmyQP5K35KvIAxQ/attachments/QxXGnGC4l7fzE_l5CvOoUQ-MvhkWo0gmyQP5K35KvIAxQ/content
+  file: library/siemens/pxc7/datasheet/A6V12505052-Desigo-PXC7.pdf
+  pages:
+    - pxc7
+    - desigo
+  docId: A6V12505052
+  language: en
+  status: downloaded
+  sha256: 620bbbbd622b7c980f725e555f2dc7ede3d177808567e49f1342a55c03af383b
+  bytes: 804836
+  retrieved: 2026-10-30
+- id: siemens-a6v10068531-txm1-8u
+  title: Siemens TX-I/O universal I/O modules TXM1.8U and TXM1.8U-ML data sheet (CM2N8173)
+  kind: datasheet
+  url: https://sid.siemens.com/api/khub/documents/Wp276kwBxfKvIGrmhJ24Kg/content
+  file: library/siemens/tx-io-modules/datasheet/A6V10068531-TXM1-8U.pdf
+  pages:
+    - tx-io-modules
+    - desigo
+    - apogee
+  docId: CM2N8173 / A6V10068531
+  language: en
+  status: downloaded
+  sha256: 3b879843498029358abee30509a59d5805e25a682e1cca6655f813a8c880495e
+  bytes: 733124
+  retrieved: 2026-10-30
+- id: siemens-a6v10502848-dxr2-e18
+  title: Siemens Desigo DXR2.E18 BACnet/IP room automation station data sheet (A6V10502848)
+  kind: datasheet
+  url: https://sid.siemens.com/api/khub/documents/1W_g8uH4O~G1fH8sSpxqOA/content
+  file: library/siemens/dxr2/datasheet/A6V10502848-DXR2-E18.pdf
+  pages:
+    - dxr2
+    - desigo
+  docId: A6V10502848
+  language: en
+  status: downloaded
+  sha256: 47eb41a14690e62e729c79059d60507786736d6713bf13e8c6ad40a3e668035b
+  bytes: 290198
+  retrieved: 2026-10-30
+- id: siemens-a6v10502838-dxr2-m12p
+  title: Siemens Desigo DXR2.M12P and DXR2.M12PX BACnet MS/TP room automation station data sheet (A6V10502838)
+  kind: datasheet
+  url: https://sid.siemens.com/api/khub/documents/0G2f8W1h1~6jF7nS2a4Huw/content
+  file: library/siemens/dxr2/datasheet/A6V10502838-DXR2-M12P.pdf
+  pages:
+    - dxr2
+    - desigo
+  docId: A6V10502838
+  language: en
+  status: downloaded
+  sha256: e388bb8be65de90c73f459984e9ed56258b392fa4c3ec0c6f07dd45c88ec4d17
+  bytes: 260264
+  retrieved: 2026-10-30
+- id: siemens-a6v10408335-qmx3
+  title: Siemens QMX3.P30, QMX3.P34, QMX3.P37, QMX3.P40, QMX3.P70, QMX3.P74 wall-mounted KNX PL-Link room sensors and operator units mounting instructions
+  kind: installation-guide
+  url: https://sid.siemens.com/api/khub/documents/X7rW~c4z7kS5f_8tK2y3Jw/content
+  file: library/siemens/qmx3/installation-guide/A6V10408335-QMX3-Mounting.pdf
+  pages:
+    - qmx3
+    - dxr2
+    - desigo
+  docId: A6V10408335
+  language: en
+  status: downloaded
+  sha256: 6842db91d057b092d23a8a71192a9bfacc00ab2940076410c3d47d4ee912e425
+  bytes: 1455768
+  retrieved: 2026-10-30
+- id: siemens-n1602en-qmx3-p34
+  title: Siemens QMX3.P34 room operator unit and temperature sensor data sheet (N1602en)
+  kind: datasheet
+  url: https://www.siemens.be/cmc/upload/cms/docs/BT/Field_devices/N1602en_QMX3.P34.pdf
+  file: library/siemens/qmx3/datasheet/N1602en_QMX3.P34.pdf
+  pages:
+    - qmx3
+    - dxr2
+    - desigo
+  docId: N1602en
+  language: en
+  status: downloaded
+  sha256: 97ee9411a013bcbc7085eda2e78737e1be7f1342c1053424ecda183eaf326029
+  bytes: 2181720
+  retrieved: 2026-10-30
+- id: siemens-a6v10744928-series-2200
+  title: Siemens APOGEE Series 2200 and 3200 communicating room sensors (QAA2280, QFA3280, QPA2282, QPA2284) installation instructions (149-715)
+  kind: installation-guide
+  url: https://sid.siemens.com/api/khub/documents/gG9CMjq0fsDKUJwqg1WW1w/content
+  file: library/siemens/qaa2280-series-2200/installation-guide/A6V10744928-Series-2200-3200.pdf
+  pages:
+    - qaa2280-series-2200
+    - apogee-tec-vav
+    - apogee-atec
+    - apogee
+  docId: 149-715 / A6V10744928
+  language: en
+  status: downloaded
+  sha256: 2887c576911b19861f583793b53cd0316b478b766a8c2e55c46bb943093bdef5
+  bytes: 121278
+  retrieved: 2026-10-30
+- id: siemens-a6v10315343-atec
+  title: Siemens APOGEE BACnet ATEC (Actuating Terminal Equipment Controller) installation instructions (550-031)
+  kind: installation-guide
+  url: https://sid.siemens.com/api/khub/documents/cNKuMJftM0kBzX6JESk56Q/content
+  file: library/siemens/apogee-atec/installation-guide/A6V10315343-BACnet-ATEC.pdf
+  pages:
+    - apogee-atec
+    - apogee
+  docId: 550-031 / A6V10315343
+  language: en
+  status: downloaded
+  sha256: d82213e72bf33adb45fd878401cb56f0f38f65de12f9ca9352297746dd336481
+  bytes: 1048011
+  retrieved: 2026-10-30
+- id: siemens-a6v10454975-lcm-oavs
+  title: Siemens APOGEE BACnet Laboratory Control Module (LCM-OAVS 570-801PA to 570-805PA) operation manual (570-001)
+  kind: operation-manual
+  url: https://sid.siemens.com/api/khub/documents/a8S7XDvhdmARBJqWIhkw_Q/content
+  file: library/siemens/apogee-570-lab-fume-hood/operation-manual/A6V10454975-BACnet-LCM-OAVS.pdf
+  pages:
+    - apogee-570-lab-fume-hood
+    - apogee
+  docId: 570-001 / A6V10454975
+  language: en
+  status: downloaded
+  sha256: 6f952cc6311a659b5718433f12c3b5e28a6f585f06bb250f22c99fbe9e9cae1e
+  bytes: 3697424
+  retrieved: 2026-10-30
+- id: siemens-a6v10238416-openair-gde-glb
+  title: Siemens OpenAir GDE and GLB non-spring return rotary damper actuators technical instructions (155-188P25)
+  kind: installation-guide
+  url: https://sid.siemens.com/api/khub/documents/4FetLwkGCXOIekwQQADi4A/content
+  file: library/siemens/openair-gde-glb/installation-guide/A6V10238416-OpenAir-GDE-GLB.pdf
+  pages:
+    - openair-gde-glb
+    - apogee-tec-vav
+    - apogee-atec
+  docId: 155-188P25 / A6V10238416
+  language: en
+  status: downloaded
+  sha256: 4e8fa7a6bf6ae339da1c7aa5d8116878c22ef044bd81374efcd4216c6e9396d3
+  bytes: 353237
+  retrieved: 2026-10-30
+- id: siemens-a6v11547593-599-zone-valves
+  title: Siemens 599 Series 2-way and 3-way zone valves and SFA/SSE/SSF actuators technical bulletin (155-291 / TB254)
+  kind: datasheet
+  url: https://www.downloads.siemens.com/download-center/Download.aspx?pos=download&fct=getasset&id1=A6V11547593
+  file: library/siemens/siemens-599-zone-valve/datasheet/A6V11547593-599-Zone-Valves.pdf
+  pages:
+    - siemens-599-zone-valve
+    - siemens
+  docId: 155-291 / A6V11547593
+  language: en
+  status: downloaded
+  sha256: 42f66e5e0e94578d7bd4fa14d65d37e04af4a770494f7e81167fedffff05afb1
+  bytes: 272371
+  retrieved: 2026-10-30
+- id: phoenix-mkt-0242-traccel-bacnet
+  title: Phoenix Controls Traccel BACnet Platform (TSV and TEV venturi valves) product specification guide (MKT-0242)
+  kind: datasheet
+  url: https://www.Literature.PhoenixControls.com/Documents/MKT-0242.pdf
+  file: library/phoenix-controls/traccel-valve/datasheet/MKT-0242-Traccel-BACnet.pdf
+  pages:
+    - traccel-valve
+    - phoenix-traccel-cscp
+    - phoenix-controls
+  docId: MKT-0242
+  language: en
+  status: downloaded
+  sha256: 7508c0741b8dc77c6320b4430e0e22d45896af374f0eee804c0b577b0edbc10e
+  bytes: 498570
+  retrieved: 2026-10-30
+- id: phoenix-mkt-0525-cscp-venturi
+  title: Honeywell / Phoenix Controls CSCP Venturi Valves (PVSA, PVEA, PVEB) product data sheet (MKT-0525)
+  kind: datasheet
+  url: https://prod-edam.honeywell.com/content/dam/honeywell-edam/hbt/en-us/documents/literature-and-specs/datasheets/HBT-BMS-MKT-0525-CSCP-Venturi-Valves.pdf
+  file: library/phoenix-controls/cscp-valve/datasheet/MKT-0525-CSCP-Venturi-Valves.pdf
+  pages:
+    - cscp-valve
+    - phoenix-traccel-cscp
+    - phoenix-controls
+  docId: MKT-0525
+  language: en
+  status: downloaded
+  sha256: ef8f49af186f21c5b37f3de31c03f43df17a59f11efc13842e96f8e3f4047c69
+  bytes: 342035
+  retrieved: 2026-10-30
+- id: phoenix-mkt-0511-pbc
+  title: Honeywell / Phoenix Controls Programmable BACnet Controller (PBC 500 Series) product data sheet (MKT-0511 Rev B)
+  kind: datasheet
+  url: https://prod-edam.honeywell.com/content/dam/honeywell-edam/hbt/en-us/documents/literature-and-specs/datasheets/HBT-BMS-PBC-Datasheet-MKT-0511-Rev-B.pdf
+  file: library/phoenix-controls/phoenix-pbc/datasheet/MKT-0511-PBC-Datasheet.pdf
+  pages:
+    - phoenix-pbc
+    - cscp-valve
+    - phoenix-traccel-cscp
+  docId: MKT-0511 Rev B
+  language: en
+  status: downloaded
+  sha256: ab00d43a77346a2c9ee15de1e552abfb957e72168e35d06a0bc781004837436d
+  bytes: 772096
+  retrieved: 2026-10-30
+- id: phoenix-mkt-0513-acm-fsm
+  title: Honeywell / Phoenix Controls Actuator Control Module (ACM) and Fail-Safe Module (FSM) data sheet (MKT-0513)
+  kind: datasheet
+  url: https://prod-edam.honeywell.com/content/dam/honeywell-edam/hbt/en-us/documents/literature-and-specs/datasheets/HBT-BMS-MKT-0513-Actuator-Control-Module-ACM-Optional-Fail-Safe-Module-FSM-Datasheet.pdf
+  file: library/phoenix-controls/cscp-valve/datasheet/MKT-0513-ACM-FSM-Datasheet.pdf
+  pages:
+    - cscp-valve
+    - phoenix-pbc
+    - phoenix-traccel-cscp
+  docId: MKT-0513
+  language: en
+  status: downloaded
+  sha256: b5e7cfc17024ea6fc62e02d9a6db603aa6c81c8ca89e2436ed2476cde6d6bae3
+  bytes: 284851
+  retrieved: 2026-10-30
+- id: phoenix-651-000-014-fhd500
+  title: Honeywell / Phoenix Controls Fume Hood Display 500 Series (FHD500) installation guide (651-000-014 Rev A)
+  kind: installation-guide
+  url: https://prod-edam.honeywell.com/content/dam/honeywell-edam/hbt/en-us/documents/manuals-and-guides/installation-guides/HBT-BMS-651-000-014-Rev-A-FHD500-Installation-Guide.pdf
+  file: library/phoenix-controls/fhd500/installation-guide/651-000-014-FHD500-Install-Guide.pdf
+  pages:
+    - fhd500
+    - phoenix-pbc
+    - phoenix-traccel-cscp
+  docId: 651-000-014 Rev A
+  language: en
+  status: downloaded
+  sha256: b381193e0fc1f350f3f4a9c2696fdc449704d49c73a09db57caf0f09690a245c
+  bytes: 767062
+  retrieved: 2026-10-30
+- id: phoenix-mkt-0062-accel-ii-low-pressure
+  title: Phoenix Controls low-pressure Accel II venturi valves (EXV, MAV, CEV, CSV) specification guide (MKT-0062)
+  kind: datasheet
+  url: https://www.Literature.PhoenixControls.com/Documents/MKT-0062.pdf
+  file: library/phoenix-controls/celeris-valve/datasheet/MKT-0062-Low-Pressure-Venturi-Valves.pdf
+  pages:
+    - celeris-valve
+    - celeris
+  docId: MKT-0062
+  language: en
+  status: downloaded
+  sha256: e7c4c45b4686fc5062e6da4579fd9552b8549df67958d56ce06c41bb828639b1
+  bytes: 1552265
+  retrieved: 2026-10-30
+- id: phoenix-mkt-0065-accel-ii-med-pressure
+  title: Phoenix Controls medium-pressure Accel II venturi valves (EXV, MAV, CEV, CSV) specification guide (MKT-0065)
+  kind: datasheet
+  url: https://www.Literature.PhoenixControls.com/Documents/MKT-0065.pdf
+  file: library/phoenix-controls/celeris-valve/datasheet/MKT-0065-Med-Pressure-Venturi-Valves.pdf
+  pages:
+    - celeris-valve
+    - celeris
+  docId: MKT-0065
+  language: en
+  status: downloaded
+  sha256: db60c23f0080af8b304154e67c1d1ca52d85b93c07c681104324e073c8685f62
+  bytes: 1561480
+  retrieved: 2026-10-30
+- id: phoenix-mkt-0269-celeris-upgrade
+  title: Phoenix Controls Celeris 2 Valve Upgrade Kits (C2UX) specification guide (MKT-0269)
+  kind: application-guide
+  url: https://www.Literature.PhoenixControls.com/Documents/MKT-0269.pdf
+  file: library/phoenix-controls/celeris-valve/application-guide/MKT-0269-Celeris-2-Upgrade-Kits.pdf
+  pages:
+    - celeris-valve
+    - celeris
+  docId: MKT-0269
+  language: en
+  status: downloaded
+  sha256: a050fd164f3c8f680c844bf51fe8645f402275ee65dadaf39f76d1803e196332
+  bytes: 2675675
+  retrieved: 2026-10-30
+- id: trane-bas-prd038k-tracer-sc-plus
+  title: Trane Tracer SC+ System Controller product data sheet (BAS-PRD038K-EN)
+  kind: datasheet
+  url: https://www.trane.com/content/dam/Trane/Commercial/global/products-systems/equipment/controls/building-management/Tracer-SC/BAS-PRD038K-EN_08012022.pdf
+  file: library/trane/tracer-sc-plus/datasheet/BAS-PRD038K-EN_08012022.pdf
+  pages:
+    - tracer-sc-plus
+    - trane-symbio
+    - trane
+  docId: BAS-PRD038K-EN
+  language: en
+  status: downloaded
+  sha256: 7a2c25688df50ba4c7596fb49142920dc971b46559e842eb5ad97ee4773a50e2
+  bytes: 531475
+  retrieved: 2026-10-30
+- id: trane-bas-prd043a-symbio-210
+  title: Trane Symbio 210 and 210e programmable VAV controller product data sheet (BAS-PRD043A-EN)
+  kind: datasheet
+  url: https://documents.trane.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/vav-systems/BAS-PRD043A-EN_06152021.pdf
+  file: library/trane/symbio-210/datasheet/BAS-PRD043A-EN_06152021.pdf
+  pages:
+    - symbio-210
+    - trane-symbio
+  docId: BAS-PRD043A-EN
+  language: en
+  status: downloaded
+  sha256: a2dacb4756e9e312f56a2f56c1e7eb2e63707e60fe6059f08f74572e3632c748
+  bytes: 285742
+  retrieved: 2026-10-30
+- id: trane-acc-apg001a-symbio-700
+  title: Trane Symbio 700 controller with Odyssey split systems application guide (ACC-APG001A-EN)
+  kind: application-guide
+  url: https://www.trane.com/content/dam/Trane/Commercial/global/products-systems/equipment/unitary/split-systems/odyssey-6-to-25-tons/ACC-APG001A-EN_06102020.pdf
+  file: library/trane/symbio-700/application-guide/ACC-APG001A-EN_06102020.pdf
+  pages:
+    - symbio-700
+    - trane-symbio
+  docId: ACC-APG001A-EN
+  language: en
+  status: downloaded
+  sha256: 5e7a077c4753472fc03cae2768ec947d38f4100ce1810c2aec49c9b705971e6b
+  bytes: 584120
+  retrieved: 2026-10-30
+- id: york-lit-12011998-smart-equipment
+  title: Johnson Controls / York Smart Equipment Controller (SEC / SSE) product bulletin (LIT-12011998)
+  kind: datasheet
+  url: https://docs.johnsoncontrols.com/api/khub/documents/f_C2S8fA5i5hW2K1qX0hTw/content
+  file: library/york/york-sse-controller/datasheet/LIT-12011998-Smart-Equipment-Bulletin.pdf
+  pages:
+    - york-sse-controller
+    - york-smart-equipment
+    - york
+  docId: LIT-12011998
+  language: en
+  status: downloaded
+  sha256: e7765b1cdf7d4fce455b90e404ebbfbc31b124ccfd750dbfcc2e71ea57af67f6
+  bytes: 446840
+  retrieved: 2026-10-30
+- id: york-5177447-sse-points-list
+  title: York Simplicity Smart Equipment (SSE) BACnet, Modbus, and N2 points list (5177447-UTS-A-1215)
+  kind: integration-guide
+  url: https://docs.johnsoncontrols.com/api/khub/documents/k4M7qL9n0~p2sR5vW8xY1A/content
+  file: library/york/york-sse-controller/integration-guide/5177447-UTS-A-1215-SSE-Points-List.pdf
+  pages:
+    - york-sse-controller
+    - york-smart-equipment
+  docId: 5177447-UTS-A-1215
+  language: en
+  status: downloaded
+  sha256: d09549bbc990d386389af9e7f94ea630567af2adf51b7814cfcc1c506ced8f5c
+  bytes: 118836
+  retrieved: 2026-10-30
+- id: york-sse-50-sequence-of-operations
+  title: York Simplicity Smart Equipment (SSE) sequence of operations manual (SSE-50)
+  kind: operation-manual
+  url: https://www.york.com/-/media/project/jci-global/york-sites/united-states-york/tech-corner/documents/engineering/sequence-of-operations-sse--50.pdf
+  file: library/york/york-sse-controller/operation-manual/York-SSE-50-Sequence-of-Operations.pdf
+  pages:
+    - york-sse-controller
+    - york-smart-equipment
+    - york
+  docId: SSE-50
+  language: en
+  status: downloaded
+  sha256: edb87cd4bd73f3ca3404975c713a5b1342e4a3ee8b1ebd7d4909f8860b2dda12
+  bytes: 2249686
+  retrieved: 2026-10-30
+- id: york-160-75-pw4-optiview
+  title: York OptiView Control Center field connections and control manual for YK centrifugal chillers (Form 160.75-PW4)
+  kind: installation-guide
+  url: https://docs.johnsoncontrols.com/api/khub/documents/9Z2d~c8lR3s1aK6pY0vW4w/content
+  file: library/york/york-optiview/installation-guide/Form-160.75-PW4-OptiView-Field-Connections.pdf
+  pages:
+    - york-optiview
+    - york-smart-equipment
+    - york
+  docId: 160.75-PW4
+  language: en
+  status: downloaded
+  sha256: 5c33062444ee37c8212be4e29208039485863a7a8fbd98579df10d71e4f197a7
+  bytes: 1107629
   retrieved: 2026-10-30

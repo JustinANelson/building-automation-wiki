@@ -1,7 +1,15 @@
 ﻿# BASWiki Guidelines & Standards
 
 ## Project Mission
-A Wiki for Building Automation System, especially focused on Siemens, and Phoenix Control product lines.
+A static Markdown wiki for building automation systems and direct digital controls, starting with Siemens and Phoenix Controls, then Viconics and packaged-unit controls (Trane, Schneider, York, and others), plus field devices (sensors, actuators, valves, dampers) and communication protocols. Every part number is read from a cited manufacturer document; see `comms/BOARD.md`.
+
+## Multi-Agent Coordination (read first)
+Several agents work in this repository at the same time. Before you edit anything:
+1. Run `npm start -- comms <your-agent-name>` and read your inbox, the live claims, and `comms/BOARD.md`.
+2. Claim the area you will edit (`comms/claims/<area>.md`) and stay out of paths another live claim covers.
+3. Release your claim and post a summary message when you finish. Stage only your own files; never `git add -A`, reset, stash, or clean.
+
+Full protocol, file formats, and shared-resource rules (Chrome, preview server, `npm run check`, `library.yaml`): `comms/README.md`.
 
 ## Architectural Mandates
 1. **Explicit Domain Invariants**: Core state transitions and business rules must be enforced in pure, deterministic domain modules rather than scattered across UI or transport layers.
@@ -19,6 +27,7 @@ A Wiki for Building Automation System, especially focused on Siemens, and Phoeni
 - **Test Coverage**: `npm run test:coverage`
 - **Dead Code & Unused Exports**: `npm run knip`
 - **Architecture & Circular Dependency Check**: `npm run depcruise`
+- **Wiki CLI**: `npm start -- validate | build | fetch [id] | ingest [dir] | verify | comms [agent]`
 
 ## Environment & CLI Tooling on PATH
 The local Windows environment includes standard Unix, AST, and process utilities on `PATH` (`C:\Users\jnels\.local\bin`):

@@ -1,4 +1,5 @@
 import { resolve } from 'node:path';
+import { commsStatus } from './content/comms.js';
 import { writeSite } from './content/site.js';
 import {
   downloadMissing,
@@ -52,6 +53,8 @@ if (command === 'validate') {
   saveLibrary(repoRoot, report2.entries);
   for (const line of report2.ingested) console.log(`ingested ${line}`);
   for (const line of report2.skipped) console.error(`skipped ${line}`);
+} else if (command === 'comms') {
+  console.log(commsStatus(repoRoot, rest[0], Date.now()));
 } else if (command === 'verify') {
   const { entries } = loadLibrary(repoRoot);
   const issues = verifyLibrary(repoRoot, entries);
@@ -59,6 +62,6 @@ if (command === 'validate') {
   console.log(`${entries.length} documents, ${issues.length} problems`);
   process.exitCode = issues.length ? 1 : 0;
 } else {
-  console.error('usage: cli.ts validate | build | fetch [id] | ingest [dir] | verify');
+  console.error('usage: cli.ts validate | build | fetch [id] | ingest [dir] | verify | comms [agent]');
   process.exitCode = 2;
 }

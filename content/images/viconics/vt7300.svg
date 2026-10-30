@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" width="520" height="300">
+  <rect x="16" y="36" width="488" height="228" rx="6" fill="#f7fafc" stroke="#2d3748" stroke-width="2"/>
+  <rect x="16" y="36" width="488" height="34" rx="6" fill="#2b6cb0"/>
+  <text x="32" y="58" font-family="sans-serif" font-weight="bold" font-size="14" fill="#ffffff">VICONICS — VT7300 / VT7350 / VT7355 Series</text>
+  <text x="32" y="84" font-family="sans-serif" font-size="11" fill="#4a5568">Low-Voltage Fan Coil Room Controller (2-Pipe / 4-Pipe, 3-Speed or 0-10V ECM Fan)</text>
+  <g transform="translate(40, 22)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">24 VAC Power</text>
+    </g>
+<g transform="translate(150, 22)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">BACnet MS/TP / Zigbee</text>
+    </g>
+<g transform="translate(260, 22)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">Remote Temp / Ret</text>
+    </g>
+<g transform="translate(370, 22)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">Window / Aux BI</text>
+    </g>
+  <g transform="translate(46, 95)">
+      <circle cx="6" cy="-4" r="4.5" fill="#38a169" stroke="#2d3748" stroke-width="1"/>
+      <text x="16" y="0" font-family="monospace" font-size="10" fill="#2d3748">Comm Status</text>
+    </g>
+<g transform="translate(46, 115)">
+      <circle cx="6" cy="-4" r="4.5" fill="#3182ce" stroke="#2d3748" stroke-width="1"/>
+      <text x="16" y="0" font-family="monospace" font-size="10" fill="#2d3748">PIR Occupancy (-55xx)</text>
+    </g>
+  <g transform="translate(300, 88)">
+    <rect x="0" y="0" width="180" height="74" rx="4" fill="#c6f6d5" stroke="#2f855a" stroke-width="1.5"/>
+    <text x="10" y="20" font-family="monospace" font-size="11" fill="#1a202c">  72.0 °F    AUTO  </text>
+<text x="10" y="36" font-family="monospace" font-size="11" fill="#1a202c">  FAN: MED   OCC   </text>
+<text x="10" y="52" font-family="monospace" font-size="11" fill="#1a202c">  [MODE] [FAN] [^v]</text>
+  </g>
+  <g transform="translate(40, 250)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">3-Spd Fan / ECM</text>
+    </g>
+<g transform="translate(150, 250)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">Cooling Valve Out</text>
+    </g>
+<g transform="translate(260, 250)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">Heating Valve Out</text>
+    </g>
+<g transform="translate(370, 250)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">RH / PIR Sensor</text>
+    </g>
+</svg>

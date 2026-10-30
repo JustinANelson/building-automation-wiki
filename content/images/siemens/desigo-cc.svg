@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" width="520" height="300">
+  <rect x="16" y="36" width="488" height="228" rx="6" fill="#f7fafc" stroke="#2d3748" stroke-width="2"/>
+  <rect x="16" y="36" width="488" height="34" rx="6" fill="#009999"/>
+  <text x="32" y="58" font-family="sans-serif" font-weight="bold" font-size="14" fill="#ffffff">SIEMENS — Desigo CC (CCA-STD-FSET)</text>
+  <text x="32" y="84" font-family="sans-serif" font-size="11" fill="#4a5568">Integrated Building Management Platform — BACnet/SC, BACnet/IP & APOGEE P2</text>
+  <g transform="translate(40, 22)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">BACnet/IP & SC</text>
+    </g>
+<g transform="translate(150, 22)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">APOGEE P2 Driver</text>
+    </g>
+<g transform="translate(260, 22)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">Modbus TCP</text>
+    </g>
+<g transform="translate(370, 22)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">SNMP / OPC UA</text>
+    </g>
+  <g transform="translate(46, 95)">
+      <circle cx="6" cy="-4" r="4.5" fill="#38a169" stroke="#2d3748" stroke-width="1"/>
+      <text x="16" y="0" font-family="monospace" font-size="10" fill="#2d3748"> Desigo CC Core</text>
+    </g>
+<g transform="translate(46, 115)">
+      <circle cx="6" cy="-4" r="4.5" fill="#38a169" stroke="#2d3748" stroke-width="1"/>
+      <text x="16" y="0" font-family="monospace" font-size="10" fill="#2d3748">BACnet B-AWS</text>
+    </g>
+<g transform="translate(46, 135)">
+      <circle cx="6" cy="-4" r="4.5" fill="#3182ce" stroke="#2d3748" stroke-width="1"/>
+      <text x="16" y="0" font-family="monospace" font-size="10" fill="#2d3748">P2 ALN Bridge</text>
+    </g>
+  <g transform="translate(300, 88)">
+    <rect x="0" y="0" width="180" height="90" rx="4" fill="#c6f6d5" stroke="#2f855a" stroke-width="1.5"/>
+    <text x="10" y="20" font-family="monospace" font-size="11" fill="#1a202c">Desigo CC Management</text>
+<text x="10" y="36" font-family="monospace" font-size="11" fill="#1a202c">Profile: B-AWS (BTL)</text>
+<text x="10" y="52" font-family="monospace" font-size="11" fill="#1a202c">Drivers: BACnet + P2</text>
+<text x="10" y="68" font-family="monospace" font-size="11" fill="#1a202c">Flex Client Web UI</text>
+  </g>
+  <g transform="translate(40, 250)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">P55802-Y114-A100</text>
+    </g>
+<g transform="translate(150, 250)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">P55802-Y133-A300</text>
+    </g>
+<g transform="translate(260, 250)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">Flex Client HTML5</text>
+    </g>
+<g transform="translate(370, 250)">
+      <rect x="0" y="0" width="95" height="28" rx="2" fill="#e8ecef" stroke="#4a5568" stroke-width="1.2"/>
+      <text x="47.5" y="17" font-family="monospace" font-size="10" fill="#1a202c" text-anchor="middle">CMD.06 Dongle</text>
+    </g>
+</svg>

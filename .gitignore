@@ -7,3 +7,7 @@ data/
 /library/*/
 /site/
 /downloads/
+
+# Agent coordination: claims and messages are ephemeral, README and BOARD are tracked
+comms/claims/*.md
+comms/messages/*.md

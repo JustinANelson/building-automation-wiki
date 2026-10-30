@@ -1,4 +1,4 @@
-﻿# Agentic LLM Development Guide
+# Agentic LLM Development Guide
 
 This project is structured for high-velocity, high-reliability pair programming with AI coding agents (Antigravity, Claude Code, Cursor, Gemini, Windsurf).
 
@@ -10,12 +10,15 @@ This project is structured for high-velocity, high-reliability pair programming 
 | `AGENTS.md` | Primary source of truth for project mission, invariants, and commands |
 | `CLAUDE.md` / `GEMINI.md` | Pointers to `@AGENTS.md` for multi-agent compatibility |
 | `docs/DESIGN.md` | Design pillars and phased roadmap (update as phases complete) |
+| `comms/README.md` | Multi-agent protocol: claims, messages, shared resources, git etiquette |
+| `comms/BOARD.md` | Standing decisions, gotchas, and open wants shared by all agents |
 | `docs/ARCHITECTURE.md` | Component boundaries and dependency rules |
 | `.agents/skills/*/SKILL.md` | Task-specific skills discovered automatically by agents |
 
 ---
 
 ## 2. Recommended Agentic Workflow
+0. **Coordinate**: Run `npm start -- comms <your-agent-name>`, read `comms/BOARD.md`, and claim your area (see `comms/README.md`).
 1. **Orient**: Read `AGENTS.md` and `docs/DESIGN.md` to understand current phase and architectural invariants.
 2. **Search Fast**:
    - Text search: `rg "pattern" src tests`

@@ -2,17 +2,19 @@
 id: viconics-room-controllers
 type: product-line
 title: Viconics VT7000 and VT8000 Room Controllers
-summary: Networked room thermostats and controllers for VAV, fan coil, and rooftop applications.
+summary: Wall-mounted commercial room controllers for zoning, VAV, 2-pipe/4-pipe fan coils, line-voltage fan coils (with VC3000 relay packs), rooftops, and heat pumps.
 manufacturer: viconics
-protocols: [bacnet, lonworks, modbus]
+protocols: [bacnet, bacnet-mstp, modbus, modbus-rtu]
 status: current
-review: needs-review
+review: verified
+related: [vt7200, vt7300, vtr7300, vt7600, vt8350, vtr8350, vt8650, vz8250]
 sources:
+  - https://www.veris.com/viconics/vt8000-series
   - https://www.veris.com/ASSETS/DOCUMENTS/CMS/EN/028-6100-13_Catalog-VT8000-VT7000_A4_EN_RH20250520.pdf
 ---
-VT8000 (touch screen, BACnet MS/TP or Modbus RTU, optional Zigbee Pro, BACnet/IP and email via Wi-Fi with a VCM8002 module):
-VZ8250 (VAV), VTR8350 (line voltage fan coil), VT8350 (low voltage fan coil), VT8650 (RTU, heat pump, IAQ).
+Viconics VT7000 (segment LCD) and VT8000 (color touchscreen) room controllers bridge the gap between standalone commercial thermostats and networked DDC terminal controllers. They are widely deployed in campus dormitories, offices, classrooms, and retrofit buildings where existing 2-pipe/4-pipe fan coils, heat pumps, or packaged rooftop units need BACnet MS/TP or Zigbee Pro wireless integration without installing separate remote DDC panels:
 
-VT7000: VT7200 zone controllers have pages. The catalog also lists VT7300, VT7300-ECM, VTR7300, VT7350, VT7355, and
-VT7600-series models that do not have pages yet (VT7350 and VT7355 variants were seen in the catalog but not fully
-transcribed).
+- **Zoning & VAV Terminal Units**: **VT7200** and **VZ8250**.
+- **Low-Voltage Fan Coil Units (24 VAC)**: **VT7300 / VT7350 / VT7355** (3-speed relay or 0–10 VDC ECM fan) and **VT8350**.
+- **Line-Voltage Fan Coil Units (110–277 VAC)**: **VTR7300 / VTR7350** and **VTR8350** wall controllers paired over a 3-wire low-voltage bus with unit-mounted **VC3000 Series Relay Packs** (`VC3300E5000`–`VC3514E5000`).
+- **Packaged Rooftop, Heat Pump & IAQ Units**: **VT7600 / VT7652 / VT7656 / VT7657** and **VT8650**.
