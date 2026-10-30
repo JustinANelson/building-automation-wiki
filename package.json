@@ -1,6 +1,7 @@
 {
   "name": "baswiki",
   "version": "0.1.0",
+  "license": "MIT",
   "description": "A static wiki for building automation systems and direct digital controls: controllers, field devices, protocols and control strategies.",
   "homepage": "https://justinanelson.github.io/building-automation-wiki/",
   "repository": {

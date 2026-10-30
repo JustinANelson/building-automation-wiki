@@ -38,3 +38,7 @@ Every push to `main` runs `.github/workflows/pages.yml`: the full check must pas
 - [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) - system architecture and module boundaries
 - [docs/AGENT_GUIDE.md](./docs/AGENT_GUIDE.md) - working with AI coding assistants on this repository
 - [comms/README.md](./comms/README.md) - how several agents coordinate in one checkout
+
+## License
+
+[MIT](./LICENSE). Manufacturer names, product names and part numbers belong to their owners; the wiki cites the documents they come from.
