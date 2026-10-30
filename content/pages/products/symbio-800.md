@@ -8,14 +8,17 @@ productLine: trane-symbio
 category: controller
 protocols: [bacnet]
 status: current
-review: draft
+review: needs-review
 partNumbers:
-  - number: X13651678001
-    description: Ordering number given for Symbio 800 (per search summary of a Trane data sheet)
+  - number: X13651678002
+    description: Symbio 800 programmable controller, UL-864/UUKL
+    source: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Product%20Data/BAS-PRD041E-EN_06302026.pdf
 sources:
-  - https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Product%20Data/BAS-PRD049C-EN_09132024.pdf
+  - https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Product%20Data/BAS-PRD041E-EN_06302026.pdf
   - https://www.trane.com/commercial/north-america/us/en/products-systems/smart-building-technology/symbio.html
-related: [symbio-500]
+related: [symbio-500, tracer-tu]
 ---
-Which data sheet carries the Symbio 800 ordering number is unconfirmed (BAS-PRD049C-EN is the candidate). Verify against
-the PDF. Connectivity per the Symbio page: Air-Fi wireless, MS/TP, or IP.
+The June 2026 data sheet BAS-PRD041E-EN lists X13651678002 as the only ordering number. An earlier draft of this page
+gave X13651678001 from a search summary; that number does not appear in the Symbio 800 data sheet, installation
+instructions, or IOM, so it was removed. BACnet/IP, BACnet MS/TP, and BACnet/Zigbee (Air-Fi) per Trane's cybersecurity
+summary BAS-SLB145-EN.

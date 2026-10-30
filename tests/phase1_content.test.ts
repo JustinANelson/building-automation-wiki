@@ -90,7 +90,7 @@ describe('Phase 1: cross-page validation', () => {
 
 describe('Phase 1: seed content', () => {
   it('loads and validates cleanly', () => {
-    const { pages, issues } = validateContent(resolve(__dirname, '../content'));
+    const { pages, issues } = validateContent(resolve(__dirname, '..'));
     expect(issues).toEqual([]);
     expect(pages.filter((p) => p.type === 'product').length).toBeGreaterThan(0);
   });

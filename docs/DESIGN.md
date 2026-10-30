@@ -7,6 +7,7 @@
 - Product pages must carry a manufacturer, a category, and at least one **part number**, each with an optional source URL.
 - **Images** live under `content/images/`. Every image entry requires `alt`, `source`, and `license`; the validator rejects images with missing provenance or missing files. Manufacturer photos are not copied without a recorded permission basis.
 - `review` state: `draft` (AI-drafted from public docs) -> `needs-review` -> `verified` (requires at least one source).
+- **Document library:** `content/library.yaml` lists every manufacturer PDF (datasheet, installation guide, IOM/service manual, catalog, brochure) with its source URL, the pages it supports, and a SHA-256 once fetched. The binaries live in the gitignored `library/<manufacturer>/<page-id>/<kind>/` tree (see `library/README.md`); `npm start -- fetch` downloads them and `npm start -- verify` re-checks them.
 - Part numbers are never guessed: if a number cannot be sourced, the page records the gap instead.
 
 ## Core Design Pillars

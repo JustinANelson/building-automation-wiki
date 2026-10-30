@@ -8,19 +8,24 @@ productLine: trane-symbio
 category: packaged-unit-controller
 protocols: [bacnet, modbus]
 status: current
-review: draft
+review: needs-review
 partNumbers:
   - number: BMSY500AAA0100011
-    description: Symbio 500 (per search summary of Trane data sheet)
+    description: Symbio 500 programmable controller
+    source: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation/BAS-SVN231E-EN_06302026.pdf
   - number: BMSY500UAA0100011
-    description: Symbio 500 variant (U in the code may denote a U.S.-made version, as on UC400; unconfirmed)
+    description: Symbio 500 programmable controller, UL-864/UUKL (smoke control) version
+    source: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation/BAS-SVN231E-EN_06302026.pdf
   - number: BMSY500ABA0100011
-    description: Symbio 500 pre-programmed for RTU or heat pump
+    description: Symbio 500 with RTU or heat pump program
+    source: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation/BAS-SVN234A-EN_06102023.pdf
 sources:
-  - https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Product%20Data/BAS-PRD057D-EN_10072025.pdf
+  - https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation/BAS-SVN231E-EN_06302026.pdf
+  - https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation/BAS-SVN234A-EN_06102023.pdf
   - https://www.trane.com/commercial/north-america/us/en/products-systems/smart-building-technology/symbio.html
-related: [symbio-800, uc400]
+related: [symbio-800, uc400, tracer-tu]
 ---
-Order numbers come from a search summary of the October 2025 Trane data sheet (believed to be BAS-PRD057D-EN). They
-were not read from the PDF directly, so verify before use. Protocols: BACnet MS/TP, Air-Fi (BACnet/Zigbee), BACnet/IP,
-and Modbus server and client per the Symbio page.
+Order numbers and descriptions read directly from the Trane installation instructions BAS-SVN231E-EN (June 2026) and
+BAS-SVN234A-EN (2023). The data sheet BAS-PRD057D-EN and the IOM BAS-SVX090 were listed by search engines but return 404
+on the Trane eLibrary (revisions appear to be superseded), so they are not in the document library yet. Protocols per
+the Symbio page: BACnet MS/TP, Air-Fi (BACnet/Zigbee), BACnet/IP, and Modbus server and client.

@@ -1,5 +1,7 @@
-﻿import { resolve } from 'node:path';
+﻿import { join } from 'node:path';
 import { loadContent } from './content/loader.js';
+import { loadLibrary } from './content/library.js';
+import { validateLibrary } from './domain/library.js';
 import { parsePages, validatePages } from './domain/validate.js';
 
 export interface ProjectInfo {
@@ -14,16 +16,14 @@ export function getProjectInfo(): ProjectInfo {
   };
 }
 
-/** Load and validate the wiki content; returns the pages and an issue list (empty when clean). */
-export function validateContent(root: string) {
-  const { raws, images } = loadContent(root);
+/** Load and validate the wiki (`<repoRoot>/content`) and its document manifest; empty issues means clean. */
+export function validateContent(repoRoot: string) {
+  const { raws, images } = loadContent(join(repoRoot, 'content'));
   const { pages, issues } = parsePages(raws);
-  return { pages, issues: [...issues, ...validatePages(pages, images)] };
-}
-
-if (process.argv[1] && /index\.[jt]s$/.test(process.argv[1]) && process.argv[2] === 'validate') {
-  const { pages, issues } = validateContent(resolve(process.argv[3] ?? 'content'));
-  for (const i of issues) console.error(`${i.file}: ${i.message}`);
-  console.log(`${pages.length} pages, ${issues.length} issues`);
-  process.exitCode = issues.length ? 1 : 0;
+  const library = loadLibrary(repoRoot);
+  return {
+    pages,
+    library: library.entries,
+    issues: [...issues, ...validatePages(pages, images), ...library.issues, ...validateLibrary(library.entries, pages)],
+  };
 }

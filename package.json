@@ -16,7 +16,7 @@
     "knip": "knip",
     "depcruise": "tsc && depcruise dist --config .dependency-cruiser.cjs",
     "check": "npm run typecheck && npm run lint && npm run depcruise && npm run test",
-    "start": "tsx src/index.ts"
+    "start": "tsx src/cli.ts"
   },
   "devDependencies": {
     "@ast-grep/cli": "^0.51.0",

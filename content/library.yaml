@@ -1,0 +1,418 @@
+- id: siemens-a6v11272745
+  title: Desigo PX automation stations PXC..-E.D / PXC..D, PXA40 data sheet
+  kind: datasheet
+  url: https://sid.siemens.com/v/u/A6V11272745
+  file: library/siemens/desigo/datasheet/A6V11272745.pdf
+  pages:
+    - desigo
+    - pxc100-e-d
+    - pxc200-e-d
+  docId: A6V11272745
+  language: en
+  status: failed
+  note: not a PDF (text/html;charset=UTF-8)
+- id: siemens-a6v11272742
+  title: Desigo PX data sheet (title unconfirmed)
+  kind: datasheet
+  url: https://sid.siemens.com/v/u/A6V11272742
+  file: library/siemens/desigo/datasheet/A6V11272742.pdf
+  pages:
+    - desigo
+  docId: A6V11272742
+  language: en
+  status: failed
+  note: not a PDF (text/html;charset=UTF-8)
+- id: siemens-a6v10066459
+  title: Desigo PX mounting and installation (Swedish)
+  kind: installation-guide
+  url: https://sid.siemens.com/v/u/A6V10066459
+  file: library/siemens/desigo/installation-guide/A6V10066459-sv.pdf
+  pages:
+    - desigo
+    - pxc100-e-d
+    - pxc200-e-d
+  docId: A6V10066459
+  language: sv
+  status: failed
+  note: not a PDF (text/html;charset=UTF-8)
+- id: siemens-a6v10356040
+  title: "VAV compact controller G..B181.1E/3, modular controller ASV181.1E/3: basic documentation"
+  kind: other
+  url: https://sid.siemens.com/v/u/A6V10356040
+  file: library/siemens/gdb181-1e-3/other/A6V10356040.pdf
+  pages:
+    - gdb181-1e-3
+    - glb181-1e-3
+  docId: A6V10356040
+  language: en
+  status: failed
+  note: not a PDF (text/html;charset=UTF-8)
+- id: siemens-a6v10631832
+  title: VAV compact controller Modbus RTU G..B181.1E/MO data sheet
+  kind: datasheet
+  url: https://sid.siemens.com/v/u/A6V10631832
+  file: library/siemens/gdb181-1e-3/datasheet/A6V10631832.pdf
+  pages:
+    - gdb181-1e-3
+    - glb181-1e-3
+  docId: A6V10631832
+  language: en
+  status: failed
+  note: not a PDF (text/html;charset=UTF-8)
+- id: siemens-a6v10435963
+  title: TEC terminal box (VAV) controller technical specification sheet
+  kind: datasheet
+  url: https://sid.siemens.com/v/u/A6V10435963
+  file: library/siemens/apogee-tec-vav/datasheet/A6V10435963.pdf
+  pages:
+    - apogee-tec-vav
+  docId: A6V10435963
+  language: en
+  status: failed
+  note: not a PDF (text/html;charset=UTF-8)
+- id: siemens-a6v10447210
+  title: Smoke control BACnet PTEC terminal box (VAV) controller installation instructions
+  kind: installation-guide
+  url: https://sid.siemens.com/v/u/A6V10447210
+  file: library/siemens/apogee-tec-vav/installation-guide/A6V10447210.pdf
+  pages:
+    - apogee-tec-vav
+  docId: A6V10447210
+  language: en
+  status: failed
+  note: not a PDF (text/html;charset=UTF-8)
+- id: siemens-a6v10443354
+  title: BACnet PTEC VAV with fan and 3-stage electric heat controller installation instructions
+  kind: installation-guide
+  url: https://sid.siemens.com/v/u/A6V10443354
+  file: library/siemens/apogee-tec-vav/installation-guide/A6V10443354.pdf
+  pages:
+    - apogee-tec-vav
+  docId: A6V10443354
+  language: en
+  status: failed
+  note: not a PDF (text/html;charset=UTF-8)
+- id: siemens-a6v10445888
+  title: BACnet PTEC terminal box (VAV) controller operation manual
+  kind: operation-manual
+  url: https://sid.siemens.com/v/u/A6V10445888
+  file: library/siemens/apogee-tec-vav/operation-manual/A6V10445888.pdf
+  pages:
+    - apogee-tec-vav
+  docId: A6V10445888
+  language: en
+  status: failed
+  note: not a PDF (text/html;charset=UTF-8)
+- id: siemens-a6v10490415
+  title: APOGEE TEC BACnet PICS statement
+  kind: pics
+  url: https://sid.siemens.com/v/u/A6V10490415
+  file: library/siemens/apogee-tec-vav/pics/A6V10490415.pdf
+  pages:
+    - apogee-tec-vav
+  docId: A6V10490415
+  language: en
+  status: failed
+  note: not a PDF (text/html;charset=UTF-8)
+- id: siemens-a6v10308138
+  title: Modular Equipment Controller (MEC) installation instructions
+  kind: installation-guide
+  url: https://sid.siemens.com/v/u/A6V10308138
+  file: library/siemens/apogee-549-003/installation-guide/A6V10308138.pdf
+  pages:
+    - apogee-549-003
+  docId: A6V10308138
+  language: en
+  status: failed
+  note: not a PDF (text/html;charset=UTF-8)
+- id: honeywell-6-inch-venturi-valve
+  title: Honeywell 6-inch venturi valve product data sheet (Rev A, 09/2023)
+  kind: datasheet
+  url: https://prod-edam.honeywell.com/content/dam/honeywell-edam/hbt/en-us/documents/literature-and-specs/datasheets/HBT-BMS-6-inch-Venturi-Valve-PDS-MKT-0514-09-2023-Rev-A-PUBLIC.pdf
+  file: library/phoenix-controls/celeris-valve/datasheet/HBT-BMS-6-inch-Venturi-Valve-PDS-MKT-0514-09-2023-Rev-A.pdf
+  pages:
+    - celeris-valve
+    - celeris
+  docId: PDS-MKT-0514
+  language: en
+  status: downloaded
+  sha256: 7eb4265f2ecf5917155b571f99bc05edff84fe274b5efba0b281e829832e7011
+  bytes: 269150
+  retrieved: 2026-10-30
+- id: viconics-catalog-028-6100-13
+  title: VT8000 and VT7000 product catalog (May 2025)
+  kind: catalog
+  url: https://www.veris.com/ASSETS/DOCUMENTS/CMS/EN/028-6100-13_Catalog-VT8000-VT7000_A4_EN_RH20250520.pdf
+  file: library/viconics/viconics-room-controllers/catalog/028-6100-13_Catalog-VT8000-VT7000_A4_EN_RH20250520.pdf
+  pages:
+    - viconics-room-controllers
+    - vz8250
+    - vtr8350
+    - vt8350
+    - vt8650
+    - vt7200
+  docId: 028-6100-13
+  language: en
+  status: downloaded
+  sha256: 891e79a3900cccc3869df75116ddb3acca04e08b1a73e8fcee785c3524b1174f
+  bytes: 12149180
+  retrieved: 2026-10-30
+- id: viconics-vt7200-datasheet
+  title: VT7200 datasheet
+  kind: datasheet
+  url: https://www.veris.com/ASSETS/DOCUMENTS/ITEMS/EN/VT7200_d1221.pdf
+  file: library/viconics/vt7200/datasheet/VT7200_d1221.pdf
+  pages:
+    - vt7200
+  docId: VT7200_d1221
+  language: en
+  status: downloaded
+  sha256: db6a67089c83380a8ac91392be8cdf9b12a495dd6ef9c4024ed5007716bb67dd
+  bytes: 256678
+  retrieved: 2026-10-30
+- id: viconics-vt7200-pir-install
+  title: VT7200 PIR Ready installation guide (028-0190-09)
+  kind: installation-guide
+  url: https://www.veris.com/ASSETS/DOCUMENTS/CMS/EN/Static_Documents/DownloadCenter/028-0190-09-LIT-VT7200-PIR-E08-RH20191008.pdf
+  file: library/viconics/vt7200/installation-guide/028-0190-09-LIT-VT7200-PIR-E08-RH20191008.pdf
+  pages:
+    - vt7200
+  docId: 028-0190-09
+  language: en
+  status: downloaded
+  sha256: 7114153ef14f16d27d225b9bf33aad75deb3ee9e6dab2b4b9cffa8be4adda8d5
+  bytes: 1687805
+  retrieved: 2026-10-30
+- id: viconics-vz8250-engineering-guide
+  title: VZ8250 engineering guide specification
+  kind: other
+  url: https://www.veris.com/ASSETS/DOCUMENTS/CMS/EN/Static_Documents/DownloadCenter/VZ8250_Engineering-Guide-Spec_EN_v2_RH20200122.pdf
+  file: library/viconics/vz8250/other/VZ8250_Engineering-Guide-Spec_EN_v2_RH20200122.pdf
+  pages:
+    - vz8250
+  docId: VZ8250 v2
+  language: en
+  status: downloaded
+  sha256: fc7a6b7b135146221b716a736ebc2d40aa71dfceef824462ab47d3856fc78802
+  bytes: 215785
+  retrieved: 2026-10-30
+- id: trane-bas-prd057d
+  title: Symbio 500 controller data sheet (Oct 2025)
+  kind: datasheet
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Product%20Data/BAS-PRD057D-EN_10072025.pdf
+  file: library/trane/symbio-500/datasheet/BAS-PRD057D-EN_10072025.pdf
+  pages:
+    - symbio-500
+  docId: BAS-PRD057D-EN
+  language: en
+  status: failed
+  note: HTTP 404 on the Trane eLibrary (also in a browser); revision likely superseded
+- id: trane-bas-svx090c
+  title: Symbio 500 programmable controller installation, operation and maintenance (2026)
+  kind: operation-manual
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation%20Operation%20and%20Maintenance/BAS-SVX090C-EN_06302026.pdf
+  file: library/trane/symbio-500/operation-manual/BAS-SVX090C-EN_06302026.pdf
+  pages:
+    - symbio-500
+  docId: BAS-SVX090C-EN
+  language: en
+  status: failed
+  note: HTTP 404
+- id: trane-bas-svx090b
+  title: Symbio 500 programmable controller installation, operation and maintenance (2023)
+  kind: operation-manual
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation%20Operation%20and%20Maintenance/BAS-SVX090B-EN_04082023.pdf
+  file: library/trane/symbio-500/operation-manual/BAS-SVX090B-EN_04082023.pdf
+  pages:
+    - symbio-500
+  docId: BAS-SVX090B-EN
+  language: en
+  status: failed
+  note: HTTP 404
+- id: trane-bas-svn234a
+  title: Symbio 500 RTU/heat pump installation guide
+  kind: installation-guide
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation/BAS-SVN234A-EN_06102023.pdf
+  file: library/trane/symbio-500/installation-guide/BAS-SVN234A-EN_06102023.pdf
+  pages:
+    - symbio-500
+  docId: BAS-SVN234A-EN
+  language: en
+  status: downloaded
+  sha256: 0f65c9505654f77a5431e43514dbc575c18e715bc96674bead5aca8d0c171d18
+  bytes: 1548935
+  retrieved: 2026-10-30
+- id: trane-bas-svn231e
+  title: Symbio 500 installation instructions (June 2026)
+  kind: installation-guide
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation/BAS-SVN231E-EN_06302026.pdf
+  file: library/trane/symbio-500/installation-guide/BAS-SVN231E-EN_06302026.pdf
+  pages:
+    - symbio-500
+  docId: BAS-SVN231E-EN
+  language: en
+  status: downloaded
+  sha256: c2967394c77e340c072445b7d2c2e52be95f2fc69fefb0bb7f2526f48104f28d
+  bytes: 2672742
+  retrieved: 2026-10-30
+- id: trane-bas-svx091b
+  title: Symbio 500 VAV installation, operation and maintenance (2023)
+  kind: operation-manual
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation%20Operation%20and%20Maintenance/BAS-SVX091B-EN_04082023.pdf
+  file: library/trane/symbio-500/operation-manual/BAS-SVX091B-EN_04082023.pdf
+  pages:
+    - symbio-500
+  docId: BAS-SVX091B-EN
+  language: en
+  status: failed
+  note: HTTP 404
+- id: trane-bas-svx093b
+  title: Symbio 500 blower coil, fan coil and unit ventilator IOM (2023)
+  kind: operation-manual
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation%20Operation%20and%20Maintenance/BAS-SVX093B-EN_04082023.pdf
+  file: library/trane/symbio-500/operation-manual/BAS-SVX093B-EN_04082023.pdf
+  pages:
+    - symbio-500
+  docId: BAS-SVX093B-EN
+  language: en
+  status: failed
+  note: HTTP 404
+- id: trane-bas-prd041e
+  title: Symbio 800 controller data sheet (June 2026)
+  kind: datasheet
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Product%20Data/BAS-PRD041E-EN_06302026.pdf
+  file: library/trane/symbio-800/datasheet/BAS-PRD041E-EN_06302026.pdf
+  pages:
+    - symbio-800
+  docId: BAS-PRD041E-EN
+  language: en
+  status: downloaded
+  sha256: 110210a0d24a2e489b3516d4228a15a266b8f1b6df1a739e74fdd13e96c97bf9
+  bytes: 226110
+  retrieved: 2026-10-30
+- id: trane-bas-svx080e
+  title: Symbio 800 controller installation, operation and maintenance (2026)
+  kind: operation-manual
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation%20Operation%20and%20Maintenance/BAS-SVX080E-EN_06302026.pdf
+  file: library/trane/symbio-800/operation-manual/BAS-SVX080E-EN_06302026.pdf
+  pages:
+    - symbio-800
+  docId: BAS-SVX080E-EN
+  language: en
+  status: downloaded
+  sha256: 4ea023d3ebffeb1a3cf525ce07b859bf48a58d98e32ce1f95589fdba6ce6c105
+  bytes: 9049085
+  retrieved: 2026-10-30
+- id: trane-bas-svn033e
+  title: Symbio 800 installation guide (2026)
+  kind: installation-guide
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation/BAS-SVN033E-EN_06302026.pdf
+  file: library/trane/symbio-800/installation-guide/BAS-SVN033E-EN_06302026.pdf
+  pages:
+    - symbio-800
+  docId: BAS-SVN033E-EN
+  language: en
+  status: downloaded
+  sha256: 79760a4bbcc835299000736bc57c6b0638af8364db5486397670fce90b3821b6
+  bytes: 1314106
+  retrieved: 2026-10-30
+- id: trane-bas-slb145
+  title: Symbio 800 cybersecurity summary
+  kind: brochure
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Sales/BAS-SLB145-EN_02012024.pdf
+  file: library/trane/symbio-800/brochure/BAS-SLB145-EN_02012024.pdf
+  pages:
+    - symbio-800
+  docId: BAS-SLB145-EN
+  language: en
+  status: downloaded
+  sha256: 3456b1a409aca56a4869e1d54fd9c3b255645505b0a072c8117760d1733f03e9
+  bytes: 617064
+  retrieved: 2026-10-30
+- id: trane-bas-prd049c
+  title: Tracer TU service tool data sheet (Sep 2024)
+  kind: datasheet
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Product%20Data/BAS-PRD049C-EN_09132024.pdf
+  file: library/trane/tracer-tu/datasheet/BAS-PRD049C-EN_09132024.pdf
+  pages:
+    - tracer-tu
+  docId: BAS-PRD049C-EN
+  language: en
+  status: downloaded
+  sha256: 60939785fa2cc9dde783e9355c1aabf6bafb445c506aff89d77d86f9483e12c5
+  bytes: 597550
+  retrieved: 2026-10-30
+- id: trane-bas-prd019d
+  title: Tracer UC400 programmable controller data sheet (Oct 2023)
+  kind: datasheet
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Product%20Data/BAS-PRD019D-EN_10272023.pdf
+  file: library/trane/uc400/datasheet/BAS-PRD019D-EN_10272023.pdf
+  pages:
+    - uc400
+  docId: BAS-PRD019D-EN
+  language: en
+  status: failed
+  note: HTTP 404
+- id: trane-bas-svx20k
+  title: Tracer UC400 programmable controller installation, operation and maintenance (2020)
+  kind: operation-manual
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation%20Operation%20and%20Maintenance/BAS-SVX20K-EN_04152020.pdf
+  file: library/trane/uc400/operation-manual/BAS-SVX20K-EN_04152020.pdf
+  pages:
+    - uc400
+  docId: BAS-SVX20K-EN
+  language: en
+  status: downloaded
+  sha256: be4f5aaf80649c38a84d2b51b217eaff25fe9df7a528a8e09f344b723944ee84
+  bytes: 1679815
+  retrieved: 2026-10-30
+- id: trane-bas-svx065f
+  title: Tracer UC400 / UC400-B water source heat pump IOM (2023)
+  kind: operation-manual
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation%20Operation%20and%20Maintenance/BAS-SVX065F-EN_05132023.pdf
+  file: library/trane/uc400/operation-manual/BAS-SVX065F-EN_05132023.pdf
+  pages:
+    - uc400
+  docId: BAS-SVX065F-EN
+  language: en
+  status: downloaded
+  sha256: 2af3278966915851cdbfb26eaf2d31d5413bd79f0d84d6d05426c691a9db6f3d
+  bytes: 2938934
+  retrieved: 2026-10-30
+- id: trane-vav-svx07f
+  title: Tracer UC400 VAV installation, operation and programming (2020)
+  kind: operation-manual
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation%20Operation%20and%20Maintenance/VAV-SVX07F-EN_04092020.pdf
+  file: library/trane/uc400/operation-manual/VAV-SVX07F-EN_04092020.pdf
+  pages:
+    - uc400
+  docId: VAV-SVX07F-EN
+  language: en
+  status: failed
+  note: HTTP 404
+- id: trane-bas-prc033
+  title: Tracer UC400 product catalog (2013, archive)
+  kind: catalog
+  url: https://jp.trane.com/content/dam/Trane/Commercial/global/controls/archive/BAS-PRC033-EN_06102013.pdf
+  file: library/trane/uc400/catalog/BAS-PRC033-EN_06102013.pdf
+  pages:
+    - uc400
+  docId: BAS-PRC033-EN
+  language: en
+  status: downloaded
+  sha256: bb8e0d9f12606fb1b1c21e81d57711160de8815add15d23af29cbddf1bbd35cd
+  bytes: 524288
+  retrieved: 2026-10-30
+- id: trane-bas-slb086
+  title: Tracer SC+ building automation system brochure (2022)
+  kind: brochure
+  url: https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Sales/BAS-SLB086-EN_04202022.pdf
+  file: library/trane/trane/brochure/BAS-SLB086-EN_04202022.pdf
+  pages:
+    - trane
+  docId: BAS-SLB086-EN
+  language: en
+  status: downloaded
+  sha256: 39c2223af4ad888f0134593b30fcb438bc220ab6050add7a3ab4a8d676ca9f26
+  bytes: 605506
+  retrieved: 2026-10-30
