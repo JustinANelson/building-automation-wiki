@@ -111,12 +111,13 @@ ul.cols{list-style:none;margin:8px 0 0;padding:0;columns:3 230px;column-gap:32px
 footer{margin-top:56px;padding-top:12px;border-top:1px solid var(--rule);font:italic 13.5px var(--serif);color:var(--muted)}
 
 @media (max-width:900px){
-  .shell{display:block}
-  .side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--rule);max-height:50vh}
-  main{padding:16px}
+  /* Content first; the contents tree follows the article instead of pushing it off screen. */
+  .shell{display:flex;flex-direction:column}
+  main{order:1;padding:16px}
+  .side{order:2;position:static;height:auto;border-right:0;border-top:1px solid var(--rule)}
+  table.t,.body table{display:block;max-width:100%;overflow-x:auto}
   .art{display:block}.info{position:static;margin:12px 0}
   .brand span,.bar nav{display:none}.search{width:auto;flex:1}
-  .pn{white-space:normal;word-break:break-all}
   h1{font-size:28px}
 }
 @media print{
