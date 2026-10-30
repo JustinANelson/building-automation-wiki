@@ -1,3 +1,4 @@
+import { runInNewContext } from 'node:vm';
 import { posix } from 'node:path';
 import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
@@ -69,5 +70,39 @@ describe('Phase 4: static site rendering', () => {
 
   it('marks pages that are not verified', () => {
     expect(site.get('product/symbio-500.html')).toContain('class="note needs-review"');
+  });
+
+  it('shows the part number a search matched, not the first one on the page', () => {
+    const handlers: Record<string, () => void> = {};
+    const box = { hidden: true, innerHTML: '', children: [], contains: () => false };
+    const input = {
+      value: '',
+      addEventListener: (ev: string, fn: () => void) => {
+        handlers[ev] = fn;
+      },
+    };
+    const sandbox = {
+      window: {
+        BASWIKI_INDEX: [
+          { t: 'Zone Controller', u: 'product/z.html', k: 'product', m: '', p: ['Z100A', 'Z200B', 'Z300C'], s: '' },
+        ],
+      },
+      document: {
+        body: { getAttribute: () => '../' },
+        getElementById: (id: string) => (id === 'q' ? input : id === 'results' ? box : null),
+        addEventListener: () => {},
+        querySelectorAll: () => [],
+        activeElement: null,
+      },
+      location: {},
+    };
+    runInNewContext(site.get('assets/site.js') as string, sandbox);
+    input.value = 'Z300C';
+    handlers.input!();
+    expect(box.innerHTML).toContain('Z300C');
+    expect(box.innerHTML).not.toContain('Z100A');
+    input.value = 'Z';
+    handlers.input!();
+    expect(box.innerHTML).toContain('Z100A');
   });
 });

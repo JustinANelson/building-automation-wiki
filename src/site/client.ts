@@ -30,12 +30,23 @@ export const CLIENT_JS = `
     return best;
   }
 
-  function render(items) {
+  /** The part number to show for a hit: the one the query matches, else the first. */
+  function pick(e, nq) {
+    var rank = -1, found = e.p[0], i;
+    for (i = 0; i < e.p.length; i++) {
+      var pn = norm(e.p[i]);
+      var r = pn === nq ? 3 : pn.indexOf(nq) === 0 ? 2 : nq.length > 2 && pn.indexOf(nq) > -1 ? 1 : 0;
+      if (r > rank) { rank = r; found = e.p[i]; }
+    }
+    return found;
+  }
+
+  function render(items, nq) {
     shown = items;
     active = -1;
     if (!items.length) { box.hidden = true; box.innerHTML = ''; return; }
     box.innerHTML = items.map(function (e, i) {
-      var pn = e.p.length ? '<span class="pn">' + esc(e.p[0]) + (e.p.length > 1 ? ' +' + (e.p.length - 1) : '') + '</span> ' : '';
+      var pn = e.p.length ? '<span class="pn">' + esc(pick(e, nq)) + (e.p.length > 1 ? ' +' + (e.p.length - 1) : '') + '</span> ' : '';
       return '<li data-i="' + i + '"><a href="' + rel + e.u + '">' + pn + esc(e.t) + '<small>' + esc(e.k) + (e.m ? ' - ' + esc(e.m) : '') + '</small></a></li>';
     }).join('');
     box.hidden = false;
@@ -51,7 +62,7 @@ export const CLIENT_JS = `
       if (s > 0) out.push({ s: s, e: index[i] });
     }
     out.sort(function (a, b) { return b.s - a.s || a.e.t.localeCompare(b.e.t); });
-    render(out.slice(0, 8).map(function (x) { return x.e; }));
+    render(out.slice(0, 8).map(function (x) { return x.e; }), nq);
   }
 
   function mark() {
