@@ -20,3 +20,32 @@ A PICS (protocol implementation conformance statement) is a manufacturer's list 
 8. **Character set.** ANSI X3.4.
 
 The same statement also covers fume hood, laboratory and pressurized-room controllers (570-series) and smoke-control-listed (UUKL) variants, which carry the same protocol data.
+
+> The rest of this page is general BACnet practice, not taken from the Siemens statement above. The BACnet standard itself was not read.
+
+## Reading the rest of a PICS
+
+**Device profile.** Profiles name capability classes. A B-ASC (application specific controller) runs a fixed set of functions, a B-AAC (advanced application controller) adds scheduling, trending and alarming, a B-BC (building controller) is a general-purpose supervisory device that may also act as a router, and a B-OWS is an operator workstation. The profile tells you how much of the system's logic a device can take on by itself.
+
+**BIBBs.** The letters before the dash name the family (DS for data sharing, SCHED for scheduling, T for trending, AE for alarms and events, DM for device management), the next letters name the function, and the final **A** or **B** says whether the device initiates (A) or provides (B) the service. A field controller usually lists mostly B, because it responds. An operator workstation lists A. For a front end to read a device, the front end must list the matching A and the device the matching B.
+
+**Object types and properties.** The PICS lists which object types exist and which are creatable, deletable and writable. Look for the objects your integration needs: Analog Value for setpoints, Schedule and Calendar for local scheduling, Trend Log for local history, and Notification Class for alarms. Check which optional properties are writable, such as Present_Value on inputs for override, because that decides whether the front end can command the device.
+
+**COV and alarms.** Change-of-value subscriptions reduce polling traffic. If the PICS lists no COV support, the supervisor must poll, which loads an MS/TP trunk. Intrinsic reporting, if listed, lets the device send alarms itself.
+
+**Network options.** Look for the maximum APDU size, segmentation, supported data links with their baud rates, whether the device can act as a router or BBMD, and the range of MS/TP addresses. These determine how the device must be connected and how large a trunk can be.
+
+## What a PICS does not tell you
+
+A PICS is a statement of intent, not a test result. **BTL listing** means an independent laboratory has tested the device against its claimed capabilities. A PICS also says nothing about how a device's points are named or how its application behaves; those come from the product data sheet and engineering manual. A capability missing from the PICS may exist as a proprietary feature but cannot be relied on by another vendor's tool.
+
+## Checklist before specifying
+
+1. Does the product and firmware revision match the PICS you were given?
+2. Is the profile enough for the role, and is the BIBB list matched by the front end?
+3. Are the objects needed to write setpoints, schedules and alarms present and writable?
+4. Can the device report by COV or alarm, or must it be polled?
+5. Do the data link, baud rates and network features fit the trunk it will sit on?
+6. Is the device BTL listed?
+
+See [BACnet](../protocol/bacnet.html) for the services and object model behind these items.

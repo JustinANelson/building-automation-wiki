@@ -54,3 +54,25 @@ Because microprocessor-based transmitters measure both `%RH` and dry-bulb temper
    - [Vaisala HMD60 / HMD62 / HMD65](../product/hmd60.html) and [HMDW110 Series](../product/hmdw110.html) with sintered stainless-steel or membrane probe filters.
 3. **Outdoor Air (`OSA`) Weatherproof Transmitters**: Mounted inside a multi-plate solar radiation shield (`DTR502B`) on the roof or north wall to measure outdoor enthalpy, wet-bulb, and dew point:
    - [Vaisala HMDW110](../product/hmdw110.html) outdoor radiation-shield models and industrial [Vaisala HMT330 Series](../product/hmt330.html) (`HMT333` / `HMT337` warmed-probe outdoor models).
+
+
+## 4. Placement, Verification and Faults
+
+> This section is general practice, not taken from the cited data sheets.
+
+**Placement.** A humidity reading is only as good as the air it samples. Mount wall sensors on an inside wall at breathing height, away from supply diffusers, exterior walls, sunlit surfaces, kitchens and showers. In a duct, put the probe where the air is well mixed, downstream of a humidifier by the distance the humidifier manufacturer specifies (so the steam has been absorbed and the sensor does not read wet), and upstream or downstream of coils as the sequence needs. Outdoor sensors belong in a radiation shield on the shaded side of the building, clear of exhaust, roof surfaces and the air handler's own discharge.
+
+**Why temperature matters.** Relative humidity changes quickly with temperature at constant moisture content. A sensor that is warmer or cooler than the air around it, because of self-heating, solar load or a nearby warm surface, reads wrong. As a rough guide, one degree Celsius of error in the air temperature at the sensor shifts the reading by about 6 percent of the value, which is around 3 %RH at 50 %RH. Derived values such as dew point and enthalpy inherit the error of both inputs.
+
+**Accuracy at the extremes.** Stated accuracy is usually best in the middle of the range and worse near 0 and 100 %RH, and a sensor held for a long time at saturation, or recently wet, reads high until it dries. Controls that depend on near-saturation, such as a humidifier high limit or condensation protection for chilled beams, should use a sensor and probe designed for those conditions; see the warmed-probe option above and [Chilled beams](chilled-beams.html).
+
+**Drift and calibration.** Thin-film sensors drift slowly and drift faster in contaminated air. Check against a reference: a calibrated handheld, or a saturated-salt check, which creates a known humidity in a sealed container (a sodium chloride solution gives about 75 %RH at room temperature). Some transmitters have a replaceable sensor module, so recalibration means swapping a part. Check at two humidities, not one, since a single-point check misses gain errors.
+
+**Humidifier control.** A humidifier is usually controlled from the space or return-air sensor and protected by a duct high-limit sensor that cuts it off when the supply air approaches saturation, so moisture does not wet the duct or the insulation downstream. A failed or badly placed high-limit sensor is a common cause of wet duct linings and mould.
+
+**Common faults.**
+
+- Reading drifts high over a few months in a lab or hospital: chemical contamination, which may need the sensor replaced or purged.
+- Reading follows the supply air, not the room: the wall sensor is too close to a diffuser or the duct sensor is downstream of the cooling coil.
+- Output stuck or scaled wrong: a 4-20 mA or 0-10 V span mismatch; see [Analog signals](analog-signals.html).
+- Enthalpy economizer will not enable: one of the two sensors is out of calibration, which biases the comparison; see [Economizer control](economizer-control.html).

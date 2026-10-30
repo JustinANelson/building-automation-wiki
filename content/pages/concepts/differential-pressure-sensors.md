@@ -29,3 +29,48 @@ See [Airflow measurement](airflow-measurement.html) for the alternatives to meas
 - Water: [Belimo 22PDP-18](../product/belimo-22pdp-18.html), ranges to 5, 10 or 35 bar.
 
 Low ranges drift with temperature and orientation, so check the zero. The Belimo data sheet schedules manual zeroing every 3 months at 1 in. WC and every 12 months above 2 in. WC unless auto-zero is fitted; Setra calibrates its 264 vertically and lists a position effect that is largest on the lowest ranges.
+
+> The sections below are general practice, not taken from the manufacturer documents cited above.
+
+## How the sensor works
+
+A differential pressure sensor has two ports, high and low, and a thin diaphragm between them. The pressure difference flexes the diaphragm, and the sensor converts the movement to an electrical signal. Two common technologies are **capacitive**, where the diaphragm is one plate of a capacitor and its movement changes the capacitance, and **piezoresistive**, where strain gauges on the diaphragm change resistance. Capacitive sensors are used for the lowest air ranges; piezoresistive sensors are common for duct and water ranges. The transmitter's electronics turn the result into a standard output such as 0-10 V or 4-20 mA; see [Analog signals](analog-signals.html).
+
+The sensor reports the difference only. Raising both ports by the same amount, as when a duct's static pressure rises, ideally leaves the output unchanged, but at very low ranges a large static pressure on both ports can produce a small error.
+
+## Units
+
+Air pressure is quoted in pascals (Pa) or inches of water column (in. WC). One inch of water column is about 249 Pa. Water systems use kilopascals, bar or psi. Ranges can be unidirectional (0 to 1 in. WC) or bidirectional (-0.5 to +0.5 in. WC), and the bidirectional kind is needed wherever the pressure may reverse, such as room pressurization.
+
+## What it is used for
+
+| Application | What the two ports see | Typical range |
+| :--- | :--- | :--- |
+| VAV airflow | High and low taps on the box's flow pick-up | Very low, tens of pascals |
+| Duct static pressure | Duct pressure against the surrounding room | 0 to 1.5 or 2 in. WC and more |
+| Filter status | Pressure across the filter bank | 0 to 1 or 2 in. WC |
+| Room or building pressure | Room against a reference such as the corridor or outdoors | Bidirectional, around 0.1 in. WC or less |
+| Pump or loop control | Pressure across a hydronic loop, coil or pump | Water ranges, kPa to bar |
+
+Static pressure sensors in ducts are the basis for the setpoints in [Static pressure reset](static-pressure-reset.html).
+
+## Installation
+
+- **Tubing.** Connect the high tube to the high port and the low to the low. Use short, unkinked tubing without leaks, and avoid low points where condensation can collect and block the line.
+- **Tap location.** Place the duct static tap about two thirds of the way down the duct, in a straight section, away from fittings, so it senses pressure that represents the system. Use a static pressure probe pointed at right angles to the airflow so velocity does not add to the reading.
+- **Reference.** A duct static sensor's low port is open to the space around the duct, so the room's pressure matters at very low ranges.
+- **Water.** Use isolation and equalizing valves so the sensor can be zeroed and removed without draining the system, and keep it within its over-pressure rating; a surge can destroy the diaphragm.
+- **Orientation.** Some low-range sensors read slightly differently when mounted at different angles, so mount in the orientation used for calibration.
+
+## Zeroing and drift
+
+At low ranges a small offset is a big percentage error, so the zero must be checked. Procedure: disconnect or equalize both ports so the sensor sees zero differential, read the output, and adjust or record the offset. Auto-zero sensors do this on a schedule by briefly connecting both ports together. Remember that temperature also changes the zero.
+
+## Common faults
+
+- **Reads negative or stuck.** Tubes reversed, disconnected, or crossed with another sensor's.
+- **Reads high at zero flow.** A zero offset, or a pressure imbalance across the tap.
+- **Noisy output.** Turbulent flow at the tap, a long tube, or an input filter that is too short.
+- **Reading follows the building but not the system.** The reference port is in a space affected by building pressure.
+
+See [Airflow measurement](airflow-measurement.html) for how the pressure is turned into flow.

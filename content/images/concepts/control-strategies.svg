@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" width="680" height="320">
+  <rect x="8" y="8" width="664" height="304" rx="6" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <rect x="8" y="8" width="664" height="32" rx="6" fill="#1e293b"/>
+  <text x="24" y="29" font-family="sans-serif" font-weight="bold" font-size="13" fill="#ffffff">DDC Cascade PID Architecture &amp; Split-Range Heating/Cooling Deadband</text>
+
+  <!-- Left Panel: Cascade PID Control Loop -->
+  <rect x="22" y="52" width="380" height="126" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="34" y="70" font-family="sans-serif" font-weight="bold" font-size="11" fill="#0f172a">1. Cascade Control Loop (Outer Temp PID &#8594; Inner Flow PID)</text>
+
+  <!-- Outer Loop -->
+  <rect x="34" y="82" width="106" height="62" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="87" y="100" font-family="sans-serif" font-weight="bold" font-size="10" fill="#1e40af" text-anchor="middle">Outer PID Loop</text>
+  <text x="87" y="115" font-family="monospace" font-size="9.5" fill="#0f172a" text-anchor="middle">e = T_room - SP</text>
+  <text x="87" y="130" font-family="sans-serif" font-size="9" fill="#334155" text-anchor="middle">Slow (dt = 5-15 s)</text>
+
+  <line x1="140" y1="113" x2="168" y2="113" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="168,113 162,109 162,117" fill="#2563eb"/>
+  <text x="154" y="105" font-family="monospace" font-size="8.5" fill="#1e40af" text-anchor="middle">Q_sp</text>
+
+  <!-- Inner Loop -->
+  <rect x="170" y="82" width="106" height="62" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="223" y="100" font-family="sans-serif" font-weight="bold" font-size="10" fill="#15803d" text-anchor="middle">Inner PID Loop</text>
+  <text x="223" y="115" font-family="monospace" font-size="9.5" fill="#0f172a" text-anchor="middle">e = Q_sp - Q_act</text>
+  <text x="223" y="130" font-family="sans-serif" font-size="9" fill="#334155" text-anchor="middle">Fast (dt = 1 s)</text>
+
+  <line x1="276" y1="113" x2="302" y2="113" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="302,113 296,109 296,117" fill="#16a34a"/>
+  <text x="289" y="105" font-family="monospace" font-size="8.5" fill="#15803d" text-anchor="middle">0-10V</text>
+
+  <!-- Actuator / Process -->
+  <rect x="304" y="82" width="86" height="62" rx="4" fill="#f1f5f9" stroke="#475569" stroke-width="1.5"/>
+  <text x="347" y="100" font-family="sans-serif" font-weight="bold" font-size="10" fill="#0f172a" text-anchor="middle">Actuator</text>
+  <text x="347" y="115" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">Damper / Valve</text>
+  <text x="347" y="130" font-family="monospace" font-size="9" fill="#0f172a" text-anchor="middle">CFM &amp; Temp</text>
+
+  <!-- Feedback lines -->
+  <path d="M 347 144 L 347 166 L 87 166 L 87 144" fill="none" stroke="#64748b" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <path d="M 325 144 L 325 156 L 223 156 L 223 144" fill="none" stroke="#16a34a" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <text x="215" y="164" font-family="monospace" font-size="8.5" fill="#475569" text-anchor="middle">Feedback: dP Airflow Sensor (Inner) &amp; Room NTC/RTD (Outer)</text>
+
+  <!-- Right Panel: PID Terms -->
+  <rect x="414" y="52" width="244" height="126" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="426" y="70" font-family="sans-serif" font-weight="bold" font-size="11" fill="#0f172a">2. Digital PID Control Law</text>
+  <rect x="426" y="78" width="220" height="28" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="536" y="96" font-family="monospace" font-weight="bold" font-size="10" fill="#0f172a" text-anchor="middle">u(t) = Kp[e + (1/Ti)&#8747;e dt + Td(de/dt)]</text>
+  <text x="428" y="122" font-family="sans-serif" font-size="9.5" fill="#1e293b">&#8226; <tspan font-weight="bold">P (Proportional):</tspan> Immediate response to error</text>
+  <text x="428" y="138" font-family="sans-serif" font-size="9.5" fill="#1e293b">&#8226; <tspan font-weight="bold">I (Integral):</tspan> Eliminates steady-state offset</text>
+  <text x="428" y="154" font-family="sans-serif" font-size="9.5" fill="#1e293b">&#8226; <tspan font-weight="bold">D (Derivative):</tspan> Damps rapid rate-of-change</text>
+  <text x="428" y="170" font-family="monospace" font-size="9" fill="#b91c1c">Anti-Windup: Clamp &#8747;e when u = 0% or 100%</text>
+
+  <!-- Bottom Panel: Split-Range Sequenced Output & Deadband -->
+  <rect x="22" y="188" width="636" height="112" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="34" y="206" font-family="sans-serif" font-weight="bold" font-size="11" fill="#0f172a">3. Zone Split-Range Sequencing &amp; Zero-Energy Deadband (No Simultaneous Heating &amp; Cooling)</text>
+
+  <!-- Heating Zone -->
+  <rect x="42" y="220" width="180" height="44" rx="3" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="132" y="238" font-family="sans-serif" font-weight="bold" font-size="10.5" fill="#991b1b" text-anchor="middle">Reverse-Acting Heating</text>
+  <text x="132" y="254" font-family="monospace" font-size="9.5" fill="#0f172a" text-anchor="middle">Reheat Valve + Heating CFM</text>
+
+  <!-- Deadband Zone -->
+  <rect x="234" y="220" width="180" height="44" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="324" y="238" font-family="sans-serif" font-weight="bold" font-size="10.5" fill="#15803d" text-anchor="middle">Occupied Deadband (4 &#176;F)</text>
+  <text x="324" y="254" font-family="monospace" font-size="9.5" fill="#0f172a" text-anchor="middle">Heat = 0%, Flow = Q_min</text>
+
+  <!-- Cooling Zone -->
+  <rect x="426" y="220" width="212" height="44" rx="3" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="532" y="238" font-family="sans-serif" font-weight="bold" font-size="10.5" fill="#1e40af" text-anchor="middle">Direct-Acting Cooling</text>
+  <text x="532" y="254" font-family="monospace" font-size="9.5" fill="#0f172a" text-anchor="middle">Modulate Q_min &#8594; Q_max (0-100%)</text>
+
+  <!-- Axis Labels -->
+  <line x1="42" y1="276" x2="638" y2="276" stroke="#334155" stroke-width="1.5"/>
+  <text x="42" y="291" font-family="monospace" font-size="9.5" fill="#991b1b">67 &#176;F (100% Heat)</text>
+  <text x="228" y="291" font-family="monospace" font-weight="bold" font-size="9.5" fill="#0f172a" text-anchor="middle">70 &#176;F (Htg SP)</text>
+  <text x="420" y="291" font-family="monospace" font-weight="bold" font-size="9.5" fill="#0f172a" text-anchor="middle">74 &#176;F (Clg SP)</text>
+  <text x="638" y="291" font-family="monospace" font-size="9.5" fill="#1e40af" text-anchor="end">77 &#176;F (100% Cool)</text>
+</svg>

@@ -23,3 +23,23 @@ sources:
   - **Desigo PXC7** (`PXC7.E400S`, `PXC7.E400M`, `PXC7.E400L`): Large primary plant automation stations scaling from 100 to 400 `TXM` physical I/O points (up to 600 total points with integration) and up to 4 RS-485 ports.
 - **Desigo PX Modular Series & TX-I/O**: **PXC100-E.D** and **PXC200-E.D** automation stations paired with **TX-I/O (`TXM1.x`)** self-forming island-bus expansion modules (`TXM1.8U`, `TXM1.8X`, `TXM1.6R`, `TXM1.8D`, `TXM1.16D`, `TXM1.8P`, `TXM1.8T`).
 - **Total Room Automation (TRA)**: **Desigo DXR2** (`DXR2.E18` BACnet/IP and `DXR2.M12P` BACnet MS/TP) compact room automation stations and **QMX3** (`QMX3.P30`, `QMX3.P34`, `QMX3.P37`, `QMX3.P70`, `QMX3.P74`) KNX PL-Link room operator units and multi-sensors.
+
+
+### Choosing Within the Line
+
+This section is an overview drawn from the other pages in this wiki.
+
+| Need | Choose | Notes |
+| :--- | :--- | :--- |
+| Single air handler or small plant | [PXC4](../product/pxc4.html) | 16 onboard points, expandable with TXM modules; BACnet/IP and BACnet/SC |
+| Supervisory router for serial devices | [PXC5](../product/pxc5.html) | Three RS-485 ports for MS/TP, Modbus RTU and M-Bus integration; no local I/O to speak of |
+| Large plant or multiple air handlers | [PXC7](../product/pxc7.html) | Three sizes (S, M, L) with growing I/O counts and RS-485 ports |
+| Established modular platform | [PXC100-E.D](../product/pxc100-e-d.html), [PXC200-E.D](../product/pxc200-e-d.html) | Use with TX-I/O modules |
+| Extra I/O at the panel | [TX-I/O modules](../product/tx-io-modules.html) | Self-forming island bus; choose universal, relay or digital modules |
+| Room control | [DXR2](../product/dxr2.html) with [QMX3](../product/qmx3.html) room units | DXR2.E18 on BACnet/IP, DXR2.M12P on MS/TP |
+
+**Two kinds of panel.** The PXC5 is mainly a supervisory and integration controller, while the PXC4 and PXC7 control equipment directly. Many projects use both: automation stations for the plant and one PXC5 to bring serial devices onto the network; see [Supervisory controllers](../concept/supervisory-controllers.html).
+
+**Security.** BACnet Secure Connect is available on the newer stations; see [BACnet/SC](../protocol/bacnet-sc.html) for what it requires. Check the station and Desigo CC versions against each other before specifying.
+
+**Engineering.** The stations are engineered with Siemens' ABT Site tool, and Desigo CC is the management layer; see [Siemens APOGEE](apogee.html) for the older platform it can supervise.

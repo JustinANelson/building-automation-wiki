@@ -861,9 +861,9 @@
   url: https://sid.siemens.com/api/khub/documents/X7rW~c4z7kS5f_8tK2y3Jw/content
   file: library/siemens/qmx3/installation-guide/A6V10408335-QMX3-Mounting.pdf
   pages:
-    - qmx3
-    - dxr2
     - desigo
+    - dxr2
+    - qmx3
   docId: A6V10408335
   language: en
   status: downloaded
@@ -876,9 +876,9 @@
   url: https://www.siemens.be/cmc/upload/cms/docs/BT/Field_devices/N1602en_QMX3.P34.pdf
   file: library/siemens/qmx3/datasheet/N1602en_QMX3.P34.pdf
   pages:
-    - qmx3
-    - dxr2
     - desigo
+    - dxr2
+    - qmx3
   docId: N1602en
   language: en
   status: downloaded
@@ -1215,4 +1215,45 @@
   status: downloaded
   sha256: 170a493be2a62e901d1c2f3098078f6b1552abe9f29d0bb1b890f431d077d7f6
   bytes: 2291443
+  retrieved: 2026-10-30
+- id: doe-geothermal-heat-pumps
+  title: "DOE Energy Saver: Geothermal heat pumps (Aug 2021)"
+  kind: other
+  url: https://www.energy.gov/sites/default/files/2021-08/ES-Geothermal%20heat%20pumps_080221.pdf
+  file: library/doe/geothermal/guide/ES-Geothermal-heat-pumps_080221.pdf
+  pages:
+    - geothermal-ground-source
+  docId: DOE-GHP
+  language: en
+  status: downloaded
+  sha256: 03ee9480339d863e837ff6c66810b72182e12b327ffad4faa0dd39e67d3c02f6
+  bytes: 1087293
+  retrieved: 2026-10-30
+- id: trane-adm-apn034-chilled-beams
+  title: "Trane Engineers Newsletter: Understanding Chilled Beam Systems (ADM-APN034-EN)"
+  kind: other
+  url: https://www.trane.com/content/dam/Trane/Commercial/global/products-systems/education-training/engineers-newsletters/airside-design/adm_apn034en_1209.pdf
+  file: library/trane/chilled-beams/other/adm_apn034en_1209.pdf
+  pages:
+    - chilled-beams
+    - condensation-detectors
+  docId: ADM-APN034-EN
+  language: en
+  status: downloaded
+  sha256: f4423d38b2e12c3bc00ea537e88699fb7b6ac96cb92b905fe8498155295b0181
+  bytes: 1331814
+  retrieved: 2026-10-30
+- id: bordass-natvent-opening-devices
+  title: "Bordass, Ford and Schiano: Specification of automatic vent opening devices for natural ventilation (2000)"
+  kind: other
+  url: https://www.usablebuildings.co.uk/UsableBuildings/Unprotected/NatventOpeningPIIRpt2000.pdf
+  file: library/usablebuildings/natural-ventilation/other/NatventOpeningPIIRpt2000.pdf
+  pages:
+    - natural-ventilation
+    - window-actuators
+  docId: NatventOpening
+  language: en
+  status: downloaded
+  sha256: 6ba591a57b14425336ecf03c3e2878882b39f0a6e90a5deae07a66107ef72f4d
+  bytes: 1845346
   retrieved: 2026-10-30

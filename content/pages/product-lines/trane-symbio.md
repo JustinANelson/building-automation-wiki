@@ -21,3 +21,22 @@ Trane's **Symbio** family and **Tracer SC+** system controller form Trane's curr
 - **Symbio 700** (`MOD04045` / `MOD03107`): Factory-mounted controller on Precedent packaged rooftop units and Odyssey split systems (6 to 25 tons), featuring an onboard 2x16 backlit LCD, Bluetooth (BLE) service app pairing, and BACnet MS/TP, BACnet/IP, Air-Fi wireless, or LonTalk integration.
 - **Symbio 500** (`BMUC500AAA0100010`): Programmable terminal and unitary controller for air handlers, blower coils, fan coils, unit ventilators, and water-source heat pumps.
 - **Symbio 210 / 210e** (`BMSY210...`): Programmable single-duct VAV, bypass, and zone damper controller available in BACnet MS/TP (`Symbio 210`) and dual-port BACnet/IP (`Symbio 210e`) configurations.
+
+
+### Choosing a Controller
+
+This section is an overview drawn from the other pages in this wiki.
+
+| Equipment | Controller |
+| :--- | :--- |
+| Building supervisor | [Tracer SC+](../product/tracer-sc-plus.html) |
+| Chillers, large rooftops and air handlers | [Symbio 800](../product/symbio-800.html) |
+| Packaged rooftops and split systems (6 to 25 tons) | [Symbio 700](../product/symbio-700.html) |
+| Air handlers, fan coils, unit ventilators, water-source heat pumps | [Symbio 500](../product/symbio-500.html) |
+| VAV, bypass and zone dampers | [Symbio 210](../product/symbio-210.html) (MS/TP) or 210e (dual-port IP) |
+
+Because the controller is usually fitted at the factory, the equipment normally decides the model. The choice that remains for the project is the network: BACnet MS/TP, BACnet/IP, Air-Fi wireless or LonTalk, depending on the controller. On MS/TP trunks apply the usual rules; see [BACnet MS/TP](../protocol/bacnet-mstp.html).
+
+**Service.** [Tracer TU](../product/tracer-tu.html) is the service tool, and the Symbio 700 also pairs with a Bluetooth service app. Keep a copy of each controller's configuration; see [Supervisory controllers](../concept/supervisory-controllers.html) on backup.
+
+**Older controllers.** The [Tracer UC series](trane-tracer-uc.html) remains widely installed and shares the BACnet architecture, so Symbio and UC controllers can coexist on the same system.

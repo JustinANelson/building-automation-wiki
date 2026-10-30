@@ -71,3 +71,36 @@ What happens to the damper or valve when `24 VAC` control power is interrupted (
 - **Feedback Potentiometers & Auxiliary End Switches**:
   - **Feedback Potentiometer (`P` suffix on Siemens `GDE132.1P` / `GLB132.1P`)**: Provides a `0–1000 Ω` resistive signal proportional to shaft angle so a controller can verify exact damper position on a floating actuator.
   - **Auxiliary End Switches (`-S` on Belimo or `6` suffix on Siemens `GDE136.1P` / `GLB136.1P`)**: One or two adjustable SPDT dry-contact switches inside the actuator that close at field-set rotation angles (e.g., `80°` open) to prove that an outdoor intake or isolation damper is open before starting a fan (`DI` proof interlock).
+
+
+## 5. Installation and Commissioning
+
+> This section is general practice, not taken from the cited documents. Use the actuator's own installation sheet for wiring and settings.
+
+**Checks before powering up.**
+
+1. **Supply.** Confirm the supply voltage and type (24 V AC, 24 V AC/DC or line voltage) and size the transformer for the actuator's rated power plus inrush; see [Field panels and enclosures](field-panels-and-enclosures.html).
+2. **Wiring.** Match the common, the control and the feedback terminals to the actuator's diagram. A floating actuator wired with open and close swapped drives the wrong way; a modulating actuator wired with the signal and common reversed may not move.
+3. **Direction of rotation.** Set the actuator for clockwise or counterclockwise on increasing signal, and set the spring-return direction so that the failure position is the safe one. Many actuators have a switch or a mounting orientation for this.
+4. **Mounting.** Fit the actuator centred on the shaft, tighten the clamp to the manufacturer's torque, and fix the anti-rotation bracket so the actuator body cannot turn. A body that moves with the shaft wastes stroke and loosens in service.
+5. **Stroke.** Set the angle limits so the actuator reaches the damper's end stops without forcing them. On some actuators, an adaptation or calibration run finds the mechanical end stops automatically.
+
+**Function test.** Command the actuator to 0, 50 and 100 percent and confirm that the damper or valve reaches each, and that any feedback signal and end switches agree with what the damper does. Test the fail-safe by removing power. Operate the manual override or hand crank to make sure it is free and that the actuator returns to automatic control after use.
+
+## 6. Troubleshooting
+
+| Symptom | What to check |
+| :--- | :--- |
+| Actuator does not move | Supply voltage at the actuator, control signal at the terminals, a tripped transformer breaker, a manual override left engaged |
+| Moves the wrong way | Direction switch or wiring on a floating pair; reversed action configured in the controller |
+| Moves but the damper does not | Slipped clamp, broken coupling or linkage, or the actuator body not anchored |
+| Hunts around the setpoint | Loop gain too high, a stroke time too fast or slow for the loop, or a noisy input |
+| Does not fully close | Stroke limit set short, a worn seal, or torque too low for the load |
+| Actuator overheats or trips | Torque under-sized, a jammed damper, or a supply voltage that is low under load |
+| Spring return does not return | Stuck or damaged spring, a blade or linkage that binds, or the damper held by a frozen shaft |
+
+## 7. Selecting a Replacement
+
+When replacing an actuator, match the torque or force, the stroke and rotation, the shaft size and clamp, the supply voltage, the control signal and the fail-safe action. Differences in run time or in feedback can change loop behaviour, so check the controller's configured runtime and feedback scaling after the swap. Where a smoke or fire damper is involved, the replacement must carry the same listing as the original.
+
+See [Dampers and louvers](dampers-and-louvers.html) for the dampers being driven and [Control valves](control-valves.html) for the valve side.

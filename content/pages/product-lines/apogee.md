@@ -26,3 +26,21 @@ Introduced in 1998 as the successor to Landis & Gyr System 600, **Siemens APOGEE
    - **TEC / PTEC VAV Terminal Controllers** (`550-49xPA` / `550-49xPKA`) and **BACnet ATEC** (`550-430PA`, `550-431PA`, `550-440`–`550-446`).
    - **570-Series Laboratory, Fume Hood & Pressurized Room Controllers** (`570-00701PA` FHC, `570-801PA`–`570-805PA` LCM-OAVS, `570-810PA`–`570-811PA` PRC-OAVS).
    - **Series 2200/3200 Communicating Room Sensors** (`QAA2280`, `QFA3280`, `QPA2282`, `QPA2284`).
+
+
+### Choosing Within the Line
+
+This section is an overview drawn from the other pages in this wiki; the product pages hold the sourced part numbers.
+
+| Need | Choose | Notes |
+| :--- | :--- | :--- |
+| Small mechanical room or unit panel | [PXC Compact](../product/pxc-compact.html) (16, 24 or 36 points) | FLN support is a license on some models; see [APOGEE FLN](../protocol/apogee-fln.html) for device limits |
+| Larger panel, flexible I/O | [PXC Modular](../product/pxc-modular.html) with TX-I/O | The PXX-485.3 module adds three FLN trunks, up to 96 devices |
+| Existing card-cage installation | [MBC](../product/apogee-mbc.html), [MEC](../product/apogee-mec.html) | Installed base; spares and expansion point modules |
+| VAV box | [TEC / PTEC](../product/apogee-tec-vav.html) or [ATEC](../product/apogee-atec.html) | FLN or BACnet MS/TP; see [VAV control](../concept/vav-control.html) |
+| Laboratory room | [570-series](../product/apogee-570-lab-fume-hood.html) | See [Laboratory and fume hood control](../concept/laboratory-and-fume-hood-control.html) |
+| Room sensor | [Series 2200/3200](../product/qaa2280-series-2200.html) | Communicates with the terminal controller |
+
+**Expanding or replacing.** On a campus with an APOGEE base, a common approach is to keep the field panels and terminal controllers and move the front end to Desigo CC, which supervises P2 panels through a driver; see [Siemens Desigo](desigo.html). Check the panel's firmware and license before adding FLN devices, and whether the trunk is P1 or BACnet MS/TP.
+
+**Documents.** Data sheets, installation instructions and owner's manuals for these products are catalogued under [Documents](../documents.html).

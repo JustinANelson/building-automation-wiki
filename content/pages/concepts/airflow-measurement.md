@@ -29,3 +29,36 @@ Controlling airflow in a duct means either measuring it or using a device whose 
 Because the valve itself regulates flow, the actuator only changes the setpoint position. The valve's position is converted to a flow using characterization data held in the actuator control module or controller; see [CSCP valve](../product/cscp-valve.html) and [Programmable BACnet Controller](../product/phoenix-pbc.html).
 
 **Choosing.** Pressure- or velocity-based measurement suits ordinary comfort VAV where cost is low. Venturi valves are used where accuracy, fast response and little maintenance matter, such as laboratories and healthcare.
+
+> The sections below are general airflow-measurement practice, not taken from the data sheets cited above.
+
+## The relationship between velocity and flow
+
+Volumetric flow is velocity times duct area: Q = A x V. Measuring flow means measuring average velocity across the duct, which is not uniform: it is slow near the walls and faster near the centre, and bends, fans and dampers distort the profile.
+
+A **pitot tube** or **flow station** measures velocity pressure, the difference between total and static pressure. In inch-pound units with standard air, velocity in feet per minute is approximately 4005 times the square root of the velocity pressure in inches of water column. Because velocity pressure is proportional to the square of velocity, a flow sensor sees a very small signal at low flow: halving the airflow cuts the pressure to a quarter. That is why low-flow accuracy is the hard part of VAV control, and why box minimum airflows are set with the sensor's limits in mind.
+
+## Sensing methods
+
+| Method | How it works | Strengths and limits |
+| :--- | :--- | :--- |
+| Multi-point averaging probe (cross, ring or flow ring) | Several total-pressure and static-pressure ports averaged into one differential signal | Common in VAV boxes; senses the average velocity, but small ports can foul and the signal is small at low flow |
+| Orifice plate or venturi inlet | A fixed restriction creates a pressure drop that depends on flow | A strong, stable signal; venturi inlets recover most of the pressure and are less sensitive to straight-run |
+| Thermal (hot-wire) velocity sensor | A heated element is cooled by airflow; the power or temperature change gives velocity | Good at low velocity, no tubing; needs periodic calibration and can foul in dirty air |
+| Vortex, ultrasonic | Shedding frequency or transit time gives velocity | Used on larger measuring stations and in laboratory work; costly |
+| Mechanical venturi valve | Spring-loaded cone regulates flow | No measurement; see above |
+
+## Installation points
+
+- **Straight run.** Most measuring stations need a length of straight duct upstream and downstream, often several duct diameters, to give a usable velocity profile. Venturi valves are the exception, as the table above says.
+- **Inlet conditions.** A tight elbow, a flexible duct with a sharp bend, or a damper right at the inlet changes the flow profile and shifts the box's measurement away from its factory calibration. The standard remedy is a **K-factor or flow correction** found by balancing against a traverse.
+- **Tubing.** Pressure-based sensors use two tubes. Keep them short, free of kinks and leaks, and connected high to high and low to low; a reversed or leaking tube gives a wrong or negative reading.
+- **Temperature and altitude.** Standard-air figures assume sea level and normal temperature. Heated or high-altitude air is less dense and reads differently unless the controller corrects for it.
+
+## Calibration and balancing
+
+A new system is balanced by a pitot traverse or a calibrated hood: measured flow is compared with the controller's reading at the minimum, maximum and an intermediate point, and the box's K-factor or gain is adjusted until they agree. Balancing at only one flow hides a zero error, which is the most common source of low-flow mistakes. Periodic zero checks, as described on [Differential pressure sensors](differential-pressure-sensors.html), keep a pressure-based sensor honest.
+
+## Where it matters most
+
+Comfort VAV zones tolerate several percent error. Laboratories, operating rooms and isolation rooms do not, because the room pressure depends on the difference between supply and exhaust flow. For that reason these spaces use fast, accurate flow devices and often separate offset tracking; see [Laboratory and fume hood control](laboratory-and-fume-hood-control.html).

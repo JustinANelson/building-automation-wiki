@@ -46,3 +46,31 @@ Wherever an electronic [BAS immersion temperature sensor](temperature-sensors.ht
 ### 4. Local Flow Indicators, Sight Glasses & Pete's Plugs
 - **Pressure/Temperature Test Plugs ("Pete's Plugs")**: Self-sealing EPDM/neoprene core fittings (`1/4 in.` or `1/2 in. NPT`) installed at the inlet and outlet of every terminal reheat coil, fan-coil valve ([Siemens 599 Series](../product/siemens-599-zone-valve.html)), and balancing valve so TAB (Testing, Adjusting, and Balancing) technicians can insert a portable needle probe digital manometer or thermometer without permanent gages at every terminal unit.
 - **Rotameters & Sight Flow Indicators**: Variable-area glass/acrylic tube flow meters (rotameters) and paddle/flapper sight glasses provide local flow verification on glycol makeup loops, seal-water lines, and sample lines.
+
+
+### 5. Using a Gage to Check a Sensor
+
+> This section is general practice, not taken from the cited documents.
+
+A local gage or thermometer is an independent second opinion on a point the controller reads. A routine check compares the two:
+
+1. **Pick a steady condition.** Readings taken while the process is changing give a difference that is due to timing, not error.
+2. **Read both at the same moment**, and record the gage reading, the front-end value and the time.
+3. **Compare against the combined tolerance.** The allowed difference is about the gage's accuracy plus the sensor's, not the tighter of the two. A common building-automation practice is to investigate a difference larger than the larger of the two accuracies, and to correct a sensor only after the gage itself has been checked against a reference.
+4. **Decide which is wrong.** If the gage and a second independent reference agree and the controller does not, the fault is the sensor, its scaling or its wiring; see [Analog signals](analog-signals.html) and [Temperature sensors](temperature-sensors.html). If the gage is the odd one out, it is probably damaged.
+
+### 6. Reading and Interpreting Gages
+
+- **Differential across equipment.** A gage across a strainer, filter or coil shows how dirty it is. Compare with the clean value recorded at commissioning, not with a catalogue figure, because the installed value includes fittings and tap location. A drop that is rising over weeks points to fouling.
+- **Pump differential.** The difference between discharge and suction pressure gives the pump head, which can be compared with the pump curve to estimate flow. A single gage with a manifold reads both ports and removes the error between two separate gages.
+- **Zero check.** A gage with the pressure removed should rest on zero. A pointer that does not return, or a case that is dented or fogged, means the gage is damaged and should not be trusted.
+- **Needle vibration and dampening.** A pointer that flutters points to pulsation, and a liquid-filled case or snubber is the cure. Do not read a fluttering gage by guessing the middle.
+
+### 7. Maintenance and Replacement
+
+- Replace a gage that has been over-ranged, since a Bourdon tube that has taken a pressure spike may not return to zero, and the error is then not obvious.
+- Fit isolation valves so a gage can be removed without draining the system, and close them when not reading if the gage is prone to damage from pulsation.
+- Keep a spare calibrated test gage for checks; the in-line gages are for indication and should not be used as the reference for calibrating electronic sensors.
+- Mark the normal operating value on the dial or on a tag. A gage with the expected value marked turns a glance into a check, and gives an operator a way to spot a change.
+
+See [Differential pressure sensors](differential-pressure-sensors.html) for the electronic equivalent of the air-side gage and [Control valves](control-valves.html) for the pressure drops that hydronic gages help verify.

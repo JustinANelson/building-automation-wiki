@@ -45,7 +45,7 @@ partNumbers:
   - number: S55624-H106
     description: Siemens stock number (SSN) for QMX3.P74 multi-sensor room operator unit
     source: https://sid.siemens.com/api/khub/documents/X7rW~c4z7kS5f_8tK2y3Jw/content
-related: [desigo, dxr2, pxc4, pxc5, pxc7, qaa2280-series-2200, temperature-sensors]
+related: [chilled-beams, desigo, dxr2, natural-ventilation, pxc4, pxc5, pxc7, qaa2280-series-2200, temperature-sensors]
 sources:
   - https://sid.siemens.com/api/khub/documents/X7rW~c4z7kS5f_8tK2y3Jw/content
   - https://www.siemens.be/cmc/upload/cms/docs/BT/Field_devices/N1602en_QMX3.P34.pdf
@@ -62,5 +62,7 @@ The **Siemens QMX3** series (Data Sheet `N1602en` and Installation Instructions 
 | **QMX3.P70 / QMX3.P74** (`S55624-H106`) | Yes | Yes | Yes (optical NDIR) | `.P70` LED IAQ / `.P74` LCD + keys | Lecture halls, classrooms, and high-occupancy conference rooms (demand-controlled ventilation) |
 
 ### Technical Highlights
+- **Condensation & Humidity Monitoring**: Models with relative humidity sensing (`.P40`, `.P44`, `.P70`, `.P74`) provide accurate room dew point calculation to the host controller to prevent [chilled beams](../concept/chilled-beams.html) and chilled ceilings from sweating. When a pipe condensation switch trips, LCD units show a condensation warning symbol.
 - **KNX PL-Link Two-Wire Bus**: Powered directly from the host **DXR2** or **PXC4/5/7** controller's `KNX PL-Link` terminals (`CE+` / `CE-`, 21–30 VDC, 7.5–15 mA max consumption) with polarity protection and automatic plug-and-play device discovery in **ABT Site**.
-- **Room-Opti-Control ("Green Leaf" Indicator)**: Front-panel Green Leaf symbol turns red when occupant overrides (e.g., extreme setpoints or open windows) cause unnecessary energy consumption; pressing the leaf resets the room to energy-optimal setpoints.
+- **Natural Ventilation & Mixed-Mode Occupant Feedback**: In buildings with operable windows and [natural ventilation](../concept/natural-ventilation.html), the display informs occupants when windows may be opened without penalty or when open sashes have caused mechanical cooling to shut down.
+- **Room-Opti-Control ("Green Leaf" Indicator)**: Front-panel Green Leaf symbol turns red when occupant overrides (e.g., extreme setpoints or open windows during active cooling) cause unnecessary energy consumption; pressing the leaf resets the room to energy-optimal setpoints.

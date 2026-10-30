@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 310" width="680" height="310">
+  <rect x="8" y="8" width="664" height="294" rx="6" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <rect x="8" y="8" width="664" height="32" rx="6" fill="#1e293b"/>
+  <text x="24" y="29" font-family="sans-serif" font-weight="bold" font-size="13" fill="#ffffff">Airside Economizer Damper Coordination, Enthalpy High-Limit &amp; DCV</text>
+
+  <!-- AHU Mixing Box Schematic -->
+  <rect x="24" y="54" width="390" height="162" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="36" y="72" font-family="sans-serif" font-weight="bold" font-size="11" fill="#0f172a">1. Three-Damper Mixing Box &amp; Integrated Free Cooling</text>
+
+  <!-- Outdoor Air Damper -->
+  <rect x="38" y="86" width="108" height="52" rx="3" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="92" y="104" font-family="sans-serif" font-weight="bold" font-size="9.5" fill="#1e40af" text-anchor="middle">Outdoor Air (OAD)</text>
+  <text x="92" y="118" font-family="monospace" font-size="8.5" fill="#0f172a" text-anchor="middle">Direct: Min% &#8594; 100%</text>
+  <text x="92" y="131" font-family="monospace" font-size="8.5" fill="#334155" text-anchor="middle">T_OA + RH_OA (HMD60)</text>
+
+  <!-- Return Air Damper -->
+  <rect x="164" y="86" width="108" height="52" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="218" y="104" font-family="sans-serif" font-weight="bold" font-size="9.5" fill="#92400e" text-anchor="middle">Return Air (RAD)</text>
+  <text x="218" y="118" font-family="monospace" font-size="8.5" fill="#0f172a" text-anchor="middle">Reverse: Max% &#8594; 0%</text>
+  <text x="218" y="131" font-family="monospace" font-size="8.5" fill="#334155" text-anchor="middle">Opposed-Blade Linear</text>
+
+  <!-- Relief / Exhaust Damper -->
+  <rect x="290" y="86" width="110" height="52" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="345" y="104" font-family="sans-serif" font-weight="bold" font-size="9.5" fill="#15803d" text-anchor="middle">Relief / Exhaust (EAD)</text>
+  <text x="345" y="118" font-family="monospace" font-size="8.5" fill="#0f172a" text-anchor="middle">Tracks Bldg dP</text>
+  <text x="345" y="131" font-family="monospace" font-size="8.5" fill="#334155" text-anchor="middle">SP = +0.05 in. w.c.</text>
+
+  <!-- Mixed Air & Cooling Coil -->
+  <rect x="38" y="150" width="362" height="52" rx="3" fill="#f1f5f9" stroke="#475569" stroke-width="1.5"/>
+  <text x="219" y="168" font-family="sans-serif" font-weight="bold" font-size="10" fill="#0f172a" text-anchor="middle">Mixed Air Plenum (MAT) + Freeze Stat (38 &#176;F) &#8594; Chilled Water / DX Coil</text>
+  <text x="219" y="184" font-family="monospace" font-size="9" fill="#1e3a8a" text-anchor="middle">Stage 1: Modulate OAD/RAD for DAT_sp | Stage 2: Lock OAD=100% &amp; Modulate Clg Coil</text>
+  <text x="219" y="196" font-family="sans-serif" font-size="8.5" fill="#b91c1c" text-anchor="middle">When OAT &gt; High-Limit or h_OA &gt; h_RA: Return OAD to Minimum DCV Ventilation Position</text>
+
+  <!-- Right: Changeover & Waterside Economizer -->
+  <rect x="428" y="54" width="228" height="162" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="440" y="72" font-family="sans-serif" font-weight="bold" font-size="11" fill="#0f172a">2. Changeover High Limits</text>
+  <text x="440" y="92" font-family="sans-serif" font-size="9.5" fill="#1e293b">&#8226; <tspan font-weight="bold">Fixed Dry-Bulb:</tspan> OAT &lt; 65-75 &#176;F</text>
+  <text x="440" y="110" font-family="sans-serif" font-size="9.5" fill="#1e293b">&#8226; <tspan font-weight="bold">Diff Dry-Bulb:</tspan> OAT &lt; RAT - 2 &#176;F</text>
+  <text x="440" y="128" font-family="sans-serif" font-size="9.5" fill="#1e293b">&#8226; <tspan font-weight="bold">Fixed Enthalpy:</tspan> h_OA &lt; 28 Btu/lb</text>
+  <text x="440" y="146" font-family="sans-serif" font-size="9.5" fill="#1e293b">&#8226; <tspan font-weight="bold">Diff Enthalpy:</tspan> h_OA &lt; h_RA</text>
+  <rect x="440" y="158" width="204" height="46" rx="3" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+  <text x="542" y="175" font-family="sans-serif" font-weight="bold" font-size="9.5" fill="#1e40af" text-anchor="middle">Waterside Economizer (HX)</text>
+  <text x="542" y="190" font-family="monospace" font-size="8.5" fill="#0f172a" text-anchor="middle">Tower CW &lt; CHWR - Approach</text>
+
+  <!-- Bottom: Demand Controlled Ventilation -->
+  <rect x="24" y="228" width="632" height="60" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="38" y="247" font-family="sans-serif" font-weight="bold" font-size="10.5" fill="#15803d">3. Demand-Controlled Ventilation (ASHRAE 62.1 Dynamic Minimum Outdoor Air)</text>
+  <text x="38" y="264" font-family="monospace" font-size="9.5" fill="#0f172a">V_bz = (Rp * Pz) + (Ra * Az)   |   CO2 Reset: 400 ppm (Base Ra*Az) &#8594; 1000 ppm (Design V_bz)</text>
+  <text x="38" y="279" font-family="sans-serif" font-size="9" fill="#334155">Sensors: Vaisala GMW90 (Wall) / GMD20 (Duct), Viconics VT8000 CO2, York SE-ECO1001-0 0-10 VDC Input</text>
+</svg>

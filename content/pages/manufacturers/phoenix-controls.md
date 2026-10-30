@@ -16,3 +16,21 @@ Phoenix Controls (headquartered in Acton, Massachusetts, and part of Honeywell B
 - **Critical Spaces Control Platform (`CSCP`, Current)**: `PVSA` supply and `PVEA`/`PVEB` exhaust venturi valves paired with closed-loop Actuator Control Modules (`ACM`), optional Fail-Safe Modules (`FSM`), Programmable BACnet Controllers (`PBC500` MS/TP and `PBC504` BACnet/IP), and 500-Series Fume Hood Displays (`FHD500`).
 - **Traccel BACnet Platform (`TSV` / `TEV`, Current)**: Pressure-independent venturi valves with factory-mounted native BACnet MS/TP controllers (`TX`, `TP`, `SO`, `EO`) for laboratories and commercial critical spaces with lower-density I/O requirements.
 - **Accel II & Celeris (`EXV` / `MAV` / `CEV` / `CSV`, Legacy / End-of-Life)**: Installed base of analog, LonWorks, and BACnet venturi valves across older campus research buildings; supported for field modernization via **Celeris 2 Valve Upgrade Kits** (`C2UX`).
+
+
+### How a Phoenix System Works
+
+This section is an overview drawn from the product-line and concept pages in this wiki.
+
+**The valve does the regulating.** A Phoenix venturi valve holds airflow mechanically: a spring-loaded cone moves with duct pressure, so flow stays at the set value over the rated pressure range without a flow sensor or feedback loop. The controller sets the valve position, and the actuator control module converts that position to a flow using the valve's factory characterisation. See [Airflow measurement](../concept/airflow-measurement.html) for the principle and the CSCP data sheet figures.
+
+**Why labs use it.** Laboratories need fast, accurate airflow, because the room's pressure relationship to its neighbours depends on the difference between supply and exhaust flow, and a fume hood sash movement changes exhaust demand within seconds. High-speed actuators respond in under a second, and the controller adjusts supply and exhaust together to hold the pressure offset. See [Laboratory and fume hood control](../concept/laboratory-and-fume-hood-control.html).
+
+**Typical layout.**
+
+- A supply valve and an exhaust valve on each room, each with an actuator control module.
+- A room controller, such as the Programmable BACnet Controller, coordinating the valves and tracking.
+- Fume hood monitors showing sash and face velocity status to the user.
+- BACnet connection to the building automation system, which sets schedules and reads status and flows but does not close the fast loop.
+
+**Choosing a generation.** Current projects use the CSCP or Traccel platforms. The older Accel II and Celeris valves remain widely installed, and the Celeris 2 upgrade kit replaces the control electronics without removing the valve body, so check which generation is installed before ordering parts.

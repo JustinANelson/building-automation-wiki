@@ -29,7 +29,10 @@
 ### UI principles
 - Reference manual, not a dashboard: ruled tables, monospace part numbers, no cards, pills, or hero sections.
 - Part numbers are the primary content; review state is stated plainly with a notice, never hidden.
-- No external fonts, scripts, or network calls; the site works from static files.
+- No external fonts, scripts, or network calls; the site works from static files. Prose uses the system serif stack (Charter, Georgia); tables, labels and part numbers use sans and monospace.
+- One warm accent colour on a paper palette (light and dark), sentence-case headings, no uppercase tracked labels.
+- Protocol and concept pages are articles: body text first, cross-reference tables after. Product, line and manufacturer pages lead with their tables.
+- The home page is manufacturer-neutral: it lists concepts, protocols and manufacturers rather than featuring any one vendor.
 
 ### Next
 - **Phase 2 - Seed Content Expansion**: Verify remaining draft part numbers against downloaded documents; remaining Viconics models (VT7300/7350/7355/7600, relay packs, wireless accessories); Phoenix Celeris/Accel/Traccel sizes; more Siemens actuators, valves, and field panels; Schneider and York product pages; licensed product images.

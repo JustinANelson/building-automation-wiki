@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 310" width="680" height="310">
+  <rect x="8" y="8" width="664" height="294" rx="6" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <rect x="8" y="8" width="664" height="32" rx="6" fill="#1e293b"/>
+  <text x="24" y="29" font-family="sans-serif" font-weight="bold" font-size="13" fill="#ffffff">ASHRAE Guideline 36 Trim-and-Respond (T&amp;R) Static Pressure Reset</text>
+
+  <!-- AHU Supply Fan & VFD -->
+  <rect x="24" y="56" width="186" height="106" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="117" y="76" font-family="sans-serif" font-weight="bold" font-size="11" fill="#1e40af" text-anchor="middle">AHU Supply Fan VFD</text>
+  <text x="117" y="94" font-family="monospace" font-size="9.5" fill="#0f172a" text-anchor="middle">PID Holds Duct SP_static</text>
+  <text x="117" y="110" font-family="monospace" font-size="9.5" fill="#1e3a8a" text-anchor="middle">Range: 0.30 to 1.50 in. w.c.</text>
+  <text x="117" y="128" font-family="monospace" font-size="9.5" fill="#0f172a" text-anchor="middle">Sensor @ 2/3 Trunk Length</text>
+  <text x="117" y="146" font-family="sans-serif" font-size="9" fill="#334155" text-anchor="middle">(Setra 264 / Belimo 22ADP-584)</text>
+
+  <!-- Central Trim-and-Respond Engine -->
+  <rect x="242" y="56" width="196" height="126" rx="5" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+  <text x="340" y="76" font-family="sans-serif" font-weight="bold" font-size="11" fill="#0f172a" text-anchor="middle">Supervisory T&amp;R Engine</text>
+  <text x="340" y="92" font-family="monospace" font-size="9.5" fill="#334155" text-anchor="middle">PXC4/5/7 or Tracer SC+</text>
+  <rect x="254" y="100" width="172" height="34" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="340" y="114" font-family="monospace" font-weight="bold" font-size="9.5" fill="#15803d" text-anchor="middle">If R &lt;= I: Trim SP_trim (-0.04")</text>
+  <text x="340" y="128" font-family="monospace" font-size="9" fill="#0f172a" text-anchor="middle">Every T_step = 2 min</text>
+  <rect x="254" y="140" width="172" height="34" rx="3" fill="#ffedd5" stroke="#ea580c" stroke-width="1.2"/>
+  <text x="340" y="154" font-family="monospace" font-weight="bold" font-size="9.5" fill="#c2410c" text-anchor="middle">If R &gt; I: +SP_res * (R - I)</text>
+  <text x="340" y="168" font-family="monospace" font-size="9" fill="#0f172a" text-anchor="middle">Capped at SP_res,max (+0.15")</text>
+
+  <!-- VAV Terminal Boxes Polling -->
+  <rect x="470" y="56" width="186" height="106" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="563" y="76" font-family="sans-serif" font-weight="bold" font-size="11" fill="#92400e" text-anchor="middle">VAV Terminal Boxes (1..N)</text>
+  <text x="563" y="94" font-family="monospace" font-size="9.5" fill="#0f172a" text-anchor="middle">PTEC / DXR2 / Symbio 210</text>
+  <text x="563" y="112" font-family="monospace" font-size="9" fill="#78350f" text-anchor="middle">Damper &gt;= 95% &amp; Q &lt; 50% SP: R=3</text>
+  <text x="563" y="128" font-family="monospace" font-size="9" fill="#78350f" text-anchor="middle">Damper &gt;= 95% &amp; Q &lt; 70% SP: R=2</text>
+  <text x="563" y="144" font-family="monospace" font-size="9" fill="#78350f" text-anchor="middle">Damper &gt;= 95% &amp; Q &lt; 85% SP: R=1</text>
+
+  <!-- Arrows -->
+  <line x1="242" y1="108" x2="210" y2="108" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="210,108 216,104 216,112" fill="#2563eb"/>
+  <line x1="470" y1="108" x2="438" y2="108" stroke="#d97706" stroke-width="2"/>
+  <polygon points="438,108 444,104 444,112" fill="#d97706"/>
+
+  <!-- Affinity Law & Hydronic Parallel Box -->
+  <rect x="24" y="196" width="632" height="92" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="38" y="216" font-family="sans-serif" font-weight="bold" font-size="11" fill="#0f172a">Fan &amp; Pump Affinity Laws + Hydronic Loop Differential Pressure Reset</text>
+  <text x="38" y="236" font-family="monospace" font-size="10" fill="#1e40af">Flow: Q1/Q2 = N1/N2   |   Pressure: dP1/dP2 = (N1/N2)^2   |   Shaft Power: P1/P2 = (N1/N2)^3</text>
+  <text x="38" y="256" font-family="sans-serif" font-size="9.5" fill="#334155">&#8226; <tspan font-weight="bold">Airside VAV:</tspan> Keeps the most loaded VAV damper at ~90% open instead of throttling against fixed 1.50 in. w.c. static pressure.</text>
+  <text x="38" y="274" font-family="sans-serif" font-size="9.5" fill="#334155">&#8226; <tspan font-weight="bold">Hydronic CHW/HHW:</tspan> Resets remote loop dP (Belimo 22PDP-18, e.g., 4 to 15 psi) until critical control valve reaches ~90% open.</text>
+</svg>

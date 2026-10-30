@@ -59,3 +59,46 @@ A passive temperature sensor changes its electrical resistance ($R$) with temper
 - **Hydronic Immersion Sensor & Thermowell**: Stainless-steel probe inserted with thermal conductive compound into a brass or `316SS` threaded **thermowell** (see [Gages and local instrumentation](gages-and-local-instrumentation.html)) so the sensor can be removed for calibration or replacement without draining the chilled- or hot-water pipe.
 - **Strap-On Surface Sensor**: Clamped with a hose clamp and thermal paste onto the outside of small terminal reheat pipes where welding or threading a thermowell is impractical (slower thermal response and requires pipe insulation over the sensor housing).
 - **Outdoor Air (OSA) Sensor with Solar Radiation Shield**: Weatherproof NEMA 4X enclosure mounted on a north-facing wall or roof stanchion inside a multi-plate white **solar radiation shield** so solar gain does not bias outdoor air temperature and economizer changeover logic.
+
+
+## 4. Accuracy, Response and Installation Errors
+
+> This section is general practice, not taken from the cited data sheets.
+
+**Self-heating.** Every resistive sensor is warmed by the current that measures it. A 10 kilohm thermistor with a low excitation current barely heats, but a sensor driven at a higher current in still air reads a little high. The controller's input sets the current, so use a sensor type that suits the input.
+
+**Response time.** A sensor takes time to follow a change in temperature. A bare probe in moving air responds in seconds, a probe in a thermowell lags noticeably because the well must also warm, and a strap-on sensor on an insulated pipe lags more. Specify the time constant for loops that need to react quickly, such as a heating coil discharge or a freeze-protection input, and filter the input only as much as the loop allows.
+
+**Errors that come from the installation, not the sensor.**
+
+- **Stratification.** Air in a mixed-air plenum is rarely uniform, so a single-point probe reads whatever stream it happens to sit in. An averaging element across the duct is the usual fix.
+- **Conduit air.** A wall sensor fed by a conduit connected to a cold or warm space sees a draught of that air across the element. Seal the conduit.
+- **Radiant and solar effects.** A sensor on a wall in sunlight, or near a heat source, reads the surface and not the air.
+- **Poor thermal contact.** A dry thermowell, a loose strap-on, or an insulated cover that is missing gives a slow and offset reading.
+- **Wrong location.** A hot-water return sensor placed before a bypass joins the flow reads a mixed value that is not the return temperature.
+
+## 5. Verification and Failure Modes
+
+**Checking a sensor.** An ice bath is a simple reference: crushed ice with enough water to fill the gaps, stirred, sits at about 0 °C (32 °F), and a probe held in it for a minute or two should read that. A calibrated reference thermometer next to the sensor in a stable environment is the practical test for higher temperatures. Check at two points if the accuracy matters; one point can hide a slope error.
+
+**Failure modes.** A passive sensor fails in a way that shows in its reading:
+
+- **Open circuit** (a broken wire or loose terminal) reads as a very cold temperature on an NTC thermistor input, and often as the end of the input's range.
+- **Short circuit** reads as a very hot temperature.
+- **Drifting contact** from a corroded terminal gives readings that wander.
+
+Controllers can use these as diagnostics. A sensor value that is beyond the plausible range for the point, or changes faster than the process can, should raise a fault and, where it feeds a loop, hand control to a safe default. For critical protection, such as freeze protection, use a dedicated device and not the BAS sensor alone; see [Switches and safeties](switches-and-safeties.html).
+
+## 6. Selecting a Sensor
+
+| Need | Sensible choice |
+| :--- | :--- |
+| Room temperature, low cost | Thermistor in a wall unit, or a communicating room sensor |
+| Large duct or coil face with stratification | Averaging element |
+| Small duct, well-mixed air | Single-point probe |
+| Hydronic pipe, serviceable | Immersion sensor in a thermowell |
+| Hydronic pipe, quick fix | Strap-on, accepting slower response |
+| High accuracy, long leads | RTD with a transmitter, or a 4-wire connection |
+| Outdoor air | Sensor in a radiation shield, shaded |
+
+Whatever the type, confirm the curve configured in the controller matches the sensor, and confirm the wiring distance and wire size against the sensor's lead-resistance limits. See [Analog signals](analog-signals.html) and [Gages and local instrumentation](gages-and-local-instrumentation.html) for checking the result.

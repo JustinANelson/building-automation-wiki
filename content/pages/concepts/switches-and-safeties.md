@@ -40,3 +40,35 @@ When a DDC controller commands a fan or pump `DO` to `Start`, it must verify tha
 ### 3. Other Common Discrete HVAC Switches
 - **High-Limit Aquastat & Steam Pressuretrol**: Immersion capillary thermostat (`Aquastat`) on hot-water converters/boilers or bellows pressure switch (`Pressuretrol`) on steam headers that interrupts heat input if water temperature or steam pressure exceeds safe limits.
 - **Condensate Drain Pan Float Switch**: Magnetic reed or mechanical float switch in cooling-coil drain pans that shuts down cooling or the unit fan before a clogged condensate trap overflows onto ceilings below.
+
+
+### 4. Wiring Philosophy and Testing
+
+> This section is general practice, not taken from the cited documents. Follow the project specification, the fire alarm interface requirements and the authority having jurisdiction.
+
+**Hardwired versus software safeties.** A safety that protects equipment or people must act even if the controller has crashed, been reprogrammed or lost power. That is why freeze stats, high static cutouts and smoke interlocks are wired in series with the fan's run circuit, so they stop the fan directly, and the controller only *monitors* them through a digital input. A software alarm that merely tells the operator is not a substitute. Never bypass, jumper or disable a hardwired safety to keep equipment running; fix the cause.
+
+**Fail-safe contacts.** Safety switches are wired so that the safe condition is the one that results from a broken wire. A normally closed contact in series with the run permissive opens on trip, and also opens if a wire is cut or a terminal loosens, so the fan stops instead of running unprotected. The monitoring input then reads "tripped" for either cause, which is why a wiring fault looks like a trip.
+
+**Manual reset versus auto reset.** Freeze, high static and smoke devices are usually manual reset so that someone must inspect the unit before it restarts. Low-limit and flow devices may be auto reset where restart is harmless. The reset type is a design decision recorded in the sequence of operation.
+
+**Trip sequence.** On a safety trip, a typical sequence stops the fan, closes the outdoor air damper, opens the heating valve, starts the pump and raises an alarm. The controller should also hold the unit off until the safety is cleared and, where specified, delay the restart so a cycling device does not damage the motor.
+
+### 5. Functional Testing at Commissioning
+
+Each safety should be tested in place, not just inspected.
+
+1. **Simulate the trip.** Operate the device (use the test button, apply pressure with a hand pump, warm or cool the sensing element) and confirm the equipment stops.
+2. **Confirm the response.** Check that dampers, valves and pumps move as the sequence requires, and that the controller reads the correct status and raises the correct alarm.
+3. **Check the setpoint.** Verify the switch trips at its setting with a reference gage or thermometer, not by reading the dial.
+4. **Check the reset.** Confirm that the device resets only as intended and the unit does not restart unexpectedly.
+5. **Record the results.** Keep the date, the tripping value and the tester with the commissioning record, and repeat on the schedule the owner or code requires.
+
+### 6. Troubleshooting Nuisance Trips
+
+- **Freeze stat trips on cold mornings.** Check for stratification: if the outdoor air damper leaks or the mixed-air section does not mix, a cold stream can cross a section of the capillary. Check damper closure and the setting before raising the setpoint.
+- **High static cutout trips at start-up.** Dampers that are closed or slow to open, or a fan that ramps faster than the boxes respond, cause a pressure spike; see [Static pressure reset](static-pressure-reset.html).
+- **Proof switch does not make.** A belt, a wrong switch setting, a plugged sensing tube, or a switch mounted where the pressure difference is too small; confirm the signal with a gage or meter.
+- **Status shows on when the fan is off.** The switch is set too low, a wire has shorted, or the current switch is picking up noise from a nearby conductor.
+
+See [Damper actuators](damper-actuators.html) for what the actuators do on a trip and [I/O points](io-points.html) for how the status inputs are read.

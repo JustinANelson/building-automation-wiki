@@ -61,3 +61,23 @@ sources:
 related: [gmd20, hmw90, analog-signals, modbus-rtu]
 ---
 Model table read from the 2022 GMW90 data sheet. R means the model also measures relative humidity and D means it has a display. Output type depends on the model digit: 3 is voltage, 4 is current, 5 is Modbus RTU.
+
+
+## Choosing a Model
+
+This section is an overview drawn from the part-number descriptions above and the other pages in this wiki.
+
+The model number encodes what the unit measures and how it outputs:
+
+| Digit or letter | Meaning |
+| :--- | :--- |
+| `3`, `4`, `5` | Output type: 3 is voltage, 4 is current, 5 is Modbus RTU |
+| `R` | Also measures relative humidity |
+| `D` | Has a display |
+| `A` | Display with CO2 indicator LEDs |
+
+So a GMW93 gives CO2 and temperature on a 3-wire voltage output, a GMW94 the same on a current output, and the R models add humidity.
+
+**Choosing.** Use a voltage or current model for a controller with an analog input, and a Modbus model where the controller or a gateway has a Modbus port; see [Analog signals](../concept/analog-signals.html) and [Modbus RTU](../protocol/modbus-rtu.html). Choose the R models where the humidity is also needed, for example for a dew point interlock, and a display where occupants or technicians should read the value. The indicator-LED version suits public spaces where a visible ventilation cue is wanted.
+
+**Application.** A wall unit measures the space directly, so use it for room-level demand-controlled ventilation; for building or air-handler level control, a return-duct unit such as the [GMD20](gmd20.html) is the alternative. Placement, control strategies and calibration are described on [CO2 sensors](../concept/co2-sensors.html), and the humidity side on [Humidity sensors](../concept/humidity-sensors.html).

@@ -45,7 +45,7 @@ partNumbers:
   - number: DXR2.M12PX-102K
     description: UL 864 UUKL Smoke Control Listed Desigo BACnet MS/TP 60-point TRA station (SSN S55376-C153)
     source: https://sid.siemens.com/api/khub/documents/0G2f8W1h1~6jF7nS2a4Huw/content
-related: [desigo, desigo-cc, pxc4, pxc5, qmx3, apogee-tec-vav, apogee-atec]
+related: [apogee-atec, apogee-tec-vav, chilled-beams, condensation-detectors, desigo, desigo-cc, natural-ventilation, pxc4, pxc5, qmx3]
 sources:
   - https://sid.siemens.com/api/khub/documents/1W_g8uH4O~G1fH8sSpxqOA/content
   - https://sid.siemens.com/api/khub/documents/0G2f8W1h1~6jF7nS2a4Huw/content
@@ -60,6 +60,10 @@ The **Siemens Desigo DXR2** series (`DXR2.E18` Data Sheet `A6V10502848` and `DXR
 | **DXR2.M12PX-102B / -102K** | **BACnet MS/TP** (RS-485) | **0–500 Pa (0–2.0 in. WC)** differential pressure sensor | 1 DI | 2 UI | 6 DO (24 VAC Triacs) | 2 AO (`0–10 VDC`) | Extended Total Room Automation (up to 60 KNX PL-Link data points for lighting, blind actuators, and multi-sensors) |
 
 ### Engineering & Room Bus Features
+- **Chilled Beam Application Support**: Pre-engineered ABT Site application templates provide modulating cooling control for 2-pipe and 4-pipe [chilled beams](../concept/chilled-beams.html), coordinating water valves with central primary air dew point limits.
+- **Condensation Monitoring & Lockout**: Dedicated digital input (`DI`) connects to pipe surface [condensation detectors](../concept/condensation-detectors.html) (such as the Siemens QXW11 or QXW20 hygroscopic track sensor). Upon trip, DXR2 triggers an immediate emergency chilled water valve lockout and alerts the [QMX3](qmx3.html) room unit.
 - **KNX PL-Link Room Bus**: Plug-and-play two-wire bus providing both communication and power to **QMX3** wall room operator units (`QMX3.P30`, `QMX3.P34`, `QMX3.P37`, `QMX3.P70`, `QMX3.P74`), ceiling presence detectors, and KNX actuators.
+- **Natural Ventilation & Window Interlock**: Hardwired digital inputs or KNX/EnOcean wireless reed switches communicate sash state to the DXR2. When operable windows open, the controller initiates comfort-cooling shutdown to avoid condensation and prevent energy loss.
 - **Preloaded Application Library**: Configured via **ABT Site** and commissioned in the field via **ABT Go** (over USB or network); BTL-listed as a **BACnet Application Specific Controller (`B-ASC`)**.
+- **Total Room Automation (TRA)**: Coordinates HVAC terminal units with motorized [window actuators](../concept/window-actuators.html) and solar shading (blinds) over KNX PL-Link, driving room energy efficiency through coordinated setpoint resets.
 - **UL 864 UUKL Smoke Control (`-101K` / `-102K`)**: Models ending in `K` are listed under UL 864 10th Edition (`UUKL`) for smoke control pressurization and purge sequences.

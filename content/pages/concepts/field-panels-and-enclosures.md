@@ -40,3 +40,24 @@ A large percentage of intermittent field-panel communication faults and blown co
    - Many BAS controllers and `0–10 VDC` actuators use **half-wave rectification** where `24 VAC Neutral/Common` (`G0` or `COM`) is internally tied to `0 VDC` signal reference and earth ground.
    - If a device with an unisolated **full-wave bridge rectifier** shares the same `24 VAC` transformer and has its DC negative reference grounded (or connected to a grounded controller input), it creates a direct half-cycle short circuit through the bridge diodes—blowing the transformer fuse or burning PCB traces. Isolate full-wave devices on a separate floating 24 VAC transformer or optically isolated input.
 3. **Shield Drain Grounding at One End Only**: Shielded cables for [RS-485 trunks](rs-485.html) and [analog sensors](analog-signals.html) should have their foil/braid drain wire landed to earth ground **at the field panel end only** (and taped back/insulated at the field device end) so ground potential differences between mechanical rooms do not drive 60 Hz ground-loop currents through the cable shield.
+
+
+### 4. Layout, Labelling and Documentation
+
+> This section is general practice, not taken from the cited Siemens documents. Follow the project specification and the local electrical code where they differ.
+
+- **Zone the subpanel.** Put the power supply and line-voltage devices at one side, the controller and I/O in the middle, and the field terminals along the bottom or edge, so the wiring flows in one direction and high-voltage and low-voltage runs do not cross. Where they must cross, cross at right angles.
+- **Label everything.** Mark each terminal block and wire at both ends with the point name used in the controller, and put a printed legend inside the door. A technician at 2 a.m. should be able to trace a point from the front end to a screw terminal without opening the drawings.
+- **Keep as-built drawings with the panel.** Wiring diagrams in a pocket on the door, plus a copy on the network, prevent a panel being rewired from memory. Update them whenever a point is added or moved.
+- **Leave spare capacity.** Specifications commonly ask for a margin of unused I/O and spare space and transformer capacity, so changes later do not mean a new panel.
+- **Provide local override.** Where the specification calls for it, hand-off-auto switches and status lights on the door let operators run equipment when the controller is out of service, and provide a visible indication of what the controller is commanding.
+
+### 5. Protection and Maintenance
+
+- **Surge and lightning.** Panels with long outdoor cable runs, such as rooftop or cooling tower sensors, benefit from surge protection on the power feed and on exposed signal circuits.
+- **Backup power.** A controller with a battery-backed memory or real-time clock needs its battery replaced on the manufacturer's schedule; a dead battery after an outage can mean lost schedules or a clock that restarts at the wrong date. A UPS on the panel or on the supervisory network gear keeps trending and alarming through short outages.
+- **Heat.** A sealed enclosure in a hot plant room or in sunlight can exceed the controller's rated temperature, because transformers and power supplies dissipate heat inside. Check the controller's ambient limits, and use ventilation, a larger enclosure or a shade where needed.
+- **Safety.** Panels contain line voltage even when the controller is off. Open the circuit and test before working inside, apply lockout and tagout to the equipment a panel controls, and do not rely on a controller's status light as proof the power is off.
+- **Walk-down checks.** Periodically check tightness of terminals, loose wire ends, burned smell or discoloration, fuse status and the condition of relays; an interposing relay is a wear item.
+
+See [Supervisory controllers](supervisory-controllers.html) for the system role of the panel and [I/O points](io-points.html) for how the terminals map to points.

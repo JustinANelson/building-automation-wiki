@@ -45,3 +45,36 @@ Damper actuator torque is specified in **pound-inches (`lb-in` or `in-lb`)** or 
   - A `44 lb-in (5 Nm)` actuator ([Siemens GDE131.1P](../product/openair-gde-glb.html) or [Belimo LMB24-3](../product/lmb24-3.html)) typically handles up to **`8–10 sq. ft.`** of standard damper area (all single-duct VAV boxes up to `16 in.` round).
   - An `88 lb-in (10 Nm)` actuator ([Siemens GLB131.1P](../product/openair-gde-glb.html) or [Belimo NMB24-3](../product/nmb24-3.html)) handles **`16–20 sq. ft.`**.
   - A `180 lb-in (20 Nm)` actuator ([Belimo AMB24-3](../product/amb24-3.html)) handles **`30–35 sq. ft.`**. Large AHU outdoor/return dampers use multiple jackshafted or master/slave actuators.
+
+
+### 4. Control Authority and Sizing the Damper
+
+> This section is general practice, not taken from the cited documents.
+
+A damper controls flow well only if it takes a meaningful share of the pressure drop in its branch. **Authority** is the pressure drop across the fully open damper divided by the total pressure drop of the damper and the system it controls. Dampers with low authority do almost nothing across most of their stroke and then change flow sharply near closed, so the loop is hard to tune. A common design target for modulating dampers is an authority in the range of about 0.3 to 0.5, which is why a damper is chosen to fit the opening it serves and not simply made as large as the duct. An oversized damper behaves like an on/off device.
+
+Practical effects:
+
+- A damper much larger than the airflow needs ends up working in the first 10 to 20 percent of its stroke, where tiny position errors cause large flow swings.
+- Resizing the blade area, or blanking off part of the damper, restores authority.
+- Opposed-blade dampers give a more linear installed characteristic than parallel-blade dampers at the same authority, which is why they are chosen for modulating service.
+
+### 5. Installation Details
+
+- **Blade orientation.** Install so that the blade axis and rotation suit the application, and so that the airflow strikes the blades as the manufacturer intends. Face-and-bypass and mixing arrangements often specify orientation to promote mixing.
+- **Jackshaft and linkage.** Where one actuator drives several damper sections through a linkage or jackshaft, check the linkage for slop and binding; torque is lost in a worn linkage, and a stiff section leaves the others only partly driven.
+- **Actuator mounting.** Mount direct-coupled actuators on the shaft with the anti-rotation bracket, and set the stroke limits so the actuator does not force the blades past their stops. Set the spring-return direction so the damper goes to its safe position, closed for outdoor air, open for smoke exhaust, on loss of power.
+- **Closing force.** Seals only seal if the actuator presses the blades closed; a damper that shows closed but leaks is a common source of freeze-stat trips and wasted energy. Some actuators have a preload or a closing-force setting.
+- **Access.** Leave room to reach the actuator and the damper, and fit access doors in ducts for fire and smoke damper inspection; codes require these dampers to be tested periodically.
+
+### 6. Common Faults
+
+| Symptom | Likely cause |
+| :--- | :--- |
+| Outdoor air damper will not stay closed, coil freezes | Worn blade seals, loose linkage, or the actuator is not driving fully closed |
+| Damper hunts or flow is erratic | Oversized damper with low authority, or a loop gain that is too high |
+| Actuator runs but the damper does not move | Slipped coupling or broken linkage |
+| Mixed air temperature stratifies | Parallel-blade damper arrangement not directing the two airstreams to mix, or no mixing device |
+| Smoke or fire damper fails its test | Link or reset device failed, or the damper sticks from dirt or corrosion |
+
+See [Control signals](control-signals.html) for how the actuator is commanded and [Airflow measurement](airflow-measurement.html) for how flow through the damper is known.

@@ -180,6 +180,10 @@ export function renderSite({ pages, library, hasFile }: SiteInput): Map<string, 
       html += `<div class="note ${p.review}"><b>${REVIEW_LABEL[p.review]}.</b>${REVIEW_NOTE[p.review]}</div>`;
     }
 
+    // Protocol and concept pages are articles: the prose leads and the cross-reference tables follow.
+    const article = p.type === 'protocol' || p.type === 'concept';
+    if (article && p.body.trim()) html += `<div class="body">${marked.parse(p.body, { async: false })}</div>`;
+
     if (p.partNumbers.length) {
       html += `<h2>Part numbers</h2><table class="t"><thead><tr><th>Part number</th><th>Description</th><th>Source</th></tr></thead><tbody>${p.partNumbers
         .map(
@@ -214,7 +218,8 @@ export function renderSite({ pages, library, hasFile }: SiteInput): Map<string, 
 
     if (docs.length)
       html += `<h2>Documents<small>${docs.filter(isLocal).length} of ${docs.length} archived locally</small></h2>${docTable(rel, docs)}`;
-    if (p.body.trim()) html += `<h2>Notes</h2><div class="body">${marked.parse(p.body, { async: false })}</div>`;
+    if (!article && p.body.trim())
+      html += `<h2>Notes</h2><div class="body">${marked.parse(p.body, { async: false })}</div>`;
     if (p.related.length) html += `<h2>See also</h2><p>${p.related.map((id) => link(id, rel)).join(' &middot; ')}</p>`;
     if (p.sources.length) {
       html += `<h2>Sources</h2><table class="t"><tbody>${p.sources
@@ -263,29 +268,37 @@ export function renderSite({ pages, library, hasFile }: SiteInput): Map<string, 
     r,
     n: pages.filter((p) => p.type === 'product' && p.review === r).length,
   }));
-  const coverage = manufacturers
+  const ofType = (t: Page['type']) => pages.filter((p) => p.type === t).sort(byTitle);
+  const topicList = (items: Page[]) =>
+    `<ul class="cols">${items.map((p) => `<li><a href="${pagePath(p)}">${esc(p.title)}</a></li>`).join('')}</ul>`;
+  const makers = manufacturers
     .map((m) => {
-      const mine = pages.filter((p) => p.manufacturer === m.id);
-      const prods = mine.filter((p) => p.type === 'product');
-      return `<tr><td><a href="${pagePath(m)}">${esc(m.title)}</a></td><td class="n">${mine.filter((p) => p.type === 'product-line').length}</td><td class="n">${prods.length}</td><td class="n">${prods.reduce((s, p) => s + p.partNumbers.length, 0)}</td><td class="n">${library.filter((d) => d.pages.some((id) => mine.some((p) => p.id === id) || id === m.id)).filter(isLocal).length}</td></tr>`;
+      const n = pages.filter((p) => p.manufacturer === m.id && p.type === 'product').length;
+      return `<li><a href="${pagePath(m)}">${esc(m.title)}</a>${n ? ` <span class="muted">${n}</span>` : ''}</li>`;
     })
     .join('');
+  const partCount = pages.reduce((s, p) => s + p.partNumbers.length, 0);
   out.set(
     'index.html',
     layout(
       'Home',
       '',
       `<h1>Building automation reference</h1>
-<p class="lead">Controllers, field devices, protocols and manufacturer documents for building automation systems and direct digital controls. Starting with Siemens, Phoenix Controls, Viconics and Trane.</p>
-<p class="lead">Search by part number or name from the header, for example BMSY500 or PXC100. Press / from anywhere on the site.</p>
-<h2>Coverage</h2>
-<table class="t compact"><thead><tr><th>Manufacturer</th><th class="n">Lines</th><th class="n">Products</th><th class="n">Part nos.</th><th class="n">Docs archived</th></tr></thead><tbody>${coverage}</tbody></table>
-<h2>Sourcing and review</h2>
-<p class="body">Every part number is taken from a cited manufacturer document, and nothing is filled in from memory. Product pages are marked
-${reviewCounts.map((x) => `<b>${x.n}</b> ${REVIEW_LABEL[x.r].toLowerCase()}`).join(', ')}.
-Pages that could not be sourced say so instead of guessing.</p>
+<p class="lead">How building automation systems and direct digital controls work, and what the equipment is: controllers, sensors, actuators, valves and dampers, communication protocols, and the control strategies that tie them together. Pages cite their sources, and product part numbers come from manufacturer documents.</p>
+<p class="lead">Search from the header by name, topic or part number. Press / from anywhere on the site.</p>
+<h2>Concepts</h2>
+<p class="muted">Control strategies, instrumentation and system design.</p>
+${topicList(ofType('concept'))}
+<h2>Protocols</h2>
+<p class="muted">How devices and controllers talk to each other.</p>
+${topicList(ofType('protocol'))}
+<h2>Manufacturers</h2>
+<p class="muted">Product lines, controllers and field devices, with the number of product pages.</p>
+<ul class="cols">${makers}</ul>
 <h2>Indexes</h2>
-<p><a href="parts.html">All part numbers</a> &middot; <a href="documents.html">All documents</a></p>`,
+<p><a href="parts.html">All ${partCount} part numbers</a> &middot; <a href="documents.html">All ${library.length} documents</a></p>
+<h2>Sourcing and review</h2>
+<p class="body">Pages are marked draft, needs review or verified, and the mark is shown at the top of each page. Part numbers are read from cited manufacturer documents and are not filled in from memory; pages that could not be sourced say so instead of guessing.</p>`,
     ),
   );
 
