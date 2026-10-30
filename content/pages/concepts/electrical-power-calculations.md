@@ -3,9 +3,11 @@ id: electrical-power-calculations
 type: concept
 title: "Electrical power and energy calculations for BAS design and evaluation"
 summary: "Single- and three-phase kW, kVA and amps, power factor and correction, energy and demand cost, 24 V AC transformer sizing for controls, and voltage drop in control and sensor wiring."
-review: draft
+review: verified
 related: [fan-and-pump-power-calculations, efficiency-metrics, variable-frequency-drives, field-panels-and-enclosures, analog-signals, energy-savings-and-payback-calculations, damper-actuators, bas-sizing-calculations]
-sources: []
+sources:
+  - https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf
+  - https://www.energy.gov/sites/prod/files/2014/05/f16/steam14_chillers.pdf
 ---
 A BAS engineer needs electrical arithmetic in two places: estimating the energy that equipment uses (to evaluate performance and savings) and sizing the low-voltage power and wiring of the control system itself. This page gives the standard relationships with worked examples.
 

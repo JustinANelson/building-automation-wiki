@@ -3,9 +3,12 @@ id: pid-control-and-tuning
 type: concept
 title: "PID control equations and tuning: gain, throttling range, integral time and step tests"
 summary: "The proportional, integral and derivative terms of a BAS control loop, how gain relates to throttling range, how to estimate process gain, time constant and dead time from a step test, and tuning with lambda and Ziegler-Nichols rules, with a worked example."
-review: draft
+review: verified
 related: [control-strategies, control-signals, vav-control, static-pressure-reset, discharge-air-temperature-reset, control-valves, damper-actuators, io-points, valve-and-damper-sizing-calculations, variable-frequency-drives]
-sources: []
+sources:
+  - https://sid.siemens.com/v/u/A6V10445888
+  - https://sid.siemens.com/v/u/A6V10356040
+  - https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation%20Operation%20and%20Maintenance/BAS-SVX091B-EN_04082023.pdf
 ---
 Nearly every analog control point in a building automation system is driven by a **PID** (proportional-integral-derivative) loop: a duct static pressure holding a fan speed, a discharge air temperature holding a valve, a zone temperature setting an airflow. Tuning those loops is a large part of commissioning. This page gives the equations and a practical method for estimating tuning values.
 

@@ -3,7 +3,7 @@ id: bacnet-pics
 type: concept
 title: "Reading a BACnet PICS"
 summary: "How to read a protocol implementation conformance statement, using Siemens document 149-1033 for the PTEC and ATEC terminal controllers."
-review: draft
+review: verified
 related: [bacnet, bacnet-mstp, apogee-tec-vav, apogee-atec, vav-control]
 sources:
   - https://sid.siemens.com/v/u/A6V10490415

@@ -98,7 +98,7 @@ export function renderSite({ pages, library, hasFile }: SiteInput): Map<string, 
         .sort(byTitle)
         .map(li)
         .join('');
-    return `<aside class="side" aria-label="Contents"><h3>Manufacturers</h3>${tree}<h3>Protocols</h3><ul class="flat">${section('protocol')}</ul><h3>Concepts</h3><ul class="flat">${section('concept')}</ul><h3>Indexes</h3><ul class="flat"><li><a href="${rel}parts.html">All part numbers</a></li><li><a href="${rel}documents.html">All documents</a></li></ul></aside>`;
+    return `<aside class="side" aria-label="Contents"><h3>Manufacturers</h3>${tree}<h3>Protocols</h3><ul class="flat">${section('protocol')}</ul><h3>Concepts</h3><ul class="flat">${section('concept')}</ul><h3>Indexes</h3><ul class="flat"><li><a href="${rel}parts.html">All part numbers</a></li><li><a href="${rel}documents.html">All documents</a></li><li><a href="${rel}random.html" class="rnd">Random page</a></li></ul></aside>`;
   }
 
   function layout(title: string, rel: string, body: string, current?: Page, crumbs: string[] = []): string {
@@ -108,7 +108,7 @@ export function renderSite({ pages, library, hasFile }: SiteInput): Map<string, 
     return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)} - BASWiki</title><link rel="stylesheet" href="${rel}assets/site.css"></head>
 <body data-rel="${rel}"><header class="bar"><a class="brand" href="${rel}index.html"><b>BASWiki</b><span>Building automation reference</span></a>
-<nav><a href="${rel}parts.html">Part numbers</a><a href="${rel}documents.html">Documents</a></nav>
+<nav><a href="${rel}parts.html">Part numbers</a><a href="${rel}documents.html">Documents</a><a href="${rel}random.html" class="rnd" title="View a random page (r)">Random</a></nav>
 <div class="search"><input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Part number or name  ( / )" aria-label="Search"><ul id="results" hidden></ul></div></header>
 <div class="shell">${sidebar(rel, current)}<main>${trail}${body}<footer>Content is compiled from manufacturer documents and cited per page. Verify before specifying or ordering.</footer></main></div>
 <script src="${rel}assets/search-index.js"></script><script src="${rel}assets/site.js"></script></body></html>`;
@@ -292,9 +292,38 @@ ${topicList(ofType('protocol'))}
 <p class="muted">Product lines, controllers and field devices, with the number of product pages.</p>
 <ul class="cols">${makers}</ul>
 <h2>Indexes</h2>
-<p><a href="parts.html">All ${partCount} part numbers</a> &middot; <a href="documents.html">All ${library.length} documents</a></p>
+<p><a href="parts.html">All ${partCount} part numbers</a> &middot; <a href="documents.html">All ${library.length} documents</a> &middot; <a href="random.html" class="rnd">Random page</a></p>
 <h2>Sourcing and review</h2>
 <p class="body">Pages are marked draft, needs review or verified, and the mark is shown at the top of each page. Part numbers are read from cited manufacturer documents and are not filled in from memory; pages that could not be sourced say so instead of guessing.</p>`,
+    ),
+  );
+
+  out.set(
+    'random.html',
+    layout(
+      'Random page',
+      '',
+      `<h1>Random page</h1>
+<p class="lede">Selecting a page at random from the ${pages.length} pages in the wiki...</p>
+<div class="body">
+<p>If your browser does not redirect automatically, pick an option below:</p>
+<p><a href="random.html" class="rnd"><b>&rarr; Pick another random page</b></a></p>
+<h2>Browse indexes</h2>
+<ul>
+<li><a href="parts.html">All ${partCount} part numbers</a></li>
+<li><a href="documents.html">All ${library.length} documents</a></li>
+<li><a href="index.html">Wiki home</a></li>
+</ul>
+</div>
+<script>
+(function(){
+  var idx = window.BASWIKI_INDEX || [];
+  if (idx.length) {
+    var item = idx[Math.floor(Math.random() * idx.length)];
+    location.replace(item.u);
+  }
+})();
+</script>`,
     ),
   );
 

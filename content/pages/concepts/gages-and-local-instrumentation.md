@@ -3,7 +3,7 @@ id: gages-and-local-instrumentation
 type: concept
 title: "Pressure and temperature gages and local instrumentation"
 summary: "Mechanical differential-pressure gages, Bourdon-tube hydronic pressure gages, industrial thermometers, thermowells, and sight glasses used for local verification and sensor calibration."
-review: draft
+review: verified
 images:
   - path: images/concepts/gages-and-local-instrumentation.svg
     alt: "Technical diagram (drawn illustration) of mechanical HVAC gages: diaphragm differential pressure gage (in. WC), Bourdon-tube hydronic pressure gage (psi), and industrial stem thermometer in a thermowell"

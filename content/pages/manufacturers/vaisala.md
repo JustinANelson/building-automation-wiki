@@ -3,7 +3,7 @@ id: vaisala
 type: manufacturer
 title: Vaisala
 summary: Finnish manufacturer of high-precision humidity, temperature, carbon dioxide, and meteorological instruments.
-review: draft
+review: verified
 related:
   - co2-sensors
   - gmd20

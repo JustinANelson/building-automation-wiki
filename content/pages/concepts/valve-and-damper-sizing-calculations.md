@@ -3,7 +3,7 @@ id: valve-and-damper-sizing-calculations
 type: concept
 title: "Control valve, damper, and flow-station sizing calculations"
 summary: "Flow coefficient (Cv/Kvs), water and glycol coil flow, steam valve equations (subcritical vs. choked), valve authority distortion, cavitation index, PICV selection, damper authority and actuator torque, and sensor K-factors."
-review: draft
+review: verified
 related:
   - airflow-measurement
   - control-signals
@@ -17,7 +17,10 @@ related:
   - hydronic-system-control
   - psychrometric-calculations
   - vav-control
-sources: []
+sources:
+  - https://sid.siemens.com/api/khub/documents/fU1aL7f23fKvIGrmhJ24Kg/content
+  - https://belimo.com/mam/general-documents/datasheets/en-gb/belimo_22PDP-18.._datasheet_en-gb.pdf
+  - https://www.belimo.com/mam/general-documents/datasheets/en-us/belimo_AMB24-3_datasheet_en-us.pdf
 ---
 
 ## Overview

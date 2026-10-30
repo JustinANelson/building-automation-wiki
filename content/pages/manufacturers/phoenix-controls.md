@@ -4,7 +4,7 @@ type: manufacturer
 title: Phoenix Controls
 summary: Maker of pressure-independent venturi air valves and high-speed critical-space controls for laboratories, fume hoods, and healthcare facilities; part of Honeywell.
 review: verified
-related: [phoenix-traccel-cscp, celeris, traccel-valve, cscp-valve, phoenix-pbc, fhd500, celeris-valve]
+related: [phoenix-traccel-cscp, celeris, traccel-valve, cscp-valve, phoenix-pbc, fhd500, celeris-valve, phoenix-controls-generations-and-upgrades, laboratory-ventilation-strategy]
 sources:
   - https://buildings.honeywell.com/us/en/brands/our-brands/phoenix-controls/products/valves-and-controllers
   - https://www.Literature.PhoenixControls.com/Documents/MKT-0242.pdf

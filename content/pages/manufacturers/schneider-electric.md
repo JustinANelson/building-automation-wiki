@@ -3,7 +3,7 @@ id: schneider-electric
 type: manufacturer
 title: Schneider Electric
 summary: Multinational energy management and building automation corporation; developer of EcoStruxure Building Operation and owner of Viconics Technologies.
-review: draft
+review: verified
 related:
   - supervisory-controllers
   - viconics

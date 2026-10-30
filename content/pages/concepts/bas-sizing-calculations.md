@@ -3,9 +3,12 @@ id: bas-sizing-calculations
 type: concept
 title: "BAS sizing calculations: points, controllers, network load, trend storage and power"
 summary: "How to count I/O points and size controllers and spare capacity, estimate MS/TP trunk loading, calculate trend and database storage, and check the power budget of a control panel."
-review: draft
+review: verified
 related: [io-points, supervisory-controllers, field-panels-and-enclosures, bacnet-mstp, rs-485, electrical-power-calculations, measurement-and-verification, bacnet, analog-signals]
-sources: []
+sources:
+  - https://sid.siemens.com/v/u/A6V10445888
+  - https://www.trane.com/content/dam/Trane/Commercial/global/products-systems/equipment/controls/building-management/Tracer-SC/BAS-PRD038K-EN_08012022.pdf
+  - https://bluerithm.com/bacnet-technical-summary/
 ---
 Before controllers are ordered or a network is laid out, a BAS design is sized: how many points, how many controllers, how much network traffic, how much data and how much power. This page gives the calculations. Product limits come from each product's data sheet, and the examples are illustrations.
 

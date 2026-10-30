@@ -7,7 +7,7 @@ manufacturer: belimo
 category: sensor
 protocols: []
 status: current
-review: draft
+review: verified
 related:
   - airflow-measurement
   - belimo
@@ -17,6 +17,9 @@ related:
   - hydronic-system-control
   - static-pressure-reset
   - switches-and-safeties
+sources:
+  - https://www.belimo.com/mam/general-documents/datasheets/en-us/belimo_22ADP-584.._datasheet_en-us.pdf
+  - https://belimo.com/mam/general-documents/datasheets/en-gb/belimo_22PDP-18.._datasheet_en-gb.pdf
 ---
 
 ## Overview

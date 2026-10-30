@@ -7,7 +7,7 @@ manufacturer: phoenix-controls
 protocols: [bacnet, lonworks]
 status: end-of-life
 review: verified
-related: [phoenix-traccel-cscp, celeris-valve, traccel-valve, cscp-valve]
+related: [phoenix-traccel-cscp, celeris-valve, traccel-valve, cscp-valve, phoenix-controls-generations-and-upgrades]
 sources:
   - https://buildings.honeywell.com/us/en/products/by-category/building-management/field-devices/valves/pressure-independent-control-valves/celeris-valves
   - https://prod-edam.honeywell.com/content/dam/honeywell-edam/hbt/en-us/documents/literature-and-specs/datasheets/HBT-BMS-6-inch-Venturi-Valve-PDS-MKT-0514-09-2023-Rev-A-PUBLIC.pdf

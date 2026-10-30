@@ -3,7 +3,7 @@ id: co2-sensors
 type: concept
 title: "CO2 sensors and demand controlled ventilation"
 summary: "NDIR carbon dioxide transmitters that let ventilation follow occupancy, with the Vaisala GMD20 and GMW90 as examples."
-review: draft
+review: verified
 related: [gmd20, gmw90, analog-signals, temperature-sensors, lonworks]
 sources:
   - https://www.iag.co.at/fileadmin/user_upload/product_documents/GMD20.en.pdf

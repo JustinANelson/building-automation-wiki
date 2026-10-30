@@ -3,9 +3,12 @@ id: psychrometric-calculations
 type: concept
 title: "Air-side calculations: sensible, latent and total heat, mixed air, and psychrometrics"
 summary: "The standard equations for airflow and heat (1.08, 0.68 and 4.5 factors), mixed-air temperature and outdoor air fraction, humidity ratio, dew point and enthalpy, coil loads and fan heat, with worked examples."
-review: draft
+review: verified
 related: [humidity-sensors, temperature-sensors, economizer-control, discharge-air-temperature-reset, vav-control, airflow-measurement, ventilation-rate-calculations, valve-and-damper-sizing-calculations, fan-and-pump-power-calculations, efficiency-metrics]
-sources: []
+sources:
+  - https://xdevs.com/doc/Vaisala/GM70/HVAC-Product-Brochure-B211277EN.pdf
+  - https://www.trane.com/content/dam/Trane/Commercial/global/products-systems/education-training/engineers-newsletters/airside-design/adm_apn034en_1209.pdf
+  - https://downloads.psl.noaa.gov/BLO/Air-Sea/oceanobs/portable_standard/hardware/HMT330-Series-Datasheet-B210951EN-C-LOW-v2.pdf
 ---
 Most air-side design and evaluation reduces to a handful of equations that relate airflow, temperature, moisture and heat. They are used to size supply airflow for a zone, check how much outdoor air an air handler is bringing in, decide whether an economizer should be enabled, and verify a coil's performance from trended data. This page collects them with worked examples.
 

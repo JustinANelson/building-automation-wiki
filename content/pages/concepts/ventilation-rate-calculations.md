@@ -3,9 +3,12 @@ id: ventilation-rate-calculations
 type: concept
 title: "Ventilation rate calculations: ASHRAE 62.1, CO2 and outdoor air"
 summary: "The ventilation rate procedure for breathing-zone and system outdoor air, multiple-zone system efficiency, steady-state CO2 for demand-controlled ventilation, outdoor air fraction from CO2, and air changes per hour."
-review: draft
+review: needs-review
 related: [co2-sensors, economizer-control, vav-control, psychrometric-calculations, natural-ventilation, energy-conservation-strategies, laboratory-and-fume-hood-control, airflow-measurement]
-sources: []
+sources:
+  - https://www.iag.co.at/fileadmin/user_upload/GMW90.en_2022.pdf
+  - https://www.iag.co.at/fileadmin/user_upload/product_documents/GMD20.en.pdf
+  - https://www.colorado.edu/fm/sites/default/files/attached-files/reducing_campus_ach_safely_an_authority_having_jurisdiction-_edited_8_26_20112submission.pdf
 ---
 Ventilation calculations set how much outdoor air a space needs, check how much a system actually brings in, and define the CO2 setpoints used for demand-controlled ventilation. They matter for both indoor air quality and energy, since outdoor air has to be heated, cooled and dehumidified.
 

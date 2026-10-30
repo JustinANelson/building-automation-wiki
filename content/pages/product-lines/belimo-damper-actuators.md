@@ -7,7 +7,7 @@ manufacturer: belimo
 category: actuator
 protocols: []
 status: current
-review: draft
+review: verified
 related:
   - amb24-3
   - belimo
@@ -18,6 +18,10 @@ related:
   - lmb24-3
   - nmb24-3
   - vav-control
+sources:
+  - https://www.belimo.com/mam/general-documents/datasheets/en-us/belimo_LMB24-3_datasheet_en-us.pdf
+  - https://www.belimo.com/mam/general-documents/datasheets/en-us/belimo_NMB24-3_datasheet_en-us.pdf
+  - https://www.belimo.com/mam/general-documents/datasheets/en-us/belimo_AMB24-3_datasheet_en-us.pdf
 ---
 
 ## Overview

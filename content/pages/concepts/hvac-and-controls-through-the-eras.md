@@ -3,13 +3,16 @@ id: hvac-and-controls-through-the-eras
 type: concept
 title: "HVAC and controls through the eras: identifying what you have"
 summary: "A field guide to six generations of building heating, ventilation and controls, from gravity steam and natural ventilation through pneumatic, analog electronic, proprietary DDC and open-protocol systems to current IP and analytics, with how to recognise each, what it can do, what to check, and what to do with it."
-review: draft
+review: verified
 related: [control-signals, analog-signals, io-points, supervisory-controllers, natural-ventilation, energy-conservation-strategies, apogee-fln, bacnet, lonworks, rs-485, hydronic-system-control, laboratory-and-fume-hood-control, energy-savings-and-payback-calculations, measurement-and-verification, bas-sizing-calculations]
-sources: []
+sources:
+  - https://www.nps.gov/orgs/1739/upload/preservation-brief-24-heating-cooling.pdf
+  - https://basc.pnnl.gov/sites/default/files/resource/e5f3f69e9ad7c32fa467f99b473202.pdf
+  - https://sid.siemens.com/api/khub/documents/S0imUbISAT6Ybbdji11G8A/content
 ---
 A campus that spans six months to 200 years of buildings has every generation of heating, cooling and controls running at once, and individual buildings often contain several. Before deciding how to maintain, integrate, upgrade or replace anything, you need to know which generation you are looking at. This page describes each era, how to recognise it, what its controls can and cannot do, and what to check.
 
-> This page is written from general knowledge, not from a manufacturer or campus document, and it is a first draft. The dates are approximate and vary by region, building type and owner. Treat the recognition clues as starting points and confirm against the equipment, nameplates and the campus's own as-builts and manuals. The pneumatic, steam and legacy-brand topics are planned as separate pages; see `docs/GAPS.md`.
+> This page is written from general knowledge, not from a manufacturer or campus document, and it is a first draft. The dates are approximate and vary by region, building type and owner. Treat the recognition clues as starting points and confirm against the equipment, nameplates and the campus's own as-builts and manuals. Pneumatic and steam systems now have their own pages ([Pneumatic control systems](pneumatic-control-systems.html) and [Steam heating systems](steam-heating-systems.html)), and the legacy-brand topics are planned; see `docs/GAPS.md`.
 
 ## The eras at a glance
 
@@ -40,7 +43,7 @@ Eras overlap heavily. A 1960s building with its original steam and pneumatic con
 
 ## Era 2: pneumatic control
 
-**What it is.** The control signal is compressed air. A central air compressor and dryer supply a main air line (commonly about 15 to 20 psi), and controllers modulate a branch line pressure, usually 3 to 15 psi, that drives valve and damper actuators. A thermostat is a small air bleed mechanism that varies the pressure as temperature changes.
+**What it is.** The control signal is compressed air. A central air compressor and dryer supply control air at a regulated main pressure (Siemens technical instructions list 18, 25 or 30 psig for control instruments), and controllers modulate a branch line pressure, usually 3 to 15 psi, that drives valve and damper actuators. See [Pneumatic control systems](pneumatic-control-systems.html) for the details. A thermostat is a small air bleed mechanism that varies the pressure as temperature changes.
 
 **How to recognise it.**
 - An air compressor, often a duplex pair, with a dryer and filters in a mechanical room.

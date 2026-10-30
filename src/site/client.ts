@@ -70,6 +70,12 @@ export const CLIENT_JS = `
     for (var i = 0; i < lis.length; i++) lis[i].className = i === active ? 'on' : '';
   }
 
+  function pickRandom() {
+    if (!index.length) return;
+    var pick = index[Math.floor(Math.random() * index.length)];
+    location.href = rel + pick.u;
+  }
+
   if (input && box) {
     input.addEventListener('input', search);
     input.addEventListener('keydown', function (ev) {
@@ -79,11 +85,29 @@ export const CLIENT_JS = `
       else if (ev.key === 'Escape') { render([]); input.blur(); }
     });
     document.addEventListener('click', function (ev) { if (!box.contains(ev.target) && ev.target !== input) render([]); });
-    document.addEventListener('keydown', function (ev) {
-      var tag = (document.activeElement && document.activeElement.tagName) || '';
-      if (ev.key === '/' && tag !== 'INPUT') { input.focus(); ev.preventDefault(); }
-    });
   }
+
+  document.addEventListener('keydown', function (ev) {
+    var tag = (document.activeElement && document.activeElement.tagName) || '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    if (ev.key === '/' && input) { input.focus(); ev.preventDefault(); }
+    else if ((ev.key === 'r' || ev.key === 'R') && !ev.ctrlKey && !ev.metaKey && !ev.altKey) {
+      ev.preventDefault();
+      pickRandom();
+    }
+  });
+
+  document.addEventListener('click', function (ev) {
+    var t = ev.target;
+    while (t && t !== document) {
+      if (t.classList && t.classList.contains('rnd')) {
+        ev.preventDefault();
+        pickRandom();
+        return;
+      }
+      t = t.parentElement;
+    }
+  });
 
   // Table filters: <input data-filter="tableId">
   var filters = document.querySelectorAll('input[data-filter]');

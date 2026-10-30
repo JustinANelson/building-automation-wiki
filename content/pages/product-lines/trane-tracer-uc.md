@@ -10,7 +10,7 @@ protocols:
   - bacnet-ip
   - bacnet-mstp
 status: current
-review: draft
+review: verified
 related:
   - bacnet-mstp
   - symbio-210
@@ -22,6 +22,11 @@ related:
   - trane-symbio
   - uc400
   - vav-control
+sources:
+  - https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation%20Operation%20and%20Maintenance/BAS-SVX20K-EN_04152020.pdf
+  - https://elibrary.tranetechnologies.com/public/commercial-hvac/Literature/Installation%20Operation%20and%20Maintenance/BAS-SVX065F-EN_05132023.pdf
+  - https://www.trane.com/content/dam/Trane/Commercial/global/products-systems/equipment/controls/building-management/Tracer-SC/BAS-PRD038K-EN_08012022.pdf
+  - https://jp.trane.com/content/dam/Trane/Commercial/global/controls/archive/BAS-PRC033-EN_06102013.pdf
 ---
 
 ## Overview

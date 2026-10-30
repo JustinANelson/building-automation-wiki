@@ -7,7 +7,7 @@ manufacturer: phoenix-controls
 protocols: [bacnet, bacnet-ip, bacnet-mstp, modbus-rtu]
 status: current
 review: verified
-related: [celeris, celeris-valve, traccel-valve, cscp-valve, phoenix-pbc, fhd500]
+related: [celeris, celeris-valve, traccel-valve, cscp-valve, phoenix-pbc, fhd500, phoenix-controls-generations-and-upgrades, laboratory-ventilation-strategy]
 sources:
   - https://www.Literature.PhoenixControls.com/Documents/MKT-0242.pdf
   - https://prod-edam.honeywell.com/content/dam/honeywell-edam/hbt/en-us/documents/literature-and-specs/datasheets/HBT-BMS-MKT-0525-CSCP-Venturi-Valves.pdf

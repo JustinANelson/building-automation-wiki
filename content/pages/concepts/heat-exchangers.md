@@ -3,7 +3,7 @@ id: heat-exchangers
 type: concept
 title: "Heat exchangers: plate-and-frame, shell-and-tube, LMTD, and BAS control sequences"
 summary: "Plate-and-frame, shell-and-tube, and brazed-plate heat exchangers: log mean temperature difference (LMTD), approach temperature, NTU effectiveness, waterside economizers, district energy isolation, and fouling monitoring."
-review: draft
+review: verified
 related:
   - absorption-chillers
   - chilled-beams

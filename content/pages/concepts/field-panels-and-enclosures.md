@@ -3,7 +3,7 @@ id: field-panels-and-enclosures
 type: concept
 title: "Field panel layout, power supplies, and control enclosures"
 summary: "Inside a mechanical room BAS control cabinet: UL 508A enclosures, 24 VAC Class 2 transformers, DIN-rail controllers and I/O modules, interposing pilot relays, and wiring segregation."
-review: draft
+review: verified
 images:
   - path: images/concepts/field-panels-and-enclosures.svg
     alt: "Technical diagram (drawn illustration) of the internal layout of a mechanical room BAS control panel showing 24 VAC transformer, Ethernet switch, interposing relays, and DIN-rail PXC controller with TX-I/O modules"

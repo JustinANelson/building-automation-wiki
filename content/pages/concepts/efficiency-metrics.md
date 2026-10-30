@@ -3,7 +3,7 @@ id: efficiency-metrics
 type: concept
 title: "Efficiency metrics: COP, EER, kW/ton, IPLV and power factor"
 summary: "How cooling and heating efficiency is expressed (coefficient of performance, EER, kW per ton, IPLV and NPLV), how to convert between them, how a BAS can calculate them from flow, temperature and power, and how they differ from power factor and load factor."
-review: draft
+review: verified
 related:
   - chiller-part-load-performance
   - electric-chillers

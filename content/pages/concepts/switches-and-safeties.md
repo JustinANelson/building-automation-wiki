@@ -3,7 +3,7 @@ id: switches-and-safeties
 type: concept
 title: "HVAC/R safety devices, cutouts, and proof-of-flow switches"
 summary: "Low-temperature cutouts (freeze stats), high/low refrigerant pressure switches, differential oil pressure switches, hydronic and air proof-of-flow switches, high-temperature cutouts (firestats and electric heater limits), and high-humidity safety cutouts."
-review: draft
+review: verified
 images:
   - path: images/concepts/switches-and-safeties.svg
     alt: "Technical diagram (drawn illustration) of an AHU hardwired safety interlock chain (Freeze Stat, High-Static Cutout, Duct Smoke Detector) wired to the supply fan starter and BAS Digital Inputs (DI)"

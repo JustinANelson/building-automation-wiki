@@ -3,7 +3,7 @@ id: cooling-towers
 type: concept
 title: "Cooling towers: thermodynamics, range and approach, fan control, and condenser water optimization"
 summary: "Cooling tower heat rejection thermodynamics, open vs. closed circuit towers, range vs. approach, dynamic wet-bulb reset sequences, fan staging with VFDs, bypass valve control, and winter freeze protection."
-review: draft
+review: verified
 related:
   - absorption-chillers
   - chiller-part-load-performance

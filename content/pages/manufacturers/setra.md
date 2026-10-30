@@ -3,7 +3,7 @@ id: setra
 type: manufacturer
 title: Setra Systems
 summary: American manufacturer of high-precision variable capacitive differential pressure transducers and critical-environment room pressure monitors.
-review: draft
+review: verified
 related:
   - differential-pressure-sensors
   - economizer-control

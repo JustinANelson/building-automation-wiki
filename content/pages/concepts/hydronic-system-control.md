@@ -3,7 +3,7 @@ id: hydronic-system-control
 type: concept
 title: "Hydronic plant and loop control: chillers, boilers, pumping topologies, and resets"
 summary: "Central chilled water (CHW), condenser water (CW), and heating hot water (HHW) plant automation: constant primary / variable secondary vs. variable-primary flow (VPF), chiller and condensing boiler sequencing, minimum evaporator flow bypass, and supply water temperature resets."
-review: draft
+review: verified
 images:
   - path: images/concepts/hydronic-system-control.svg
     alt: "Technical diagram (drawn illustration) of a variable-primary flow (VPF) chiller plant with minimum flow bypass, condensing boiler outdoor hot water reset below 130 degrees F, and hydronic heat transfer equations"

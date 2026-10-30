@@ -3,7 +3,7 @@ id: fan-and-pump-power-calculations
 type: concept
 title: "Fan and pump power calculations and variable speed savings estimates"
 summary: "Air and water horsepower, brake horsepower and motor input power for fans and pumps, system efficiency, motor load from current, and a worked bin-hour estimate of variable frequency drive savings."
-review: draft
+review: verified
 related: [variable-frequency-drives, electrical-power-calculations, energy-savings-and-payback-calculations, static-pressure-reset, hydronic-system-control, airflow-measurement, efficiency-metrics, psychrometric-calculations]
 sources:
   - https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf

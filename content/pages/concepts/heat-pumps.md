@@ -3,7 +3,7 @@ id: heat-pumps
 type: concept
 title: "Heat pumps and their controls"
 summary: "Air-source, water-source and ground-source heat pumps, how COP and EER describe them, and what a heat pump controller must manage."
-review: draft
+review: verified
 related: [apogee-tec-vav, control-signals, control-strategies, economizer-control, energy-conservation-strategies, geothermal-ground-source, hydronic-system-control, symbio-500, temperature-sensors, uc400, vt7600]
 sources:
   - https://www.energy.gov/sites/default/files/2021-08/ES-Geothermal%20heat%20pumps_080221.pdf

@@ -3,7 +3,7 @@ id: io-points
 type: concept
 title: "BAS I/O point types: AI, AO, DI, DO, and UIO"
 summary: "How physical field points (Analog Input, Analog Output, Digital Input, Digital Output, and Universal I/O) and virtual BACnet objects connect sensors and actuators to DDC controllers."
-review: draft
+review: verified
 images:
   - path: images/concepts/io-points.svg
     alt: "Technical diagram (drawn illustration) of BAS DDC controller I/O point types showing AI, DI, AO, DO, Universal I/O (UIO), and BACnet object mappings"

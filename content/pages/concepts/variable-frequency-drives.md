@@ -3,7 +3,7 @@ id: variable-frequency-drives
 type: concept
 title: "Variable frequency drives (VFDs) for fans, pumps and chillers"
 summary: "How a VFD varies motor speed, why fan and pump power falls with the cube of speed, what drive and motor losses do to the savings, and how a BAS commands, monitors and commissions drives."
-review: draft
+review: verified
 related:
   - analog-signals
   - bacnet-mstp

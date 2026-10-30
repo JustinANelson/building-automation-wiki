@@ -3,7 +3,7 @@ id: laboratory-and-fume-hood-control
 type: concept
 title: "Laboratory pressurization, volumetric flow tracking, and fume hood controls"
 summary: "Critical airflow control principles for research laboratories, vivariums, and cleanrooms: room envelope leakage physics, volumetric offset tracking vs. direct differential pressure control, hybrid cascade architectures, sub-second speed of response (ANSI/AIHA Z9.5), and venturi valves."
-review: draft
+review: verified
 images:
   - path: images/concepts/laboratory-and-fume-hood-control.svg
     alt: "Technical diagram (drawn illustration) of laboratory volumetric airflow tracking, negative pressure containment, and VAV fume hood sash and face-velocity control"
@@ -21,6 +21,8 @@ related:
   - fhd500
   - gages-and-local-instrumentation
   - io-points
+  - laboratory-ventilation-strategy
+  - phoenix-controls-generations-and-upgrades
   - phoenix-pbc
   - switches-and-safeties
   - traccel-valve

@@ -3,7 +3,7 @@ id: natural-ventilation
 type: concept
 title: "Natural and mixed-mode ventilation"
 summary: "Using motorised vents and windows for ventilation and night cooling, and how a BAS controls them."
-review: draft
+review: verified
 related: [chilled-beams, co2-sensors, control-strategies, damper-actuators, dampers-and-louvers, economizer-control, energy-conservation-strategies, enocean, switches-and-safeties, temperature-sensors, window-actuators]
 sources:
   - https://www.usablebuildings.co.uk/UsableBuildings/Unprotected/NatventOpeningPIIRpt2000.pdf

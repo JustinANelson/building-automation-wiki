@@ -3,7 +3,7 @@ id: control-signals
 type: concept
 title: "Floating, two-position and modulating control"
 summary: "The three ways a controller drives an actuator: modulating, floating (tri-state), and on/off."
-review: draft
+review: verified
 related: [io-points, analog-signals, damper-actuators, control-valves, dampers-and-louvers, vav-control, openair-gde-glb, siemens-599-zone-valve, amb24-3]
 sources:
   - https://sid.siemens.com/v/u/A6V10445888

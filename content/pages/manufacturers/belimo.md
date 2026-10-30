@@ -3,7 +3,7 @@ id: belimo
 type: manufacturer
 title: Belimo
 summary: Swiss manufacturer of direct-coupled damper actuators, characterized control valves, and HVAC pressure/temperature sensors.
-review: draft
+review: verified
 related:
   - amb24-3
   - belimo-22adp-584

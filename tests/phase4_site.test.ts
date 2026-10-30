@@ -41,6 +41,10 @@ describe('Phase 4: static site rendering', () => {
     expect(parts).toContain('BMSY500AAA0100011');
     expect(parts).toContain('PXC100-E.D');
     expect(site.has('documents.html')).toBe(true);
+    expect(site.has('random.html')).toBe(true);
+    const rndHtml = site.get('random.html') as string;
+    expect(rndHtml).toContain('Random page');
+    expect(rndHtml).toContain('location.replace(item.u)');
     for (const asset of ['assets/site.css', 'assets/site.js', 'assets/search-index.js'])
       expect(site.has(asset)).toBe(true);
   });
@@ -104,5 +108,60 @@ describe('Phase 4: static site rendering', () => {
     input.value = 'Z';
     handlers.input!();
     expect(box.innerHTML).toContain('Z100A');
+  });
+
+  it('provides a client-side random page picker', () => {
+    let targetUrl = '';
+    const clickListeners: ((ev: { target: unknown; preventDefault: () => void }) => void)[] = [];
+    const keyListeners: ((ev: { key: string; preventDefault: () => void; ctrlKey?: boolean; metaKey?: boolean; altKey?: boolean }) => void)[] = [];
+
+    const sandbox = {
+      window: {
+        BASWIKI_INDEX: [
+          { t: 'PXC4 Controller', u: 'product/pxc4.html', k: 'product', m: 'Siemens', p: ['PXC4.E16'], s: '' },
+        ],
+      },
+      document: {
+        body: { getAttribute: () => '../' },
+        getElementById: () => null,
+        addEventListener: (ev: string, fn: (arg: unknown) => void) => {
+          if (ev === 'click') clickListeners.push(fn as (ev: { target: unknown; preventDefault: () => void }) => void);
+          if (ev === 'keydown') keyListeners.push(fn as (ev: { key: string; preventDefault: () => void; ctrlKey?: boolean; metaKey?: boolean; altKey?: boolean }) => void);
+        },
+        querySelectorAll: () => [],
+        activeElement: null,
+      },
+      location: {
+        get href() {
+          return targetUrl;
+        },
+        set href(val: string) {
+          targetUrl = val;
+        },
+      },
+      Math,
+    };
+    runInNewContext(site.get('assets/site.js') as string, sandbox);
+
+    // Test click on .rnd link
+    let prevented = false;
+    const fakeLink = {
+      classList: { contains: (cls: string) => cls === 'rnd' },
+      parentElement: null,
+    };
+    for (const listener of clickListeners) {
+      listener({ target: fakeLink, preventDefault: () => { prevented = true; } });
+    }
+    expect(prevented).toBe(true);
+    expect(targetUrl).toBe('../product/pxc4.html');
+
+    // Test 'r' shortcut key
+    targetUrl = '';
+    prevented = false;
+    for (const listener of keyListeners) {
+      listener({ key: 'r', preventDefault: () => { prevented = true; } });
+    }
+    expect(prevented).toBe(true);
+    expect(targetUrl).toBe('../product/pxc4.html');
   });
 });

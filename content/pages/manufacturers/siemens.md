@@ -4,7 +4,7 @@ type: manufacturer
 title: Siemens Smart Infrastructure
 summary: Building automation vendor behind the Desigo and APOGEE platforms, Insight and Desigo CC management workstations, and OpenAir and Acvatix field devices.
 review: verified
-related: [apogee, desigo, siemens-insight, desigo-cc, openair-gde-glb, siemens-599-zone-valve]
+related: [apogee, desigo, siemens-insight, desigo-cc, openair-gde-glb, siemens-599-zone-valve, siemens-apogee-to-desigo-migration]
 sources:
   - https://sid.siemens.com/v/u/A6V11272745
   - https://sid.siemens.com/api/khub/documents/_Hsnme0ubYXgaGd1jxgjgQ/content

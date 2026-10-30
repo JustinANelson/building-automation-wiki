@@ -3,7 +3,7 @@ id: electric-chillers
 type: concept
 title: "Electric chillers: compressor types, air- and water-cooled, controls and BAS points"
 summary: "How a vapor-compression chiller works, how scroll, reciprocating, screw and centrifugal machines differ, how air-cooled and water-cooled machines compare, and the controls, safeties and BAS points a chiller exposes."
-review: draft
+review: verified
 related:
   - bacnet-mstp
   - chiller-part-load-performance

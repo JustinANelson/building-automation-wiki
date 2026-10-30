@@ -3,7 +3,7 @@ id: airflow-measurement
 type: concept
 title: "Airflow measurement and pressure-independent control"
 summary: "Three ways VAV and laboratory controllers know airflow: a differential-pressure sensor, a velocity sensor, or a mechanical venturi valve that needs no measurement."
-review: draft
+review: verified
 related: [differential-pressure-sensors, vav-control, celeris-valve, cscp-valve, traccel-valve, phoenix-pbc, gdb181-1e-3]
 sources:
   - https://prod-edam.honeywell.com/content/dam/honeywell-edam/hbt/en-us/documents/literature-and-specs/datasheets/HBT-BMS-MKT-0525-CSCP-Venturi-Valves.pdf

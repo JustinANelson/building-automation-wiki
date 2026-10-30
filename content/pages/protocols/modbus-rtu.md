@@ -3,7 +3,7 @@ id: modbus-rtu
 type: protocol
 title: "Modbus RTU"
 summary: "Modbus over a serial line (usually two-wire RS-485) with binary framing and a CRC-16 check."
-review: draft
+review: verified
 related: [modbus, modbus-tcp, rs-485]
 sources:
   - https://www.modbus.org/file/secure/modbusoverseriallegacy.pdf

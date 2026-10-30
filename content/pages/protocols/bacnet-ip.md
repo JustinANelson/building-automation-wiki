@@ -3,7 +3,7 @@ id: bacnet-ip
 type: protocol
 title: "BACnet/IP"
 summary: "BACnet carried over UDP/IP on Ethernet, with BBMDs bridging broadcast domains."
-review: draft
+review: needs-review
 related: [bacnet, bacnet-mstp, bacnet-sc]
 sources:
   - https://bluerithm.com/bacnet-technical-summary/

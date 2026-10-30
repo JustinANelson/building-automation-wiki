@@ -3,7 +3,7 @@ id: differential-pressure-sensors
 type: concept
 title: "Differential pressure sensors"
 summary: "How a small differential pressure sensor inside a VAV compact controller turns a pressure drop into airflow, and how the nominal-flow parameter scales it."
-review: draft
+review: verified
 related: [airflow-measurement, vav-control, gdb181-1e-3, glb181-1e-3, apogee-tec-vav, setra-264, belimo-22adp-584, belimo-22pdp-18]
 sources:
   - https://sid.siemens.com/v/u/A6V10356040

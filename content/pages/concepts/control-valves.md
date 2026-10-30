@@ -3,7 +3,7 @@ id: control-valves
 type: concept
 title: "HVAC hydronic and steam control valves: body types, Cv ratings, authority, and PICVs"
 summary: "Two-way, three-way, globe, ball, butterfly, and pressure-independent control valves (PICVs): valve flow coefficient (Cv/Kvs), inherent vs. installed characteristics, valve authority, cavitation, close-off ratings, and fail-safe selection."
-review: draft
+review: verified
 images:
   - path: images/concepts/butterfly-valve-electric-actuator.jpg
     alt: "Industrial butterfly valve fitted with an electric quarter-turn actuator and handwheel"

@@ -3,7 +3,7 @@ id: vav-control
 type: concept
 title: "VAV terminal box control"
 summary: "How a pressure-independent variable-air-volume box controller combines a temperature loop and a flow loop, using the Siemens BACnet PTEC as the worked example."
-review: draft
+review: verified
 related: [airflow-measurement, apogee-atec, apogee-fln, apogee-tec-vav, control-strategies, damper-actuators, dampers-and-louvers, discharge-air-temperature-reset, dxr2, energy-conservation-strategies, laboratory-and-fume-hood-control, static-pressure-reset, temperature-sensors]
 sources:
   - https://sid.siemens.com/v/u/A6V10445888

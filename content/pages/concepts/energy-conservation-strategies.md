@@ -3,7 +3,7 @@ id: energy-conservation-strategies
 type: concept
 title: "BAS energy conservation strategies and ASHRAE 90.1 / Guideline 36 sequences"
 summary: "High-performance building automation energy conservation measures (ECMs): dual-maximum VAV reheat, optimal start/stop, unoccupied setback and morning warm-up, demand-controlled ventilation, air and hydronic resets, and automated fault detection and diagnostics (FDD)."
-review: draft
+review: verified
 images:
   - path: images/concepts/energy-conservation-strategies.svg
     alt: "Technical diagram (drawn illustration) comparing legacy single-minimum VAV reheat against ASHRAE Guideline 36 dual-maximum VAV sequencing alongside optimal start, CO2 demand-controlled ventilation, resets, and automated FDD"

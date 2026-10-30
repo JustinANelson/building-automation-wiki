@@ -3,7 +3,7 @@ id: measurement-and-verification
 type: concept
 title: "Measurement and verification: IPMVP options, baseline models and ASHRAE Guideline 14 metrics"
 summary: "How energy savings are verified: the four IPMVP options, baseline and reporting periods, weather-normalised regression models, the NMBE and CV(RMSE) fit statistics with Guideline 14 thresholds, energy use intensity, and how BAS trend data supports M&V."
-review: draft
+review: verified
 related: [energy-savings-and-payback-calculations, efficiency-metrics, fan-and-pump-power-calculations, energy-conservation-strategies, supervisory-controllers, electrical-power-calculations, temperature-sensors, chiller-part-load-performance]
 sources:
   - https://www.energy.nsw.gov.au/sites/default/files/2023-09/Measurement_and_Verification_Guide_Module2_Aug_2023.pdf

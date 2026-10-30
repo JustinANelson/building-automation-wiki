@@ -7,12 +7,15 @@ manufacturer: vaisala
 category: sensor
 protocols: []
 status: current
-review: draft
+review: verified
 related:
   - humidity-sensors
   - temperature-sensors
   - vaisala
   - vaisala-hvac-transmitters
+sources:
+  - https://downloads.psl.noaa.gov/BLO/Air-Sea/oceanobs/portable_standard/hardware/HMT330-Series-Datasheet-B210951EN-C-LOW-v2.pdf
+  - https://xdevs.com/doc/Vaisala/GM70/HVAC-Product-Brochure-B211277EN.pdf
 ---
 
 ## Overview

@@ -3,7 +3,7 @@ id: knx
 type: protocol
 title: "KNX"
 summary: "Open twisted-pair building bus used by Siemens QMX3 room operator units, engineered with ETS or the Synco ACS tool."
-review: draft
+review: needs-review
 related: [qmx3, bacnet, lonworks, rs-485]
 sources:
   - https://sid.siemens.com/v/u/A6V10408335

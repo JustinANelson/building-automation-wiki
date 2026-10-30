@@ -3,7 +3,7 @@ id: chiller-part-load-performance
 type: concept
 title: "Chiller part-load performance, IPLV and NPLV"
 summary: "Why chillers spend most of their hours below full load, how efficiency changes with load and with condenser water temperature, how IPLV and NPLV are weighted, and what a BAS can do to keep a plant efficient at part load."
-review: draft
+review: verified
 related:
   - economizer-control
   - efficiency-metrics

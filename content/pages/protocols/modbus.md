@@ -3,7 +3,7 @@ id: modbus
 type: protocol
 title: "Modbus"
 summary: "Simple client-server register protocol used for equipment, meters, and sensors, over serial lines or TCP."
-review: draft
+review: verified
 related: [modbus-rtu, modbus-tcp, bacnet, rs-485]
 sources:
   - https://www.modbus.org/file/secure/modbusprotocolspecification.pdf

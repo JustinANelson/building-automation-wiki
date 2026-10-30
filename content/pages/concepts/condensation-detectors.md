@@ -3,7 +3,7 @@ id: condensation-detectors
 type: concept
 title: "Condensation detectors and surface dewpoint monitors"
 summary: "Pipe-mounted and surface condensation monitors used in chilled beam and radiant cooling systems: hygroscopic impedance sensors, pipe surface dewpoint comparison, and emergency valve shut-off sequences."
-review: draft
+review: verified
 related:
   - chilled-beams
   - control-valves

@@ -3,7 +3,7 @@ id: chilled-beams
 type: concept
 title: "Chilled beams"
 summary: "Ceiling-mounted water coils that cool sensibly, passive or active, and the dew point controls that keep them from dripping."
-review: draft
+review: verified
 related: [co2-sensors, condensation-detectors, control-strategies, control-valves, discharge-air-temperature-reset, dxr2, energy-conservation-strategies, humidity-sensors, hydronic-system-control, natural-ventilation, temperature-sensors, vav-control, vt8350]
 sources:
   - https://www.trane.com/content/dam/Trane/Commercial/global/products-systems/education-training/engineers-newsletters/airside-design/adm_apn034en_1209.pdf

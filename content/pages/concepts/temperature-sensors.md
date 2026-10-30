@@ -3,7 +3,7 @@ id: temperature-sensors
 type: concept
 title: "HVAC temperature sensors: thermistors, RTDs, and transmitters"
 summary: "How NTC thermistors, platinum and nickel RTDs, active 4-20 mA / 0-10 V transmitters, and digital bus room sensors measure air, hydronic water, and space temperature in building automation."
-review: draft
+review: verified
 images:
   - path: images/concepts/thermistor.jpg
     alt: "Resistance versus temperature curves for an NTC thermistor (curve 1, falling) and a PTC thermistor (curve 2, rising); axis labels are in Russian"

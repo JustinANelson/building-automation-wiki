@@ -3,7 +3,7 @@ id: window-actuators
 type: concept
 title: "Motorized window actuators and automatic vent opening devices"
 summary: "Electric drive mechanisms used in natural and mixed-mode ventilation: chain actuators, linear spindle drives, rack-and-pinion actuators, thrust sizing, weather interlocks, and BAS control interfaces."
-review: draft
+review: verified
 related:
   - co2-sensors
   - control-signals

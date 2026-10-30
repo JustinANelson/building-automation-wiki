@@ -3,7 +3,7 @@ id: damper-actuators
 type: concept
 title: "HVAC damper and valve actuators"
 summary: "Electric rotary and linear actuators that drive HVAC air dampers and hydronic control valves, selected by torque or stroke force, control signal, fail-safe action, run time, and auxiliary feedback."
-review: draft
+review: verified
 images:
   - path: images/concepts/damper-actuator-belimo-lf230s.jpg
     alt: "Belimo LF230-S spring-return rotary actuator, nameplate visible"

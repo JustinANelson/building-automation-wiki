@@ -3,7 +3,7 @@ id: lonworks
 type: protocol
 title: "LonWorks"
 summary: "Echelon peer-to-peer control network (LonTalk), common in older terminal-unit controllers."
-review: draft
+review: needs-review
 related: [bacnet, gmd20]
 sources:
   - https://www.iag.co.at/fileadmin/user_upload/product_documents/GMD20.en.pdf

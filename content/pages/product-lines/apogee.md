@@ -7,7 +7,7 @@ manufacturer: siemens
 protocols: [apogee-fln, bacnet, bacnet-ip, bacnet-mstp]
 status: legacy
 review: verified
-related: [desigo, siemens-insight, desigo-cc, pxc-compact, pxc-modular, apogee-mbc, apogee-mec, apogee-tec-vav, apogee-atec, apogee-570-lab-fume-hood, qaa2280-series-2200]
+related: [desigo, siemens-insight, desigo-cc, pxc-compact, pxc-modular, apogee-mbc, apogee-mec, apogee-tec-vav, apogee-atec, apogee-570-lab-fume-hood, qaa2280-series-2200, siemens-apogee-to-desigo-migration]
 sources:
   - https://sid.siemens.com/api/khub/documents/_Hsnme0ubYXgaGd1jxgjgQ/content
   - https://sid.siemens.com/api/khub/documents/qfKRjJjW4TsT6NaZ1oVO9Q/content

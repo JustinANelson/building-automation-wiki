@@ -3,7 +3,7 @@ id: static-pressure-reset
 type: concept
 title: "Duct static pressure and hydronic differential pressure reset"
 summary: "Energy conservation sequences that continuously reset VAV supply duct static pressure and hydronic loop differential pressure setpoints using ASHRAE Guideline 36 trim-and-respond (T&R) damper/valve position polling so the most loaded terminal operates near 90% open."
-review: draft
+review: verified
 images:
   - path: images/concepts/static-pressure-reset.svg
     alt: "Technical diagram (drawn illustration) of ASHRAE Guideline 36 trim-and-respond duct static pressure reset polling VAV terminal damper positions and parallel hydronic loop differential pressure reset"

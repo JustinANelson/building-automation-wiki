@@ -3,7 +3,7 @@ id: absorption-chillers
 type: concept
 title: "Absorption chillers: single-effect, double-effect, and when they make sense"
 summary: "How a heat-driven absorption chiller makes chilled water without a mechanical compressor, the difference between single- and double-effect machines, why their heat rejection is larger than an electric chiller's, and the controls and risks specific to them."
-review: draft
+review: verified
 related: [electric-chillers, efficiency-metrics, chiller-part-load-performance, hydronic-system-control, energy-conservation-strategies, control-valves, switches-and-safeties]
 sources:
   - https://www.energy.gov/sites/prod/files/2014/05/f16/steam14_chillers.pdf

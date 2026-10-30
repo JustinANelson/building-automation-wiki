@@ -3,7 +3,7 @@ id: modbus-tcp
 type: protocol
 title: "Modbus TCP"
 summary: "Modbus carried over TCP/IP with a 7-byte MBAP header and no CRC."
-review: draft
+review: verified
 related: [modbus, modbus-rtu]
 sources:
   - https://www.modbus.org/file/secure/messagingimplementationguide.pdf

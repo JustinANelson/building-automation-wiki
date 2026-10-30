@@ -3,7 +3,7 @@ id: bacnet
 type: protocol
 title: "BACnet"
 summary: "ASHRAE 135 / ISO 16484-5 open protocol for building automation, carried over IP, MS/TP, or secure transports."
-review: draft
+review: needs-review
 related: [bacnet-ip, bacnet-mstp, bacnet-sc, rs-485, modbus]
 sources:
   - https://bluerithm.com/bacnet-technical-summary/

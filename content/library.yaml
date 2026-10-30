@@ -1257,3 +1257,186 @@
   sha256: 6ba591a57b14425336ecf03c3e2878882b39f0a6e90a5deae07a66107ef72f4d
   bytes: 1845346
   retrieved: 2026-10-30
+- id: siemens-155-002
+  title: "Siemens Technical Instructions 155-002: Air Compressor and Accessories (2005-03-11)"
+  kind: other
+  url: https://sid.siemens.com/api/khub/documents/S0imUbISAT6Ybbdji11G8A/content
+  file: library/siemens/pneumatic-control-systems/other/155-002.pdf
+  pages:
+    - pneumatic-control-systems
+    - hvac-and-controls-through-the-eras
+  docId: "155-002"
+  language: en
+  status: downloaded
+  sha256: 0c3cf0aa2d3b5244098d656336871d5fa6d18555741d4609da32ef9a9ae4c74a
+  bytes: 188167
+  retrieved: 2026-10-30
+  note: Scanned document with an OCR text layer; Powers pneumatic equipment. Title and date read from the document.
+- id: uf-255000-integrated-automation-facility-controls
+  title: "University of Florida Design and Construction Standards 255000: Integrated Automation Facility Controls (October 2015)"
+  kind: other
+  url: https://pdc.ufl.edu/wp-content/uploads/2025/03/dcs-47-255000.pdf
+  file: library/standards/pneumatic-control-systems/other/UF-255000.pdf
+  pages:
+    - pneumatic-control-systems
+  docId: "255000"
+  language: en
+  status: downloaded
+  sha256: 28978b50d7a7b0eedeb88673f3e916a2cb47a5835d549f6cfee88e980f35956b
+  bytes: 24290
+  retrieved: 2026-10-30
+  note: One owner's standard, used as an example of control-air requirements. The PDF metadata calls it Section 15950; the text is headed 255000.
+- id: doe-steam-tip-sheet-1-steam-traps
+  title: "DOE Advanced Manufacturing Office Steam Tip Sheet #1: Inspect and Repair Steam Traps (January 2012)"
+  kind: other
+  url: https://www.energy.gov/sites/prod/files/2014/05/f16/steam1_traps.pdf
+  file: library/doe/steam-heating-systems/other/steam1_traps.pdf
+  pages:
+    - steam-heating-systems
+  docId: DOE/GO-102012-3401
+  language: en
+  status: downloaded
+  sha256: e93745d18501b040cccb32fc13644a4cd284b0f8de0066b3667fac787a14cdf8
+  bytes: 403223
+  retrieved: 2026-10-30
+  note: Adapted by DOE from an Energy TIPS fact sheet of the Industrial Energy Extension Service of Georgia Tech.
+- id: nps-preservation-brief-24
+  title: "National Park Service Preservation Brief 24: Heating, Ventilating, and Cooling Historic Buildings - Problems and Recommended Approaches (Sharon C. Park)"
+  kind: other
+  url: https://www.nps.gov/orgs/1739/upload/preservation-brief-24-heating-cooling.pdf
+  file: library/nps/steam-heating-systems/other/preservation-brief-24.pdf
+  pages:
+    - steam-heating-systems
+  docId: Preservation Brief 24
+  language: en
+  status: downloaded
+  sha256: 8b11ae19161fa9edda8617ce1bdce6187f7945051f81d7594a6950f0dd6d85d1
+  bytes: 9496028
+  retrieved: 2026-10-30
+  note: Publication date not confirmed from the document text.
+- id: gifford-two-pipe-steam-2003
+  title: "Henry Gifford: How to Make a Two-Pipe Steam Heating System Really Work (trade magazine article, June 2003, hosted by PNNL)"
+  kind: other
+  url: https://basc.pnnl.gov/sites/default/files/resource/e5f3f69e9ad7c32fa467f99b473202.pdf
+  file: library/pnnl/steam-heating-systems/other/gifford-two-pipe-steam-2003.pdf
+  pages:
+    - steam-heating-systems
+  docId: Gifford 2003
+  language: en
+  status: downloaded
+  sha256: 5b394f32b85d3a0567ce2c28f6e90893ca835fbf0969140c5f0ebc70cbd55b58
+  bytes: 1532825
+  retrieved: 2026-10-30
+  note: One practitioner's method (radiator inlet orifices), not a consensus standard.
+- id: siemens-desigo-cc-help-verifying-field-panel-support
+  title: "Desigo CC engineering help: Verifying Field Panel and Hardware/Firmware Support (APOGEE P2)"
+  kind: other
+  url: https://legacy.pvamu.edu/ClickOnce_Client/Help/EngineeringHelp/en-US/17354773259.html
+  file: library/siemens/siemens-apogee-to-desigo-migration/other/desigo-cc-help-verifying-field-panel-support.html
+  pages:
+    - siemens-apogee-to-desigo-migration
+  docId: "Desigo CC help 17354773259"
+  language: en
+  status: downloaded
+  sha256: a8c2829941ef3dd198dde620735c291cd2e04a4dba1a0bfbacffaedb636f535f
+  bytes: 19399
+  retrieved: 2026-10-30
+  note: Siemens Desigo CC engineering help as mirrored on a university server (legacy.pvamu.edu); the Desigo CC version it describes is not stated. Confirm against Siemens documentation for the version in use.
+- id: siemens-desigo-cc-help-preparing-database-export
+  title: "Desigo CC engineering help: Preparing for a Database Export (APOGEE P2)"
+  kind: other
+  url: https://legacy.pvamu.edu/ClickOnce_Client/Help/EngineeringHelp/en-US/17355066123.html
+  file: library/siemens/siemens-apogee-to-desigo-migration/other/desigo-cc-help-preparing-database-export.html
+  pages:
+    - siemens-apogee-to-desigo-migration
+  docId: "Desigo CC help 17355066123"
+  language: en
+  status: downloaded
+  sha256: 02d204e49f85917cb5347c53b8c6b76ca15ec21c243bfa126ce80181f852a9b6
+  bytes: 18179
+  retrieved: 2026-10-30
+  note: Siemens Desigo CC engineering help as mirrored on a university server (legacy.pvamu.edu); the Desigo CC version it describes is not stated. Confirm against Siemens documentation for the version in use.
+- id: siemens-desigo-cc-help-exporting-database
+  title: "Desigo CC engineering help: Exporting the Database (APOGEE P2)"
+  kind: other
+  url: https://legacy.pvamu.edu/ClickOnce_Client/Help/EngineeringHelp/en-US/17354829067.html
+  file: library/siemens/siemens-apogee-to-desigo-migration/other/desigo-cc-help-exporting-database.html
+  pages:
+    - siemens-apogee-to-desigo-migration
+  docId: "Desigo CC help 17354829067"
+  language: en
+  status: downloaded
+  sha256: e46e666170587ef432ff2ce7aeac7819ab2ce8e29458e98d269767d489a4911a
+  bytes: 21022
+  retrieved: 2026-10-30
+  note: Siemens Desigo CC engineering help as mirrored on a university server (legacy.pvamu.edu); the Desigo CC version it describes is not stated. Confirm against Siemens documentation for the version in use.
+- id: siemens-desigo-cc-help-compatibility-list
+  title: "Desigo CC engineering help: Compatibility List (APOGEE BACnet)"
+  kind: other
+  url: https://legacy.pvamu.edu/ClickOnce_Client/Help/EngineeringHelp/en-US/22033871883.html
+  file: library/siemens/siemens-apogee-to-desigo-migration/other/desigo-cc-help-compatibility-list.html
+  pages:
+    - siemens-apogee-to-desigo-migration
+  docId: "Desigo CC help 22033871883"
+  language: en
+  status: downloaded
+  sha256: c6239b1d4390f5e52cd965ed687f6a4651b136da204c00c7e5193794b872e1c6
+  bytes: 14528
+  retrieved: 2026-10-30
+  note: Siemens Desigo CC engineering help as mirrored on a university server (legacy.pvamu.edu); the Desigo CC version it describes is not stated. Confirm against Siemens documentation for the version in use.
+- id: siemens-desigo-cc-help-migrating-insight-steps
+  title: "Desigo CC engineering help: Migrating APOGEE Insight Software (step-by-step overview)"
+  kind: other
+  url: https://legacy.pvamu.edu/ClickOnce_Client/Help/EngineeringHelp/en-US/13800026507.html
+  file: library/siemens/siemens-apogee-to-desigo-migration/other/desigo-cc-help-migrating-insight-steps.html
+  pages:
+    - siemens-apogee-to-desigo-migration
+  docId: "Desigo CC help 13800026507"
+  language: en
+  status: downloaded
+  sha256: 61cab71bf3b274e5c50902f9f39565a184819aa9c36cffef49af061580a79b7d
+  bytes: 5712
+  retrieved: 2026-10-30
+  note: Siemens Desigo CC engineering help as mirrored on a university server (legacy.pvamu.edu); the Desigo CC version it describes is not stated. Confirm against Siemens documentation for the version in use.
+- id: siemens-desigo-cc-help-migrating-insight-reference
+  title: "Desigo CC engineering help: Migrating APOGEE Insight Software (reference overview)"
+  kind: other
+  url: https://legacy.pvamu.edu/ClickOnce_Client/Help/EngineeringHelp/en-US/13801496331.html
+  file: library/siemens/siemens-apogee-to-desigo-migration/other/desigo-cc-help-migrating-insight-reference.html
+  pages:
+    - siemens-apogee-to-desigo-migration
+  docId: "Desigo CC help 13801496331"
+  language: en
+  status: downloaded
+  sha256: fb36e8568ea10aa3c6fd7f9c555ebc84810bb418617562d7664f254d0aa474be
+  bytes: 5046
+  retrieved: 2026-10-30
+  note: Siemens Desigo CC engineering help as mirrored on a university server (legacy.pvamu.edu); the Desigo CC version it describes is not stated. Confirm against Siemens documentation for the version in use.
+- id: uf-labs21-cu-boulder-reducing-campus-ach
+  title: "Horn and Lockhart (University of Colorado Boulder): Reducing campus air change rates safely, an authority having jurisdiction perspective (Labs21 conference presentation, September 2011)"
+  kind: other
+  url: https://www.colorado.edu/fm/sites/default/files/attached-files/reducing_campus_ach_safely_an_authority_having_jurisdiction-_edited_8_26_20112submission.pdf
+  file: library/standards/laboratory-ventilation-strategy/other/CU-Boulder-Reducing-Campus-ACH-Labs21-2011.pdf
+  pages:
+    - laboratory-ventilation-strategy
+  docId: "Labs21 2011"
+  language: en
+  status: downloaded
+  sha256: fcc6775b6e6fe780456b2159842b6dd2466c6508b004ce8ed214b0b7cb86d23c
+  bytes: 4280375
+  retrieved: 2026-10-30
+  note: Conference presentation slides; one campus experience, not a standard.
+- id: i2sl-demand-based-control-2021
+  title: "I2SL Best Practices Guide: Energy Savings with Demand Based Control (September 2021)"
+  kind: other
+  url: https://www.i2sl.org/_files/ugd/59662e_37d2dc9cf1c245bcbfe1ca24180e534e.pdf
+  file: library/standards/laboratory-ventilation-strategy/other/I2SL-Demand-Based-Control-2021.pdf
+  pages:
+    - laboratory-ventilation-strategy
+  docId: "I2SL DBC 2021"
+  language: en
+  status: downloaded
+  sha256: 1751c3d9b8ee84c9d78d89f63d642104ea32a8a5ca185bf7197ff8797a41a2eb
+  bytes: 2600277
+  retrieved: 2026-10-30
+  note: Describes ANSI Z9.5 and NFPA 45 changes as the guide states them; the standards themselves were not read.

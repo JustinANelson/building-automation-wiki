@@ -3,7 +3,7 @@ id: control-strategies
 type: concept
 title: "DDC control strategies: PID loops, cascade control, deadbands, and equipment staging"
 summary: "Core direct digital control (DDC) feedback and sequencing architectures: two-position, floating, and digital PID control laws, direct vs. reverse action, cascade loops, heating/cooling deadbands, split-range sequencing, and lead-lag staging."
-review: draft
+review: verified
 images:
   - path: images/concepts/control-strategies.svg
     alt: "Technical diagram (drawn illustration) of a DDC cascade PID control loop, positional PID equation with anti-windup, and split-range heating/cooling deadband sequencing"

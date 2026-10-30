@@ -3,7 +3,7 @@ id: bacnet-mstp
 type: protocol
 title: "BACnet MS/TP"
 summary: "BACnet master-slave/token-passing data link over RS-485 twisted pair, the usual field bus between controllers."
-review: draft
+review: needs-review
 related: [bacnet, bacnet-ip, rs-485]
 sources:
   - https://bluerithm.com/bacnet-technical-summary/

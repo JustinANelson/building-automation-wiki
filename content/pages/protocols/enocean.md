@@ -3,7 +3,7 @@ id: enocean
 type: protocol
 title: "EnOcean wireless standard"
 summary: "Ultra-low-power energy-harvesting wireless standard (ISO/IEC 14543-3-10) for batteryless window contact switches, solar room sensors, and BAS gateways."
-review: draft
+review: verified
 related:
   - bacnet-ip
   - bacnet-mstp

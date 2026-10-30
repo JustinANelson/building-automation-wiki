@@ -3,7 +3,7 @@ id: discharge-air-temperature-reset
 type: concept
 title: "Discharge and supply air temperature reset"
 summary: "Air-handling and rooftop unit control sequences that dynamically reset discharge air temperature (DAT / SAT) based on outdoor air temperature, zone cooling requests, and humidity limits to minimize simultaneous VAV reheat, extend airside economizer free cooling, and balance fan vs. chiller energy."
-review: draft
+review: verified
 images:
   - path: images/concepts/discharge-air-temperature-reset.svg
     alt: "Technical diagram (drawn illustration) of VAV discharge air temperature (DAT) reset schedule vs. outdoor air temperature, cooling trim-and-respond requests, dehumidification clamp, and SZVAV integration"

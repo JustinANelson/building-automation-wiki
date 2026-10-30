@@ -3,7 +3,7 @@ id: bacnet-sc
 type: protocol
 title: "BACnet/SC"
 summary: "Secure Connect: BACnet over WebSocket with TLS, using a hub-and-spoke topology."
-review: draft
+review: needs-review
 related: [bacnet, bacnet-ip]
 sources:
   - https://www.incibe.es/index.php/en/incibe-cert/blog/understanding-bacnet-present-and-future-protocol-industrial-environments

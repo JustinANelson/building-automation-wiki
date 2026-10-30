@@ -3,7 +3,7 @@ id: geothermal-ground-source
 type: concept
 title: "Geothermal (ground-source) systems"
 summary: "Heat pumps that use the stable temperature of the earth or groundwater, and the four ground-loop arrangements."
-review: draft
+review: verified
 related: [control-strategies, energy-conservation-strategies, heat-pumps, hydronic-system-control, symbio-500, uc400]
 sources:
   - https://www.energy.gov/sites/default/files/2021-08/ES-Geothermal%20heat%20pumps_080221.pdf

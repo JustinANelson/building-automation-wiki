@@ -3,7 +3,7 @@ id: apogee-fln
 type: protocol
 title: APOGEE Floor Level Network (FLN)
 summary: Siemens proprietary RS-485 field network (P1) connecting APOGEE terminal and equipment controllers to a field panel.
-review: draft
+review: verified
 related: [rs-485, apogee-tec-vav, apogee-atec, apogee-mbc, vav-control, supervisory-controllers, bacnet-mstp]
 sources:
   - https://sid.siemens.com/v/u/A6V10445888

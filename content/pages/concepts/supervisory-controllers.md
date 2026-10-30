@@ -3,7 +3,7 @@ id: supervisory-controllers
 type: concept
 title: "Supervisory controllers, field panels, and BAS system architecture"
 summary: "How building automation systems are structured across management workstations (B-AWS), supervisory and primary-plant field panels (B-BC), and room/terminal controllers (B-ASC / B-AAC)."
-review: draft
+review: verified
 images:
   - path: images/concepts/supervisory-controllers.svg
     alt: "Technical diagram (drawn illustration) of the three-tier BAS hierarchy showing Management Level Workstations, Supervisory/Plant Field Panels, and Room/Terminal Controllers"

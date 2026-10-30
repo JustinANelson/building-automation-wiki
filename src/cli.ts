@@ -61,7 +61,32 @@ if (command === 'validate') {
   report(issues);
   console.log(`${entries.length} documents, ${issues.length} problems`);
   process.exitCode = issues.length ? 1 : 0;
+} else if (command === 'random') {
+  const { pages, issues } = validateContent(repoRoot);
+  report(issues);
+  const filterType = rest[0]?.toLowerCase();
+  const validTypes = ['concept', 'protocol', 'product', 'product-line', 'manufacturer'];
+  if (filterType && !validTypes.includes(filterType)) {
+    console.error(`error: unknown type "${filterType}". Valid types: ${validTypes.join(', ')}`);
+    process.exitCode = 1;
+  } else {
+    const pool = filterType ? pages.filter((p) => p.type === filterType) : pages;
+    if (!pool.length) {
+      console.error(`No pages found matching type "${filterType}".`);
+      process.exitCode = 1;
+    } else {
+      const pick = pool[Math.floor(Math.random() * pool.length)]!;
+      console.log(`[${pick.type}] ${pick.title}`);
+      console.log(`URL: ${pick.type}/${pick.id}.html`);
+      if (pick.summary) console.log(`Summary: ${pick.summary}`);
+      if (pick.category) console.log(`Category: ${pick.category}`);
+      if (pick.manufacturer) console.log(`Manufacturer: ${pick.manufacturer}`);
+      if (pick.partNumbers.length) {
+        console.log(`Part numbers (${pick.partNumbers.length}): ${pick.partNumbers.map((p) => p.number).join(', ')}`);
+      }
+    }
+  }
 } else {
-  console.error('usage: cli.ts validate | build | fetch [id] | ingest [dir] | verify | comms [agent]');
+  console.error('usage: cli.ts validate | build | fetch [id] | ingest [dir] | verify | comms [agent] | random [type]');
   process.exitCode = 2;
 }

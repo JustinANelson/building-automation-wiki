@@ -3,9 +3,12 @@ id: energy-savings-and-payback-calculations
 type: concept
 title: "Energy savings, demand, payback and life-cycle cost calculations"
 summary: "How to estimate energy and demand savings (bin hours, degree days, combined measures), convert units, and evaluate projects with simple payback, return on investment, net present value, savings-to-investment ratio and life-cycle cost."
-review: draft
+review: verified
 related: [fan-and-pump-power-calculations, electrical-power-calculations, measurement-and-verification, efficiency-metrics, energy-conservation-strategies, variable-frequency-drives, chiller-part-load-performance, discharge-air-temperature-reset, static-pressure-reset]
-sources: []
+sources:
+  - https://www.energy.nsw.gov.au/sites/default/files/2023-09/Measurement_and_Verification_Guide_Module2_Aug_2023.pdf
+  - https://impact.ornl.gov/en/publications/suitability-of-ashrae-guideline-14-metrics-for-calibration/
+  - https://www.energy.gov/sites/prod/files/2014/04/f15/motor_tip_sheet11.pdf
 ---
 Building automation projects are justified, designed and evaluated by savings. This page covers how savings are estimated, how energy and demand are priced, and the common financial measures. [Measurement and verification](measurement-and-verification.html) covers confirming the savings afterwards.
 

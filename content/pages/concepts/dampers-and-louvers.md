@@ -3,7 +3,7 @@ id: dampers-and-louvers
 type: concept
 title: "HVAC dampers: control, smoke, fire/smoke, and backdraft dampers"
 summary: "Parallel-blade vs. opposed-blade control dampers, round VAV dampers, low-leakage airfoil blades, UL 555/555S fire and smoke dampers, and actuator torque sizing."
-review: draft
+review: verified
 images:
   - path: images/concepts/dampers-and-louvers.svg
     alt: "Technical diagram (drawn illustration) comparing parallel-blade dampers, opposed-blade dampers, and round VAV terminal box dampers"

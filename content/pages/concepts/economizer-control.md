@@ -3,7 +3,7 @@ id: economizer-control
 type: concept
 title: "Airside and waterside economizer control and demand-controlled ventilation"
 summary: "Free-cooling and ventilation control strategies: coordinated outdoor/return/relief air damper modulation, dry-bulb and enthalpy changeover high limits, building static pressure relief, ASHRAE 62.1 CO2 demand-controlled ventilation (DCV), and plate-and-frame waterside economizers."
-review: draft
+review: verified
 images:
   - path: images/concepts/economizer-control.svg
     alt: "Technical diagram (drawn illustration) of a 3-damper airside economizer mixing box, dry-bulb and enthalpy changeover high limits, plate-and-frame waterside economizer, and ASHRAE 62.1 CO2 demand-controlled ventilation"

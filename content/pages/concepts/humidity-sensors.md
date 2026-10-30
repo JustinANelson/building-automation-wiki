@@ -3,7 +3,7 @@ id: humidity-sensors
 type: concept
 title: "HVAC humidity sensors, dew point, and enthalpy transmitters"
 summary: "Capacitive thin-film polymer relative-humidity sensing, accuracy tiers, psychrometric derived values (dew point, enthalpy, wet bulb), and wall, duct, and outdoor transmitter selection."
-review: draft
+review: verified
 related:
   - temperature-sensors
   - analog-signals

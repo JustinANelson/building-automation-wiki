@@ -7,7 +7,7 @@ manufacturer: vaisala
 category: sensor
 protocols: []
 status: current
-review: draft
+review: verified
 related:
   - co2-sensors
   - economizer-control
@@ -21,6 +21,12 @@ related:
   - temperature-sensors
   - vaisala
   - vaisala-industrial-transmitters
+sources:
+  - https://xdevs.com/doc/Vaisala/GM70/HVAC-Product-Brochure-B211277EN.pdf
+  - https://www.iag.co.at/fileadmin/user_upload/product_documents/HMW90_Series_User_s_Guide_M211399EN-A_04.pdf
+  - https://www.iag.co.at/fileadmin/user_upload/GMW90.en_2022.pdf
+  - https://www.iag.co.at/fileadmin/user_upload/product_documents/GMD20.en.pdf
+  - https://www.esis.com.au/wp/wp-content/uploads/2019/01/HMDW110-Datasheet.pdf
 ---
 
 ## Overview
