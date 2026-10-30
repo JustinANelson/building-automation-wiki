@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320">
+  <rect x="8" y="8" width="624" height="304" rx="6" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <rect x="8" y="8" width="624" height="32" rx="6" fill="#1e293b"/>
+  <text x="24" y="29" font-family="sans-serif" font-weight="bold" font-size="13" fill="#ffffff">BAS DDC Controller I/O Point Types (AI / AO / DI / DO / UIO)</text>
+
+  <!-- Left: Inputs -->
+  <rect x="24" y="54" width="180" height="110" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="34" y="74" font-family="sans-serif" font-weight="bold" font-size="12" fill="#0369a1">AI (Analog Input)</text>
+  <text x="34" y="92" font-family="monospace" font-size="10" fill="#0f172a">• 10k NTC / Pt1000 / Ni1000</text>
+  <text x="34" y="108" font-family="monospace" font-size="10" fill="#0f172a">• 4–20 mA (2-wire loop)</text>
+  <text x="34" y="124" font-family="monospace" font-size="10" fill="#0f172a">• 0–10 VDC transmitter</text>
+  <text x="34" y="144" font-family="sans-serif" font-size="10" fill="#334155">Temp, RH, CO2, Static P</text>
+
+  <rect x="24" y="180" width="180" height="110" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="34" y="200" font-family="sans-serif" font-weight="bold" font-size="12" fill="#15803d">DI / BI (Digital Input)</text>
+  <text x="34" y="218" font-family="monospace" font-size="10" fill="#0f172a">• Dry Contact (Open/Closed)</text>
+  <text x="34" y="234" font-family="monospace" font-size="10" fill="#0f172a">• 24 VAC/DC Wetted Sense</text>
+  <text x="34" y="250" font-family="monospace" font-size="10" fill="#0f172a">• High-Speed Pulse (Hz)</text>
+  <text x="34" y="270" font-family="sans-serif" font-size="10" fill="#334155">Fan Status, Freeze Stat, Meter</text>
+
+  <!-- Center: Controller -->
+  <rect x="244" y="70" width="152" height="200" rx="6" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+  <text x="320" y="98" font-family="sans-serif" font-weight="bold" font-size="12" fill="#0f172a" text-anchor="middle">DDC Controller</text>
+  <text x="320" y="116" font-family="monospace" font-size="10" fill="#334155" text-anchor="middle">(PXC / DXR2 / Symbio)</text>
+  <rect x="260" y="130" width="120" height="54" rx="3" fill="#ffffff" stroke="#64748b" stroke-width="1"/>
+  <text x="320" y="148" font-family="monospace" font-size="10" fill="#0f172a" text-anchor="middle">UIOConfigurable</text>
+  <text x="320" y="164" font-family="monospace" font-size="10" fill="#0f172a" text-anchor="middle">16-bit ADC / DAC</text>
+  <rect x="260" y="196" width="120" height="56" rx="3" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="320" y="214" font-family="monospace" font-size="10" fill="#713f12" text-anchor="middle">BACnet Objects</text>
+  <text x="320" y="230" font-family="monospace" font-size="10" fill="#713f12" text-anchor="middle">AI, AO, BI, BO, AV, BV</text>
+  <text x="320" y="244" font-family="monospace" font-size="9" fill="#713f12" text-anchor="middle">16-Level Priority Array</text>
+
+  <!-- Right: Outputs -->
+  <rect x="436" y="54" width="180" height="110" rx="4" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="446" y="74" font-family="sans-serif" font-weight="bold" font-size="12" fill="#c2410c">AO (Analog Output)</text>
+  <text x="446" y="92" font-family="monospace" font-size="10" fill="#0f172a">• 0–10 VDC / 2–10 VDC</text>
+  <text x="446" y="108" font-family="monospace" font-size="10" fill="#0f172a">• 4–20 mA Current Out</text>
+  <text x="446" y="124" font-family="monospace" font-size="10" fill="#0f172a">• 0–100% Modulating Cmd</text>
+  <text x="446" y="144" font-family="sans-serif" font-size="10" fill="#334155">Modulating Valves, Damper, VFD</text>
+
+  <rect x="436" y="180" width="180" height="110" rx="4" fill="#fae8ff" stroke="#9333ea" stroke-width="1.5"/>
+  <text x="446" y="200" font-family="sans-serif" font-weight="bold" font-size="12" fill="#7e22ce">DO / BO (Digital Output)</text>
+  <text x="446" y="218" font-family="monospace" font-size="10" fill="#0f172a">• Form C / Form A Relay</text>
+  <text x="446" y="234" font-family="monospace" font-size="10" fill="#0f172a">• 24 VAC Triac (SSR)</text>
+  <text x="446" y="250" font-family="monospace" font-size="10" fill="#0f172a">• Paired Floating (CW/CCW)</text>
+  <text x="446" y="270" font-family="sans-serif" font-size="10" fill="#334155">Fan Start/Stop, Floating Act</text>
+
+  <!-- Arrows -->
+  <line x1="204" y1="110" x2="244" y2="135" stroke="#0284c7" stroke-width="2"/>
+  <line x1="204" y1="235" x2="244" y2="210" stroke="#16a34a" stroke-width="2"/>
+  <line x1="396" y1="135" x2="436" y2="110" stroke="#ea580c" stroke-width="2"/>
+  <line x1="396" y1="210" x2="436" y2="235" stroke="#9333ea" stroke-width="2"/>
+</svg>

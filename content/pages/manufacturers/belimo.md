@@ -4,7 +4,7 @@ type: manufacturer
 title: Belimo
 summary: Maker of damper actuators, valve actuators, and characterized control valves for HVAC.
 review: draft
-related: [belimo-damper-actuators, damper-actuators, control-valves]
+related: [belimo-damper-actuators, belimo-pressure-sensors, damper-actuators, control-valves]
 sources:
   - https://www.belimo.com/mam/general-documents/datasheets/en-us/belimo_LMB24-3_datasheet_en-us.pdf
 ---

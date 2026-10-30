@@ -4,7 +4,7 @@ type: concept
 title: "Analog signals: 0-10 V and 4-20 mA"
 summary: "Voltage and current loop signals that connect sensors and actuators to controller inputs and outputs."
 review: draft
-related: [temperature-sensors, damper-actuators, hmw90, gmw90]
+related: [io-points, control-signals, temperature-sensors, humidity-sensors, damper-actuators, control-valves, hmw90, gmw90]
 sources:
   - https://www.iag.co.at/fileadmin/user_upload/product_documents/HMW90_Series_User_s_Guide_M211399EN-A_04.pdf
   - https://www.vaisala.com/sites/default/files/documents/CEN-G-HMD60-70-datasheet-B210839FR.pdf

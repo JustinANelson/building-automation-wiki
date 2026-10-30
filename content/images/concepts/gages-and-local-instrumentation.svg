@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" width="640" height="280">
+  <rect x="8" y="8" width="624" height="264" rx="6" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <rect x="8" y="8" width="624" height="32" rx="6" fill="#1e293b"/>
+  <text x="24" y="29" font-family="sans-serif" font-weight="bold" font-size="13" fill="#ffffff">Mechanical Gages &amp; Local Instrumentation in HVAC Systems</text>
+
+  <!-- Magnehelic Diff Pressure Gage -->
+  <g transform="translate(36, 56)">
+    <rect x="0" y="0" width="170" height="196" rx="6" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="85" cy="78" r="54" fill="#f1f5f9" stroke="#1e293b" stroke-width="2.5"/>
+    <path d="M 45 95 A 45 45 0 0 1 125 95" fill="none" stroke="#334155" stroke-width="1.5"/>
+    <line x1="85" y1="88" x2="108" y2="54" stroke="#dc2626" stroke-width="2"/>
+    <circle cx="85" cy="88" r="4" fill="#1e293b"/>
+    <text x="85" y="108" font-family="monospace" font-size="9" fill="#0f172a" text-anchor="middle">0 - 2.0 IN. W.C.</text>
+    <text x="85" y="152" font-family="sans-serif" font-weight="bold" font-size="11" fill="#0f172a" text-anchor="middle">Diaphragm ΔP Gage</text>
+    <text x="85" y="168" font-family="monospace" font-size="9.5" fill="#334155" text-anchor="middle">HI / LO Static Taps</text>
+    <text x="85" y="182" font-family="sans-serif" font-size="9.5" fill="#475569" text-anchor="middle">Filter ΔP, Duct &amp; Room P</text>
+  </g>
+
+  <!-- Bourdon Tube Hydronic Gage -->
+  <g transform="translate(235, 56)">
+    <rect x="0" y="0" width="170" height="196" rx="6" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="85" cy="70" r="48" fill="#f1f5f9" stroke="#1e293b" stroke-width="2.5"/>
+    <line x1="85" y1="70" x2="112" y2="48" stroke="#0f172a" stroke-width="2"/>
+    <circle cx="85" cy="70" r="4" fill="#1e293b"/>
+    <text x="85" y="92" font-family="monospace" font-size="9" fill="#0f172a" text-anchor="middle">0 - 100 PSI</text>
+    <rect x="79" y="118" width="12" height="22" fill="#94a3b8" stroke="#334155" stroke-width="1"/>
+    <line x1="68" y1="128" x2="102" y2="128" stroke="#dc2626" stroke-width="3"/>
+    <text x="85" y="154" font-family="sans-serif" font-weight="bold" font-size="11" fill="#0f172a" text-anchor="middle">Bourdon-Tube Gage</text>
+    <text x="85" y="169" font-family="monospace" font-size="9.5" fill="#334155" text-anchor="middle">ASME B40.100 Gr 1A/2A</text>
+    <text x="85" y="183" font-family="sans-serif" font-size="9.5" fill="#475569" text-anchor="middle">Pump Suction/Disch &amp; Coil</text>
+  </g>
+
+  <!-- Industrial Thermometer & Thermowell -->
+  <g transform="translate(434, 56)">
+    <rect x="0" y="0" width="170" height="196" rx="6" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+    <rect x="73" y="18" width="24" height="90" rx="3" fill="#e2e8f0" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="85" y1="30" x2="85" y2="100" stroke="#e2e8f0" stroke-width="4"/>
+    <line x1="85" y1="52" x2="85" y2="100" stroke="#2563eb" stroke-width="4"/>
+    <rect x="78" y="108" width="14" height="28" fill="#cbd5e1" stroke="#334155" stroke-width="1.2"/>
+    <text x="85" y="154" font-family="sans-serif" font-weight="bold" font-size="11" fill="#0f172a" text-anchor="middle">Thermowell &amp; Stem Gage</text>
+    <text x="85" y="169" font-family="monospace" font-size="9.5" fill="#334155" text-anchor="middle">CHWS/R &amp; HWS/R Reference</text>
+    <text x="85" y="183" font-family="sans-serif" font-size="9.5" fill="#475569" text-anchor="middle">Calibrates BAS RTD / NTC</text>
+  </g>
+</svg>

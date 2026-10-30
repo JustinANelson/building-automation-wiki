@@ -1177,3 +1177,42 @@
   sha256: 5c33062444ee37c8212be4e29208039485863a7a8fbd98579df10d71e4f197a7
   bytes: 1107629
   retrieved: 2026-10-30
+- id: setra-264-datasheet
+  title: Setra Model 264 very low differential pressure transducer data sheet
+  kind: datasheet
+  url: https://www.setra.com/hubfs/Product_Data_Sheets/Setra_Model_264_Data_Sheet.pdf
+  file: library/setra/setra-264/datasheet/Setra_Model_264_Data_Sheet.pdf
+  pages:
+    - setra-264
+  docId: Setra-264
+  language: en
+  status: downloaded
+  sha256: 8778f5c623525a729cd4b0139baabc5ea45315fd32e1fc1c6db1dc9741e65cad
+  bytes: 678473
+  retrieved: 2026-10-30
+- id: belimo-22adp-584-datasheet
+  title: Belimo 22ADP-584 air differential pressure sensor data sheet
+  kind: datasheet
+  url: https://www.belimo.com/mam/general-documents/datasheets/en-us/belimo_22ADP-584.._datasheet_en-us.pdf
+  file: library/belimo/belimo-22adp-584/datasheet/belimo_22ADP-584.._datasheet_en-us.pdf
+  pages:
+    - belimo-22adp-584
+  docId: 22ADP-584
+  language: en
+  status: downloaded
+  sha256: b258d0c1eef02d9a376519618eedb03fbc3fa278bc9cf4c21b9e7ef5f7526701
+  bytes: 2368102
+  retrieved: 2026-10-30
+- id: belimo-22pdp-18-datasheet
+  title: Belimo 22PDP-18 water differential pressure sensor data sheet (en-gb)
+  kind: datasheet
+  url: https://belimo.com/mam/general-documents/datasheets/en-gb/belimo_22PDP-18.._datasheet_en-gb.pdf
+  file: library/belimo/belimo-22pdp-18/datasheet/belimo_22PDP-18.._datasheet_en-gb.pdf
+  pages:
+    - belimo-22pdp-18
+  docId: 22PDP-18
+  language: en
+  status: downloaded
+  sha256: 170a493be2a62e901d1c2f3098078f6b1552abe9f29d0bb1b890f431d077d7f6
+  bytes: 2291443
+  retrieved: 2026-10-30

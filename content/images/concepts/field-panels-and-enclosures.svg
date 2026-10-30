@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300">
+  <rect x="8" y="8" width="624" height="284" rx="6" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <rect x="8" y="8" width="624" height="32" rx="6" fill="#1e293b"/>
+  <text x="24" y="29" font-family="sans-serif" font-weight="bold" font-size="13" fill="#ffffff">Inside a Mechanical Room BAS Control Panel (UL 508A / NEMA 1 Enclosure Layout)</text>
+
+  <!-- Top Row: Power & Network -->
+  <rect x="30" y="54" width="175" height="84" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="40" y="74" font-family="sans-serif" font-weight="bold" font-size="11" fill="#991b1b">120 VAC / 24 VAC Power</text>
+  <text x="40" y="92" font-family="monospace" font-size="10" fill="#0f172a">• 100 VA Class 2 Xfmr</text>
+  <text x="40" y="108" font-family="monospace" font-size="10" fill="#0f172a">• Primary/Sec Breaker</text>
+  <text x="40" y="124" font-family="monospace" font-size="10" fill="#0f172a">• Convenience Outlet</text>
+
+  <rect x="225" y="54" width="185" height="84" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="235" y="74" font-family="sans-serif" font-weight="bold" font-size="11" fill="#075985">Managed Ethernet / Patch</text>
+  <text x="235" y="92" font-family="monospace" font-size="10" fill="#0f172a">• Campus OT VLAN Switch</text>
+  <text x="235" y="108" font-family="monospace" font-size="10" fill="#0f172a">• BACnet/IP &amp; BACnet/SC</text>
+  <text x="235" y="124" font-family="monospace" font-size="10" fill="#0f172a">• RS-485 Surge Arrestor</text>
+
+  <rect x="430" y="54" width="180" height="84" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="440" y="74" font-family="sans-serif" font-weight="bold" font-size="11" fill="#92400e">Interposing Relays (DO)</text>
+  <text x="440" y="92" font-family="monospace" font-size="10" fill="#0f172a">• Socketed DPDT Relays</text>
+  <text x="440" y="108" font-family="monospace" font-size="10" fill="#0f172a">• LED + HOA Override</text>
+  <text x="440" y="124" font-family="monospace" font-size="10" fill="#0f172a">• Fan/Pump Starter Iso</text>
+
+  <!-- Bottom Row: DIN Rail Controller + I/O Modules -->
+  <rect x="30" y="158" width="580" height="114" rx="4" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+  <text x="44" y="178" font-family="sans-serif" font-weight="bold" font-size="11" fill="#0f172a">35 mm DIN Rail — Automation Station &amp; Modular I/O Bus (PXC7 / PXC Modular + TX-I/O)</text>
+  <rect x="44" y="190" width="130" height="68" rx="3" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+  <text x="109" y="216" font-family="monospace" font-weight="bold" font-size="10" fill="#0f172a" text-anchor="middle">PXC7 / PXC100</text>
+  <text x="109" y="232" font-family="monospace" font-size="9.5" fill="#334155" text-anchor="middle">CPU + Ethernet</text>
+  <text x="109" y="246" font-family="monospace" font-size="9.5" fill="#334155" text-anchor="middle">RS-485 Trunks</text>
+
+  <rect x="184" y="190" width="90" height="68" rx="3" fill="#ffffff" stroke="#334155" stroke-width="1.2"/>
+  <text x="229" y="216" font-family="monospace" font-weight="bold" font-size="10" fill="#0f172a" text-anchor="middle">TXS1.12F10</text>
+  <text x="229" y="234" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">24VDC 1.2A</text>
+  <text x="229" y="248" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">Island Bus</text>
+
+  <rect x="284" y="190" width="98" height="68" rx="3" fill="#ffffff" stroke="#334155" stroke-width="1.2"/>
+  <text x="333" y="216" font-family="monospace" font-weight="bold" font-size="10" fill="#0f172a" text-anchor="middle">TXM1.8U-ML</text>
+  <text x="333" y="234" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">8x Univ I/O</text>
+  <text x="333" y="248" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">LCD + HOA</text>
+
+  <rect x="392" y="190" width="98" height="68" rx="3" fill="#ffffff" stroke="#334155" stroke-width="1.2"/>
+  <text x="441" y="216" font-family="monospace" font-weight="bold" font-size="10" fill="#0f172a" text-anchor="middle">TXM1.8X-ML</text>
+  <text x="441" y="234" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">4–20mA / 0–10V</text>
+  <text x="441" y="248" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">LCD + HOA</text>
+
+  <rect x="500" y="190" width="96" height="68" rx="3" fill="#ffffff" stroke="#334155" stroke-width="1.2"/>
+  <text x="548" y="216" font-family="monospace" font-weight="bold" font-size="10" fill="#0f172a" text-anchor="middle">TXM1.6R-M</text>
+  <text x="548" y="234" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">6x Relay DO</text>
+  <text x="548" y="248" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">Manual Sw</text>
+</svg>

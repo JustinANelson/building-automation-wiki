@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 310" width="640" height="310">
+  <rect x="8" y="8" width="624" height="294" rx="6" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <rect x="8" y="8" width="624" height="32" rx="6" fill="#1e293b"/>
+  <text x="24" y="29" font-family="sans-serif" font-weight="bold" font-size="13" fill="#ffffff">Three-Tier BAS Architecture: Management, Supervisory Field Panels &amp; Room Controllers</text>
+
+  <!-- Tier 1: Management Level -->
+  <rect x="32" y="52" width="576" height="62" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="46" y="72" font-family="sans-serif" font-weight="bold" font-size="12" fill="#1e40af">1. Management Level Network (MLN) — Operator Workstations &amp; Enterprise Servers (B-AWS)</text>
+  <text x="46" y="90" font-family="monospace" font-size="10.5" fill="#0f172a">Siemens Desigo CC • Siemens APOGEE Insight • Trane Tracer Synchrony</text>
+  <text x="46" y="105" font-family="sans-serif" font-size="10" fill="#334155">Campus Graphics, Long-Term Trend Historian, Alarm Routing (RENO/Email/SMS), Global Calendars</text>
+
+  <!-- Tier 2: Supervisory / Automation Level -->
+  <rect x="32" y="132" width="576" height="72" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="46" y="152" font-family="sans-serif" font-weight="bold" font-size="12" fill="#0369a1">2. Automation Level Network (ALN / BACnet/IP / BACnet/SC) — Supervisory &amp; Plant Field Panels (B-BC)</text>
+  <text x="46" y="170" font-family="monospace" font-size="10.5" fill="#0f172a">Desigo PXC4 / PXC5 / PXC7 / PXC100-E.D • APOGEE PXC Compact / Modular / MBC • Tracer SC+</text>
+  <text x="46" y="186" font-family="sans-serif" font-size="10" fill="#334155">Central Plant &amp; AHU Control (PPCL / CFC / TGP2), Local Schedules &amp; Trend Buffers, MS/TP &amp; FLN Routing</text>
+
+  <!-- Tier 3: Field / Room Level -->
+  <rect x="32" y="222" width="576" height="66" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="46" y="242" font-family="sans-serif" font-weight="bold" font-size="12" fill="#15803d">3. Floor / Field Level Network (FLN / BACnet MS/TP / KNX PL-Link) — Terminal &amp; Unitary Controllers (B-ASC / B-AAC)</text>
+  <text x="46" y="260" font-family="monospace" font-size="10.5" fill="#0f172a">Desigo DXR2 • APOGEE PTEC / ATEC / 570 Lab • Phoenix PBC / Traccel • Viconics VT7000/8000 • Symbio • York SSE</text>
+  <text x="46" y="276" font-family="sans-serif" font-size="10" fill="#334155">VAV Boxes, Laboratory Fume Hoods &amp; Venturi Valves, Fan Coils, Packaged Rooftops, Chiller Control Centers</text>
+
+  <line x1="320" y1="114" x2="320" y2="132" stroke="#1e40af" stroke-width="2.5"/>
+  <line x1="320" y1="204" x2="320" y2="222" stroke="#0369a1" stroke-width="2.5"/>
+</svg>
