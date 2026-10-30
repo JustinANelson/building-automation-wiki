@@ -1,4 +1,5 @@
 import { resolve } from 'node:path';
+import { writeSite } from './content/site.js';
 import { downloadMissing, httpFetcher, loadLibrary, saveLibrary, verifyLibrary } from './content/library.js';
 import { validateContent } from './index.js';
 
@@ -28,6 +29,11 @@ if (command === 'validate') {
   const counts: Record<string, number> = {};
   for (const e of updated) counts[e.status] = (counts[e.status] ?? 0) + 1;
   console.log(JSON.stringify(counts));
+} else if (command === 'build') {
+  const { pages, library, issues } = validateContent(repoRoot);
+  report(issues);
+  if (issues.length) process.exitCode = 1;
+  else console.log(`site/: ${writeSite(repoRoot, pages, library)} files`);
 } else if (command === 'verify') {
   const { entries } = loadLibrary(repoRoot);
   const issues = verifyLibrary(repoRoot, entries);
@@ -35,6 +41,6 @@ if (command === 'validate') {
   console.log(`${entries.length} documents, ${issues.length} problems`);
   process.exitCode = issues.length ? 1 : 0;
 } else {
-  console.error('usage: cli.ts validate | fetch [id] | verify');
+  console.error('usage: cli.ts validate | build | fetch [id] | verify');
   process.exitCode = 2;
 }

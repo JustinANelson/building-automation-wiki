@@ -1,4 +1,4 @@
-# BASWiki â€” Design Pillars & Roadmap
+# BASWiki - Design Pillars & Roadmap
 
 **Mission:** A static Markdown wiki for building automation systems (BAS) and direct digital controls (DDC), starting with Siemens and Phoenix Controls, then Viconics and packaged-unit controls from Trane, Schneider, York, and others.
 
@@ -19,6 +19,11 @@
 
 ### Done
 - **Phase 0 - Project Scaffold**: Initialized repository, agentic guidelines (`AGENTS.md`), skills (`.agents/skills/`), and static analysis / test harness.
-- **Phase 2 - Seed Content Expansion**: Verify draft part numbers against manufacturer datasheets; add Viconics model pages from catalog 028-6100-13; add Phoenix Celeris/Accel/Traccel sizes; add actuators, valves, and field panels for Siemens; Trane Tracer, Schneider, and York pages.
+- **Phase 1 - Content Model & Validator**: Zod frontmatter schema, loader, cross-page validator (ids, references, part-number uniqueness, image provenance), `npm start -- validate`, and seed pages for Siemens, Phoenix Controls, Viconics, Trane, with stubs for Schneider and York.
+- **Phase 1.5 - Document Library**: Manifest schema, validator, downloader that only accepts real PDFs, checksum verification, and 34 catalogued documents (16 downloaded). Reading the PDFs corrected two Trane part-number sources.
+- **Phase 4a - Static Site (first cut)**: `npm start -- build` renders `site/` (index with client-side search, per-page part-number tables, linked documents, cross-references). Link integrity and HTML escaping are tested.
+
+### Next
+- **Phase 2 - Seed Content Expansion**: Obtain the Siemens documents and verify Desigo/APOGEE part numbers against them; remaining Viconics models (VT7300/7350/7355/7600, relay packs, wireless accessories); Phoenix Celeris/Accel/Traccel sizes; more Siemens actuators, valves, and field panels; Schneider and York product pages; licensed product images.
 - **Phase 3 - Cross-reference Graph**: Compatibility and supersession links, backlinks, and orphan detection.
-- **Phase 4 - Static Site Generator**: Render pages, part-number index, and image galleries to HTML; client-side search.
+- **Phase 4b - Site polish**: Part-number index page, category browse, image galleries, and deployment.
