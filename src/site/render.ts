@@ -264,10 +264,6 @@ export function renderSite({ pages, library, hasFile }: SiteInput): Map<string, 
   );
 
   // ---- home ----
-  const reviewCounts = (['draft', 'needs-review', 'verified'] as const).map((r) => ({
-    r,
-    n: pages.filter((p) => p.type === 'product' && p.review === r).length,
-  }));
   const ofType = (t: Page['type']) => pages.filter((p) => p.type === t).sort(byTitle);
   const topicList = (items: Page[]) =>
     `<ul class="cols">${items.map((p) => `<li><a href="${pagePath(p)}">${esc(p.title)}</a></li>`).join('')}</ul>`;
