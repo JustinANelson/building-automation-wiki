@@ -28,6 +28,13 @@ describe('Phase 4: static site rendering', () => {
     expect(broken).toEqual([]);
   });
 
+  it('references images relative to the site, not the repository', () => {
+    const withImage = pages.find((p) => p.images.length > 0)!;
+    const html = site.get(`${withImage.type}/${withImage.id}.html`) as string;
+    expect(html).toContain(`src="../${withImage.images[0]!.path}"`);
+    expect(html).not.toContain('../content/');
+  });
+
   it('renders the part number index, document index, and shared assets', () => {
     const parts = site.get('parts.html') as string;
     expect(parts).toContain('BMSY500AAA0100011');

@@ -201,7 +201,7 @@ export function renderSite({ pages, library, hasFile }: SiteInput): Map<string, 
       html += `<h2>Images</h2>${p.images
         .map(
           (i) =>
-            `<figure><img src="${rel}../content/${esc(i.path)}" alt="${esc(i.alt)}"><figcaption>${esc(i.alt)}. ${esc(i.license)}; ${esc(i.source)}</figcaption></figure>`,
+            `<figure><img src="${rel}${esc(i.path)}" alt="${esc(i.alt)}"><figcaption>${esc(i.alt)}. ${esc(i.license)}; ${esc(i.source)}</figcaption></figure>`,
         )
         .join('')}`;
     } else if (p.type === 'product') {
