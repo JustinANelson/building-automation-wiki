@@ -12,12 +12,14 @@ images:
 related:
   - co2-sensors
   - control-strategies
+  - cooling-towers
   - damper-actuators
   - dampers-and-louvers
   - discharge-air-temperature-reset
   - energy-conservation-strategies
   - gmd20
   - gmw90
+  - heat-exchangers
   - hmdw110
   - humidity-sensors
   - hydronic-system-control

@@ -16,6 +16,7 @@ related:
   - chiller-part-load-performance
   - control-strategies
   - control-valves
+  - cooling-towers
   - differential-pressure-sensors
   - discharge-air-temperature-reset
   - economizer-control
@@ -24,6 +25,7 @@ related:
   - energy-conservation-strategies
   - gages-and-local-instrumentation
   - geothermal-ground-source
+  - heat-exchangers
   - heat-pumps
   - static-pressure-reset
   - switches-and-safeties

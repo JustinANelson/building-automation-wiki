@@ -1,98 +1,232 @@
 ---
 id: valve-and-damper-sizing-calculations
 type: concept
-title: "Control valve, damper and flow-station sizing calculations"
-summary: "Valve flow coefficient (Cv) and pressure drop, valve and damper authority, coil flow from load, actuator torque from damper area, damper leakage, and the K-factor relationship for pressure-based flow sensors."
+title: "Control valve, damper, and flow-station sizing calculations"
+summary: "Flow coefficient (Cv/Kvs), water and glycol coil flow, steam valve equations (subcritical vs. choked), valve authority distortion, cavitation index, PICV selection, damper authority and actuator torque, and sensor K-factors."
 review: draft
-related: [control-valves, dampers-and-louvers, damper-actuators, hydronic-system-control, airflow-measurement, differential-pressure-sensors, vav-control, psychrometric-calculations, fan-and-pump-power-calculations, control-signals]
+related:
+  - airflow-measurement
+  - control-signals
+  - control-valves
+  - cooling-towers
+  - damper-actuators
+  - dampers-and-louvers
+  - differential-pressure-sensors
+  - fan-and-pump-power-calculations
+  - heat-exchangers
+  - hydronic-system-control
+  - psychrometric-calculations
+  - vav-control
 sources: []
 ---
-Control valves and dampers are sized so that they can pass the design flow with a usable pressure drop and still control well at part load. An oversized device operates in a small part of its stroke, and an undersized one cannot pass the flow. This page collects the standard sizing calculations. The devices themselves are described on [Control valves](control-valves.html), [Dampers and louvers](dampers-and-louvers.html) and [Damper actuators](damper-actuators.html).
 
-> These are standard relationships written from general knowledge. Valve and actuator selection must use the manufacturer's capacity tables and sizing equations, which govern, particularly for steam, glycol and gases.
+## Overview
 
-## Flow required through a coil
+Control valves and dampers are modulating throttling devices designed to pass maximum design fluid flow with an acceptable pressure drop while maintaining stable, precise control resolution at minimum part-load conditions. 
 
-The water flow a coil needs comes from its load and the design temperature difference:
+An **oversized valve** forces the actuator to operate in a tiny fraction of its stroke (`5% to 15%`), causing violent hunting, rapid seat wire-drawing, and premature actuator failure. An **undersized valve** starves the coil of flow at peak design loads and wastes excessive pump and fan energy. This page collects the core engineering sizing equations for HVAC hydronic valves, steam valves, dampers, and pressure-based flow sensors.
 
-- gpm = load (Btu/h) / (500 x delta-T), for water, with delta-T in degrees F
-- Tons = gpm x delta-T / 24
+---
 
-**Example.** A chilled water coil with a 240,000 Btu/h load (20 tons) at a 12 degree F delta-T needs 240,000 / (500 x 12) = 40 gpm. A hot water coil with a 100,000 Btu/h load and a 30 degree F drop needs 100,000 / (500 x 30) = 6.7 gpm.
+## Hydronic Coil Flow Calculations
 
-For water and glycol mixtures the constant 500 is lower, because the mixture's density and specific heat are lower; use a fluid property table or the manufacturer's tool.
+### Pure Water Coil Flow
 
-## Valve flow coefficient (Cv)
+For standard hydronic water loops operating near `60 °F` (`15.6 °C`), water density is $\rho \approx 62.34\text{ lb/ft}^3$ (`8.33 lb/gallon`) and specific heat is $c_p = 1.00\text{ Btu/(lb}\cdot^\circ\text{F)}$. The hydronic fluid constant is:
 
-The flow coefficient Cv is the number of gallons per minute of water at 60 degrees F that pass through the valve at a pressure drop of 1 psi. The flow through a valve at any pressure drop is:
+$$\text{Constant} = 8.33\frac{\text{lb}}{\text{gal}} \times 60\frac{\text{min}}{\text{hr}} \times 1.0\frac{\text{Btu}}{\text{lb}\cdot^\circ\text{F}} \approx \mathbf{500}$$
 
-- gpm = Cv x square root of (delta-P / SG), with delta-P in psi and SG the specific gravity (1.0 for water)
-- Therefore Cv = gpm / square root of (delta-P / SG)
+$$\text{Load (Btu/hr)} = 500 \times \text{GPM} \times \Delta T \quad \Longleftrightarrow \quad \text{GPM} = \frac{\text{Load (Btu/hr)}}{500 \times \Delta T}$$
 
-**Example.** The 40 gpm chilled water coil, with 5 psi across the valve at full flow:
+$$\text{Cooling Capacity (Tons)} = \frac{\text{GPM} \times \Delta T}{24}$$
 
-- Cv = 40 / square root of 5 = 40 / 2.24 = 17.9
+- **Example (Chilled Water Coil)**: An air-handler cooling coil rated at `240,000 Btu/hr` (`20 Tons`) designed for a `12.0 °F` chilled water rise ($\Delta T = 56\text{ °F} - 44\text{ °F}$) requires:
+  $$\text{GPM} = \frac{240{,}000}{500 \times 12.0} = \mathbf{40.0\text{ GPM}}$$
+- **Example (Heating Hot Water Coil)**: A VAV reheat coil rated at `30,000 Btu/hr` designed for a `30.0 °F` temperature drop ($\Delta T = 180\text{ °F} - 150\text{ °F}$) requires:
+  $$\text{GPM} = \frac{30{,}000}{500 \times 30.0} = \mathbf{2.0\text{ GPM}}$$
 
-Pick a valve with a rated Cv close to, and not below, the calculated value; the next standard size up is common. In metric units the equivalent coefficient is Kv, with Kv = 0.865 x Cv (flow in cubic meters per hour at 1 bar).
+### Aqueous Glycol Mixtures
 
-The square-root relationship has a practical meaning: to double the flow through a fixed valve opening you need four times the pressure drop. It also means the flow through a valve changes when the pressure across it changes, which is why pressure-independent valves exist; see the Belimo valves described on [Belimo](../manufacturer/belimo.html).
+In outdoor air handlers, freeze protection requires an aqueous mixture of ethylene glycol or propylene glycol. Adding glycol increases fluid density ($\rho$) but significantly decreases specific heat ($c_p$), reducing the thermal capacity multiplier below `500`:
 
-## How much pressure drop for the valve: authority
+$$C_{\text{fluid}} = 8.33 \times SG \times 60 \times c_p = 500 \times SG \times c_p$$
 
-A valve controls well only if it takes a meaningful share of the pressure drop in its circuit. **Valve authority** is:
+| Fluid Mixture | Specific Gravity ($SG$) | Specific Heat ($c_p$, $\text{Btu/lb}\cdot^\circ\text{F}$) | Multiplier ($C_{\text{fluid}}$) | Required GPM Factor |
+| :--- | :--- | :--- | :--- | :--- |
+| **Pure Water (`100%`)** | `1.000` | `1.000` | `500` | `1.000` (Baseline) |
+| **`30%` Ethylene Glycol** | `1.042` | `0.900` | `469` | `1.066` (`+6.6% GPM`) |
+| **`50%` Ethylene Glycol** | `1.071` | `0.805` | `431` | `1.160` (`+16.0% GPM`) |
+| **`30%` Propylene Glycol** | `1.026` | `0.920` | `472` | `1.059` (`+5.9% GPM`) |
+| **`50%` Propylene Glycol** | `1.040` | `0.840` | `437` | `1.144` (`+14.4% GPM`) |
 
-- authority = delta-P across the fully open valve / delta-P across the valve plus the rest of the controlled circuit (coil, piping, balancing) at design flow
+A `20-ton` coil with `50%` ethylene glycol requires $\text{GPM} = 240{,}000 / (431 \times 12) = \mathbf{46.4\text{ GPM}}$, requiring a `16%` larger valve $C_v$ and pump capacity than pure water.
 
-An authority near 1 gives the installed flow characteristic that the valve's inherent characteristic promises. A low authority distorts it: most of the flow change happens in the first part of the stroke, which makes the loop hard to tune. A common design target is an authority of about 0.3 to 0.5, which in practice means that the valve's drop at full flow is similar to the coil's. Many designers also set a minimum drop, a few psi, to give stable control and enough drop to overcome small pressure changes elsewhere in the system.
+---
 
-**Example.** A coil and its piping drop 6 psi at design flow. A valve sized for 3 psi has an authority of 3 / (3 + 6) = 0.33. A valve sized for 6 psi has 6 / 12 = 0.5, but costs more pump energy. The right balance is a design decision.
+## Valve Flow Coefficient ($C_v$ and $K_v$) Sizing
 
-The pump energy tradeoff is real: every psi across a valve at design flow is pumping power. Selecting a valve with less drop saves energy but reduces control quality, so a pressure-independent valve, which holds flow regardless of supply pressure, is attractive in variable-flow systems.
+The flow coefficient ($C_v$) represents the flow of `60 °F` water in US GPM through a fully open valve at a pressure drop of `1.0 psi`:
 
-**Equal-percentage valves** have an inherent characteristic in which equal increments of stroke change flow by equal percentages. On a heating or cooling coil, whose heat output is not linear with flow, an equal-percentage valve with adequate authority gives a close to linear heat output against stroke. A valve with low authority behaves closer to quick-opening, so it is better to fix authority than to change the characteristic.
+$$Q\text{ (GPM)} = C_v \sqrt{\frac{\Delta P}{SG}} \quad \Longleftrightarrow \quad C_v = \frac{Q}{\sqrt{\Delta P / SG}}$$
 
-## Rangeability and turndown
+In metric units ($K_v$ in $\text{m}^3/\text{h}$ at `1 bar` drop):
 
-Rangeability is the ratio of the maximum to the minimum controllable flow. Many valves quote 50:1 but the installed rangeability is lower, because it is degraded by low authority and by actuator resolution. If a coil must operate at 10 percent flow, the valve needs to control accurately there. Two valves in parallel (a small one and a large one) can extend the range when the load varies a great deal.
+$$K_v = 0.865 \times C_v \quad \Longleftrightarrow \quad C_v = 1.156 \times K_v$$
 
-## Damper authority and sizing
+**Sizing Example**: Sizing a 2-way valve for the `40.0 GPM` chilled water coil above, targeting a design valve pressure drop of **`4.0 psi`** ($\Delta P = 4.0\text{ psi}$):
 
-Dampers follow the same logic as valves: authority is the pressure drop across the fully open damper divided by the total pressure drop of the damper and its circuit. A common target is 0.3 to 0.5 for modulating dampers; see the discussion on [Dampers and louvers](dampers-and-louvers.html).
+$$C_v = \frac{40.0}{\sqrt{4.0 / 1.0}} = \frac{40.0}{2.0} = \mathbf{20.0}$$
 
-- **Face velocity** = cfm / damper area (ft2). A damper sized for a lower velocity than the duct has a small drop and low authority.
-- **Pressure drop** across a damper rises with the square of velocity, and falls with the blade opening. Manufacturer data gives the drop at full open.
+From the manufacturer's catalog (such as [Siemens 599 Series](../product/siemens-599-zone-valve.html) or [Belimo CCV](../manufacturer/belimo.html)), select the next closest standard commercial $C_v$ rating (e.g., standard catalog $C_v = 19$ or $25$).
 
-**Example.** An outdoor air damper passes 6,000 cfm through 12 ft2: face velocity = 500 fpm. If its full-open drop is 0.05 in. w.g. and the circuit's drop is 0.15, authority is 0.05 / 0.20 = 0.25, which is a little low. A smaller damper, or blanking off a section, raises the drop and the authority.
+---
 
-## Actuator torque for dampers
+## Steam Control Valve Sizing Equations
 
-The torque an actuator must provide depends on the damper's area and its seal and bearing friction. A common method is to multiply the area by the manufacturer's torque per square foot and add a margin:
+Steam is compressible; as pressure drops across the valve orifice, the steam expands, reducing density and increasing velocity. Steam valves are sized using mass flow rate ($W$ in $\text{lb/hr}$), where latent heat of vaporization ($h_{fg}$) determines steam requirement:
 
-- torque required = damper area (ft2) x torque per ft2 (in-lb) x safety factor
+$$W\text{ (lb/hr)} = \frac{\text{Load (Btu/hr)}}{h_{fg}}$$
 
-The ranges quoted on [Damper actuators](damper-actuators.html) are roughly 4 to 7 in-lb per ft2, depending on the seals and the velocity and pressure. For a 20 ft2 damper at 7 in-lb per ft2, 20 x 7 = 140 in-lb, which is 15.8 N-m (1 N-m is about 8.85 in-lb), so a 20 N-m class actuator would be the next size up and gives a margin of about 25 percent. Always use the damper manufacturer's torque value, and add actuators or use a jackshaft for large dampers.
+At standard low pressure (`15 psig`, $P_1 = 29.7\text{ psia}$), $h_{fg} \approx 945\text{ Btu/lb}$. A `500,000 Btu/hr` steam preheat coil requires $W = 500{,}000 / 945 = \mathbf{529\text{ lb/hr}}$.
 
-## Damper leakage
+### 1. Subcritical Flow ($\Delta P < 0.5 \times P_1$)
+When the pressure drop across the valve is less than half the absolute inlet pressure ($P_2 > 0.5 \times P_1$):
 
-Leakage is quoted in cfm per ft2 of damper face at a stated pressure difference. A damper with a leakage rating of 3 cfm/ft2 at 1 in. w.g. leaks 3 x 12 = 36 cfm at that pressure for a 12 ft2 damper. Leakage rises with the square root of pressure, so at 0.25 in. w.g. it is about half. Compare the leakage with the heat lost or gained: 36 cfm of 20 degree F air is 1.08 x 36 x 20 = 780 Btu/h per damper; see [Air-side calculations](psychrometric-calculations.html). Leakage matters most for outdoor air and relief dampers in cold climates, where it can freeze a coil or waste heating energy.
+$$C_v = \frac{W \times (1 + 0.0007 \times T_{\text{sh}})}{2.1 \times \sqrt{\Delta P \times (P_1 + P_2)}}$$
 
-## Flow from a pressure-based sensor: the K-factor
+where:
+- $W$ = Steam mass flow rate ($\text{lb/hr}$).
+- $P_1$ = Absolute upstream pressure ($\text{psia} = \text{psig} + 14.7$).
+- $P_2$ = Absolute downstream pressure ($\text{psia}$).
+- $\Delta P = P_1 - P_2$ ($\text{psi}$).
+- $T_{\text{sh}}$ = Degrees of superheat above saturation ($^\circ\text{F}$, $T_{\text{sh}} = 0$ for saturated steam).
 
-Many VAV boxes and flow stations produce a differential pressure that rises with the square of the flow. The flow is:
+### 2. Critical (Choked) Flow ($\Delta P \ge 0.5 \times P_1$)
+When the downstream pressure drops below critical pressure ($P_2 \le 0.58 \times P_1$), sonic velocity is reached at the valve vena contracta. Further drops in downstream pressure cannot increase mass flow rate:
 
-- cfm = K x square root of (delta-P), with delta-P in in. w.g. and K a constant for the box and inlet size
+$$C_v = \frac{W \times (1 + 0.0007 \times T_{\text{sh}})}{1.82 \times P_1}$$
 
-The manufacturer gives K, or gives the flow at a known pressure, from which K = cfm_nominal / square root of delta-P_nominal. Controllers hold this as a parameter, often called the **K-factor** or flow coefficient. The Siemens Vn parameter described on [Differential pressure sensors](differential-pressure-sensors.html), where Vn = square root of (300 Pa / nominal pressure), is the same idea scaled to the sensor's range.
+---
 
-**Example.** A box delivers 1,000 cfm at 0.30 in. w.g., so K = 1,000 / square root of 0.30 = 1,826. At 0.05 in. w.g. it passes 1,826 x square root of 0.05 = 408 cfm. That the signal at 400 cfm is 6 times smaller than at 1,000 cfm shows why low-flow measurement is difficult, and why a sensor zero error matters; see [Airflow measurement](airflow-measurement.html).
+## Valve Authority and Characteristic Distortion
 
-In velocity terms, velocity (fpm) = 4,005 x square root of velocity pressure (in. w.g.) for standard air, and cfm = velocity x area.
+### Authority ($N$) Mathematical Definition
 
-## Checking a selection
+**Valve authority ($N$)** defines the valve's share of total dynamic pressure drop in the controlled branch circuit at full design flow:
 
-1. Calculate the design flow from the load.
-2. Compute the Cv or the damper face velocity.
-3. Check authority at design flow.
-4. Check the minimum controllable flow against the turndown the load requires.
-5. Check the actuator's torque, close-off pressure and failure position; see [Control signals](control-signals.html).
-6. Check the pressure drop's effect on pump or fan energy; see [Fan and pump power calculations](fan-and-pump-power-calculations.html).
+$$N = \frac{\Delta P_{\text{valve, full open}}}{\Delta P_{\text{valve, full open}} + \Delta P_{\text{coil}} + \Delta P_{\text{balance}} + \Delta P_{\text{piping}}}$$
+
+- **Target Authority**: **$N = 0.30\text{ to }0.50$**. 
+- Sizing a valve for too small a pressure drop ($\Delta P_{\text{valve}} = 1.0\text{ psi}$ on a circuit dropping `10.0 psi`) yields $N = 1 / 11 = 0.09$, severely degrading control stability.
+
+### Installed Characteristic Equation
+
+A valve's published inherent curve $f(h)$ (where $h = \text{stem position } [0.0\text{ to }1.0]$) distorts in an installed hydronic system according to:
+
+$$f_i(h) = \frac{f(h)}{\sqrt{N + (1 - N) \cdot [f(h)]^2}}$$
+
+```
+ Flow Fraction (Q / Qmax)
+ 1.0 ┌────────────────────────────────────────────────────────┐
+     │                                      .. - - ' (N = 0.10,
+ 0.8 │                             .. - - '          Distorted)
+     │                     .. - - '               .. - - '    │
+ 0.6 │             .. - - '               .. - - ' (N = 0.50) │
+     │       .- - '              .. - - '                     │
+ 0.4 │  .- - '           .. - - '                             │
+     │ /        .. - - '                                      │
+ 0.2 │/ .. - - '                   (Inherent Equal-% Curve)   │
+     │                                                        │
+ 0.0 └────────────────────────────────────────────────────────┘
+     0.0       0.2       0.4       0.6       0.8       1.0
+                         Stem Lift / Stroke (h)
+```
+
+- When $N = 1.0$ (perfect authority, or a PICV), $f_i(h) = f(h)$ (zero distortion).
+- When $N = 0.10$ (low authority), an equal-percentage valve distorts into a linear profile, and a linear valve distorts into an uncontrollable **quick-opening** profile where `80%` of flow passes in the first `20%` of stroke.
+
+### Installed Turndown ($T$)
+
+The **inherent rangeability ($R$)** is the ratio of maximum to minimum controllable flow (typically $R = 50:1$ to $100:1$). The **installed turndown ($T$)** accounting for authority is:
+
+$$T = R \times \sqrt{N}$$
+
+If a valve has $R = 50$ but is installed with low authority $N = 0.10$, its actual controllable turndown collapses to:
+
+$$T = 50 \times \sqrt{0.10} = 50 \times 0.316 = \mathbf{15.8:1}$$
+
+---
+
+## Cavitation Index ($\sigma$) and Choking Verification
+
+To verify that water valves do not suffer cavitation or flashing, calculate the dimensionless **Cavitation Index ($\sigma$)**:
+
+$$\sigma = \frac{P_1 - P_v}{P_1 - P_2}$$
+
+where $P_1$ and $P_2$ are upstream and downstream pressures in absolute units ($\text{psia}$), and $P_v$ is water vapor pressure ($\text{psia}$):
+- For `60 °F` chilled water: $P_v \approx 0.256\text{ psia}$.
+- For `180 °F` hot water: $P_v \approx 7.51\text{ psia}$.
+- **Verification Rule**: Maintain $\sigma \ge 1.70$. If $\sigma < 1.50$, increase downstream pressure $P_2$, reduce $\Delta P$, or select hardened stainless steel trim.
+
+---
+
+## Pressure-Independent Control Valve (PICV) Sizing
+
+Because a PICV incorporates an integral dynamic differential pressure regulator, **it eliminates $C_v$ calculations and valve authority calculations ($N = 1.0$)**:
+1. Determine the design flow rate ($Q$ in $\text{GPM}$) from coil load.
+2. Select a PICV body whose **adjustable maximum flow range ($Q_{\min}\text{ to }Q_{\max}$)** encompasses the design GPM.
+3. Verify that available pump head satisfies the PICV's **minimum operating differential pressure threshold** (typically `3.0 to 5.0 psid` / `20 to 35 kPa`).
+4. Set the mechanical dial or electronic DIP switch on the valve body to the design GPM. The controller's `0–10 VDC` output will modulate flow linearly from `0 GPM` to design GPM regardless of system pressure fluctuations.
+
+---
+
+## Damper Sizing, Authority, and Actuator Torque
+
+### Damper Authority
+
+Dampers follow identical authority physics to hydronic valves:
+
+$$N_{\text{damper}} = \frac{\Delta P_{\text{damper, full open}}}{\Delta P_{\text{damper, full open}} + \Delta P_{\text{ductwork}} + \Delta P_{\text{louvers}} + \Delta P_{\text{filters}}}$$
+
+Target authority for modulating dampers ([dampers and louvers](dampers-and-louvers.html)) is **$N = 0.30\text{ to }0.50$**. Sizing dampers equal to duct size often results in face velocities $< 400\text{ FPM}$ and pressure drops $< 0.02\text{ in. w.c.}$, yielding $N < 0.10$. Modulating dampers should be sized for face velocities of **`1,000 to 1,500 FPM`** (`5.1 to 7.6 m/s`).
+
+### Damper Actuator Torque Sizing
+
+Actuator torque must overcome blade seal compression, edge seal friction, bearing drag, and aerodynamic dynamic wind forces:
+
+$$\tau_{\text{required}}\text{ (in-lb)} = A_{\text{damper}}\text{ (ft}^2\text{)} \times \tau_{\text{unit}}\text{ (in-lb/ft}^2\text{)} \times SF$$
+
+where:
+- $\tau_{\text{unit}}$ = Specific torque rating from damper manufacturer:
+  - Low-leakage flat blade dampers with neoprene/PVC seals: **`4.0 to 5.0 in-lb/ft²`** (`0.45 to 0.56 N·m/m²`).
+  - Ultra-low-leakage extruded airfoil dampers with silicone seals (AMCA Class 1A): **`7.0 to 10.0 in-lb/ft²`** (`0.79 to 1.13 N·m/m²`).
+- $SF$ = Safety factor (typically **`1.25 to 1.30`**, providing a `25% to 30%` engineering margin).
+
+**Torque Sizing Example**: Sizing an actuator for a `24 ft²` AMCA Class 1A outdoor air damper:
+$$\tau_{\text{required}} = 24\text{ ft}^2 \times 7.0\frac{\text{in-lb}}{\text{ft}^2} \times 1.25 = \mathbf{210\text{ in-lb}}\text{ (}23.7\text{ N}\cdot\text{m)}$$
+Select a standard `220 in-lb` (`25 N·m`) spring-return actuator (such as the [Belimo](../manufacturer/belimo.html) `AF` or `EF` series).
+
+---
+
+## Pressure-Based Airflow Measurement: The K-Factor
+
+VAV terminal units, fan inlet piezometer rings, and duct airflow stations measure differential pressure ($\Delta P$) across an aerodynamic constriction to infer volumetric airflow ($Q$ in $\text{CFM}$):
+
+$$Q\text{ (CFM)} = K \times \sqrt{\Delta P}$$
+
+where:
+- $\Delta P$ is velocity pressure or differential pressure in inches water column ($\text{in. w.c.}$).
+- $K$ is the manufacturer's flow pickup calibration coefficient:
+  $$K = \frac{Q_{\text{nominal}}}{\sqrt{\Delta P_{\text{nominal}}}}$$
+
+In velocity terms for standard air ($\rho = 0.075\text{ lb/ft}^3$):
+
+$$V\text{ (FPM)} = 4{,}005 \times \sqrt{P_v\text{ (in. w.c.)}} \quad \Longleftrightarrow \quad Q\text{ (CFM)} = A_{\text{duct}}\text{ (ft}^2\text{)} \times 4{,}005 \times \sqrt{P_v}$$
+
+Because differential pressure varies with the **square of velocity**, measuring low airflows is physically challenging:
+- At full flow (`1,000 CFM`, $P_v = 0.50\text{ in. w.c.}$), $\Delta P = 0.50\text{ in. w.c.}$ (`125 Pa`).
+- At `20%` part load (`200 CFM`), differential pressure collapses to:
+  $$\Delta P = 0.50 \times (0.20)^2 = \mathbf{0.020\text{ in. w.c.}}\text{ (5.0 Pa)}$$
+A sensor zero error of only `0.005 in. w.c.` (`1.2 Pa`) creates a **`25%` airflow measurement error at minimum turndown**, emphasizing why high-accuracy low-range transducers ([differential pressure sensors](differential-pressure-sensors.html)) and aerodynamic amplification rings are essential for VAV control.
+
+See [Control valves](control-valves.html) for mechanical valve body architectures, [Hydronic system control](hydronic-system-control.html) for system pumping equations, and [Damper actuators](damper-actuators.html) for actuator mechanics.
