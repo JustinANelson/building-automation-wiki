@@ -10,13 +10,17 @@ images:
     source: "Own work (BASWiki technical diagram based on York OptiView Control Center Form 160.75-PW4, Trane Tracer SC+ BAS-PRD038K-EN, Trane UC400 WSHP BAS-SVX065F-EN, and Belimo 22PDP-18 documentation)"
     license: CC0-1.0
 related:
+  - absorption-chillers
   - belimo-22pdp-18
   - chilled-beams
+  - chiller-part-load-performance
   - control-strategies
   - control-valves
   - differential-pressure-sensors
   - discharge-air-temperature-reset
   - economizer-control
+  - efficiency-metrics
+  - electric-chillers
   - energy-conservation-strategies
   - gages-and-local-instrumentation
   - geothermal-ground-source
@@ -24,6 +28,7 @@ related:
   - static-pressure-reset
   - switches-and-safeties
   - tracer-sc-plus
+  - variable-frequency-drives
   - york-optiview
 sources:
   - https://docs.johnsoncontrols.com/api/khub/documents/9Z2d~c8lR3s1aK6pY0vW4w/content

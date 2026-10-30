@@ -9,7 +9,7 @@ images:
     alt: "Technical diagram (drawn illustration) of BAS DDC controller I/O point types showing AI, DI, AO, DO, Universal I/O (UIO), and BACnet object mappings"
     source: "Own work (BASWiki technical diagram based on Siemens TX-I/O CM2N8173, Desigo PXC4 A6V11646018, and BACnet PICS A6V10490415)"
     license: CC0-1.0
-related: [analog-signals, control-signals, temperature-sensors, humidity-sensors, damper-actuators, control-valves, tx-io-modules, pxc4, pxc-compact, dxr2, symbio-210]
+related: [analog-signals, control-signals, temperature-sensors, humidity-sensors, damper-actuators, control-valves, tx-io-modules, pxc4, pxc-compact, dxr2, symbio-210, bas-sizing-calculations, electrical-power-calculations]
 sources:
   - https://sid.siemens.com/api/khub/documents/Wp276kwBxfKvIGrmhJ24Kg/content
   - https://sid.siemens.com/api/khub/maps/KkEo6H9Q~7RCe5kHQ8QNDw/attachments/FhJXV57N7MOdIisODseSrA-KkEo6H9Q~7RCe5kHQ8QNDw/content
