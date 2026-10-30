@@ -97,8 +97,22 @@ export function classifyDownload(
 ): { status: 'downloaded' | 'blocked' | 'failed'; note?: string } {
   if (r.status === 401 || r.status === 403) return { status: 'blocked', note: `HTTP ${r.status}` };
   if (r.status < 200 || r.status >= 300) return { status: 'failed', note: `HTTP ${r.status}` };
-  if (entry.file.endsWith('.pdf') && !PDF_MAGIC.every((b, i) => r.bytes[i] === b)) {
+  if (entry.file.endsWith('.pdf') && !isPdf(r.bytes)) {
     return { status: 'failed', note: `not a PDF (${r.contentType || 'unknown content type'})` };
   }
   return { status: 'downloaded' };
+}
+
+/**
+ * Browser downloads from Siemens are named `<docId>_<language>.pdf` (optionally with a ` (n)` copy suffix).
+ * Returns the document id and language, or undefined for any other filename.
+ */
+export function parseDownloadName(name: string): { docId: string; language: string } | undefined {
+  const m = /^(.+?)_([a-z]{2})(?: \(\d+\))?\.pdf$/.exec(name);
+  return m ? { docId: m[1]!, language: m[2]! } : undefined;
+}
+
+/** Whether the bytes look like a PDF (`%PDF-` magic). */
+export function isPdf(bytes: Uint8Array): boolean {
+  return PDF_MAGIC.every((b, i) => bytes[i] === b);
 }

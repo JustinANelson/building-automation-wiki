@@ -1,8 +1,15 @@
 import { createHash } from 'node:crypto';
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { parse, stringify } from 'yaml';
-import { type DownloadResult, type LibraryEntry, classifyDownload, parseLibrary } from '../domain/library.js';
+import {
+  type DownloadResult,
+  type LibraryEntry,
+  classifyDownload,
+  isPdf,
+  parseDownloadName,
+  parseLibrary,
+} from '../domain/library.js';
 import type { Issue } from '../domain/validate.js';
 
 const MANIFEST = 'content/library.yaml';
@@ -87,4 +94,54 @@ export function verifyLibrary(repoRoot: string, entries: LibraryEntry[]): Issue[
     }
   }
   return issues;
+}
+
+export interface IngestReport {
+  entries: LibraryEntry[];
+  ingested: string[];
+  skipped: string[];
+}
+
+/**
+ * Move browser-downloaded PDFs from `dir` into the library. A file is matched to a manifest entry by the document id
+ * in its name, must really be a PDF, and is left in place (and reported) otherwise. Copies of an already
+ * ingested document, such as `name (1).pdf`, are skipped rather than deleted.
+ */
+export function ingestDownloads(repoRoot: string, dir: string, entries: LibraryEntry[], today: string): IngestReport {
+  const byDocId = new Map(entries.filter((e) => e.docId).map((e) => [e.docId as string, e]));
+  const updated = new Map(entries.map((e) => [e.id, e]));
+  const ingested: string[] = [];
+  const skipped: string[] = [];
+  for (const name of readdirSync(dir).sort()) {
+    const parsed = parseDownloadName(name);
+    const entry = parsed && byDocId.get(parsed.docId);
+    if (!parsed || !entry) {
+      skipped.push(`${name}: no manifest entry for this filename`);
+      continue;
+    }
+    const current = updated.get(entry.id) as LibraryEntry;
+    if (current.status === 'downloaded') {
+      skipped.push(`${name}: ${entry.id} is already in the library`);
+      continue;
+    }
+    const bytes = readFileSync(join(dir, name));
+    if (!isPdf(bytes)) {
+      skipped.push(`${name}: not a PDF`);
+      continue;
+    }
+    const target = join(repoRoot, entry.file);
+    mkdirSync(dirname(target), { recursive: true });
+    renameSync(join(dir, name), target);
+    updated.set(entry.id, {
+      ...current,
+      status: 'downloaded',
+      language: parsed.language,
+      sha256: createHash('sha256').update(bytes).digest('hex'),
+      bytes: bytes.length,
+      retrieved: today,
+      note: 'Downloaded through a browser',
+    });
+    ingested.push(`${name} -> ${entry.file}`);
+  }
+  return { entries: entries.map((e) => updated.get(e.id) as LibraryEntry), ingested, skipped };
 }

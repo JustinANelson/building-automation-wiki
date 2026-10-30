@@ -9,8 +9,11 @@
     - pxc200-e-d
   docId: A6V11272745
   language: en
-  status: failed
-  note: not a PDF (text/html;charset=UTF-8)
+  status: downloaded
+  note: Downloaded through a browser
+  sha256: 9dcb57575c81e719b47029d451900690ca497946cc5456d8e4cd51a5aec2b67b
+  bytes: 446816
+  retrieved: 2026-10-30
 - id: siemens-a6v11272742
   title: Desigo PX data sheet (title unconfirmed)
   kind: datasheet
@@ -19,9 +22,12 @@
   pages:
     - desigo
   docId: A6V11272742
-  language: en
-  status: failed
-  note: not a PDF (text/html;charset=UTF-8)
+  language: de
+  status: downloaded
+  note: German edition (served for this document ID)
+  sha256: ca523565fdfe32b93441326090a60f34f48136730cd70d1701ef1b624c7ceda9
+  bytes: 461018
+  retrieved: 2026-10-30
 - id: siemens-a6v10066459
   title: Desigo PX mounting and installation (Swedish)
   kind: installation-guide
@@ -33,8 +39,11 @@
     - pxc200-e-d
   docId: A6V10066459
   language: sv
-  status: failed
-  note: not a PDF (text/html;charset=UTF-8)
+  status: downloaded
+  note: Downloaded through a browser
+  sha256: 0d5a418f3e2fa44c6a194cd1d1c6db3d7cec8e9332fea690a1e97df2a5615cc3
+  bytes: 2185123
+  retrieved: 2026-10-30
 - id: siemens-a6v10356040
   title: "VAV compact controller G..B181.1E/3, modular controller ASV181.1E/3: basic documentation"
   kind: other
@@ -44,9 +53,12 @@
     - gdb181-1e-3
     - glb181-1e-3
   docId: A6V10356040
-  language: en
-  status: failed
-  note: not a PDF (text/html;charset=UTF-8)
+  language: de
+  status: downloaded
+  note: German edition (served for this document ID); covers GDB181.1E/3, GLB181.1E/3, ASV181.1E/3
+  sha256: cab789a09a132ef80370537de482bc794b4172dfad6aab339807d8ae9b1a34e3
+  bytes: 2268942
+  retrieved: 2026-10-30
 - id: siemens-a6v10631832
   title: VAV compact controller Modbus RTU G..B181.1E/MO data sheet
   kind: datasheet
@@ -56,9 +68,12 @@
     - gdb181-1e-3
     - glb181-1e-3
   docId: A6V10631832
-  language: en
-  status: failed
-  note: not a PDF (text/html;charset=UTF-8)
+  language: de
+  status: downloaded
+  note: German edition (served for this document ID)
+  sha256: a3755c931b58f6b0b322ae13d4f789d79cd3a0eb39a3bb60ed112a1763561849
+  bytes: 698512
+  retrieved: 2026-10-30
 - id: siemens-a6v10435963
   title: TEC terminal box (VAV) controller technical specification sheet
   kind: datasheet
@@ -68,8 +83,11 @@
     - apogee-tec-vav
   docId: A6V10435963
   language: en
-  status: failed
-  note: not a PDF (text/html;charset=UTF-8)
+  status: downloaded
+  note: Downloaded through a browser
+  sha256: 552e6bd847a504c830307dcd76da71057874a357106dfa569a6e29bf8eb9398f
+  bytes: 146851
+  retrieved: 2026-10-30
 - id: siemens-a6v10447210
   title: Smoke control BACnet PTEC terminal box (VAV) controller installation instructions
   kind: installation-guide
@@ -79,10 +97,13 @@
     - apogee-tec-vav
   docId: A6V10447210
   language: en
-  status: failed
-  note: not a PDF (text/html;charset=UTF-8)
+  status: downloaded
+  note: Downloaded through a browser
+  sha256: c84c82e301abac75dee4eef600f458a10dc8e63c39a0606ac8db634e06da9730
+  bytes: 1252161
+  retrieved: 2026-10-30
 - id: siemens-a6v10443354
-  title: BACnet PTEC VAV with fan and 3-stage electric heat controller installation instructions
+  title: BACnet PTEC VAV with series fan and 3-stage electric heat installation instructions
   kind: installation-guide
   url: https://sid.siemens.com/v/u/A6V10443354
   file: library/siemens/apogee-tec-vav/installation-guide/A6V10443354.pdf
@@ -90,8 +111,11 @@
     - apogee-tec-vav
   docId: A6V10443354
   language: en
-  status: failed
-  note: not a PDF (text/html;charset=UTF-8)
+  status: downloaded
+  note: Downloaded through a browser
+  sha256: d99086ccbdbf89e1e2d7d6f1ac3225ace262a16a61a0ff308aeefade20e273ce
+  bytes: 588777
+  retrieved: 2026-10-30
 - id: siemens-a6v10445888
   title: BACnet PTEC terminal box (VAV) controller operation manual
   kind: operation-manual
@@ -101,8 +125,11 @@
     - apogee-tec-vav
   docId: A6V10445888
   language: en
-  status: failed
-  note: not a PDF (text/html;charset=UTF-8)
+  status: downloaded
+  note: Downloaded through a browser
+  sha256: e5c7f77a22d1d3b4b761a0311a1ea14ec2cb2555c90a9cdc32b81f13f9505a68
+  bytes: 3518244
+  retrieved: 2026-10-30
 - id: siemens-a6v10490415
   title: APOGEE TEC BACnet PICS statement
   kind: pics
@@ -112,19 +139,25 @@
     - apogee-tec-vav
   docId: A6V10490415
   language: en
-  status: failed
-  note: not a PDF (text/html;charset=UTF-8)
+  status: downloaded
+  note: Downloaded through a browser
+  sha256: cb3e3d4d7a3d4058077e7f64951976d9dc54b081401efb714e988dad0eff164d
+  bytes: 245343
+  retrieved: 2026-10-30
 - id: siemens-a6v10308138
   title: Modular Equipment Controller (MEC) installation instructions
   kind: installation-guide
   url: https://sid.siemens.com/v/u/A6V10308138
-  file: library/siemens/apogee-549-003/installation-guide/A6V10308138.pdf
+  file: library/siemens/apogee-mec/installation-guide/A6V10308138.pdf
   pages:
-    - apogee-549-003
+    - apogee-mec
   docId: A6V10308138
   language: en
-  status: failed
-  note: not a PDF (text/html;charset=UTF-8)
+  status: downloaded
+  note: Downloaded through a browser
+  sha256: b91b991ad41ef1d5c946826c9975b8a1883ebc308e59670d26e7b41912163a1d
+  bytes: 181583
+  retrieved: 2026-10-30
 - id: honeywell-6-inch-venturi-valve
   title: Honeywell 6-inch venturi valve product data sheet (Rev A, 09/2023)
   kind: datasheet

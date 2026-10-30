@@ -1,13 +1,14 @@
 import { createHash } from 'node:crypto';
-import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
-import { downloadMissing, verifyLibrary } from '../src/content/library.js';
+import { downloadMissing, ingestDownloads, verifyLibrary } from '../src/content/library.js';
 import {
   type DownloadResult,
   type LibraryEntry,
   classifyDownload,
+  parseDownloadName,
   parseLibrary,
   validateLibrary,
 } from '../src/domain/library.js';
@@ -113,5 +114,49 @@ describe('Phase 2: downloading into the library', () => {
     expect(verifyLibrary(dir, [done])[0]?.message).toMatch(/sha256 does not match/);
     rmSync(join(dir, done.file));
     expect(verifyLibrary(dir, [done])[0]?.message).toMatch(/missing on disk/);
+  });
+});
+
+describe('Phase 2: ingesting browser downloads', () => {
+  let dir = '';
+  afterEach(() => dir && rmSync(dir, { recursive: true, force: true }));
+
+  const setup = () => {
+    dir = mkdtempSync(join(tmpdir(), 'baswiki-'));
+    mkdirSync(join(dir, 'downloads'));
+    return join(dir, 'downloads');
+  };
+  const withDoc = entry({ docId: 'A6V1' });
+
+  it('parses Siemens-style download names', () => {
+    expect(parseDownloadName('A6V10356040_de.pdf')).toEqual({ docId: 'A6V10356040', language: 'de' });
+    expect(parseDownloadName('A6V10356040_en (1).pdf')).toEqual({ docId: 'A6V10356040', language: 'en' });
+    expect(parseDownloadName('notes.txt')).toBeUndefined();
+  });
+
+  it('files a matching PDF, records its language and checksum, and leaves other files alone', () => {
+    const dl = setup();
+    writeFileSync(join(dl, 'A6V1_de.pdf'), '%PDF-1.4 body');
+    writeFileSync(join(dl, 'unrelated.pdf'), '%PDF-1.4 other');
+    const r = ingestDownloads(dir, dl, [withDoc], '2026-10-29');
+    expect(r.entries[0]).toMatchObject({ status: 'downloaded', language: 'de', retrieved: '2026-10-29' });
+    expect(existsSync(join(dir, withDoc.file))).toBe(true);
+    expect(existsSync(join(dl, 'A6V1_de.pdf'))).toBe(false);
+    expect(existsSync(join(dl, 'unrelated.pdf'))).toBe(true);
+    expect(r.skipped).toEqual(['unrelated.pdf: no manifest entry for this filename']);
+    expect(verifyLibrary(dir, r.entries)).toEqual([]);
+  });
+
+  it('rejects a file that is not a PDF and skips copies of an ingested document', () => {
+    const dl = setup();
+    writeFileSync(join(dl, 'A6V1_en.pdf'), '<html>login</html>');
+    expect(ingestDownloads(dir, dl, [withDoc], '2026-10-29').skipped).toEqual(['A6V1_en.pdf: not a PDF']);
+
+    writeFileSync(join(dl, 'A6V1_en.pdf'), '%PDF-1.4 ok');
+    const first = ingestDownloads(dir, dl, [withDoc], '2026-10-29');
+    writeFileSync(join(dl, 'A6V1_en (1).pdf'), '%PDF-1.4 ok');
+    const again = ingestDownloads(dir, dl, first.entries, '2026-11-01');
+    expect(again.skipped[0]).toMatch(/already in the library/);
+    expect(again.entries).toEqual(first.entries);
   });
 });

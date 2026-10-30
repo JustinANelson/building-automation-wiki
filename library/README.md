@@ -21,6 +21,7 @@ A document that supports several pages is stored once; its manifest entry lists 
 
 ```
 npm start -- fetch [id]   # download anything not on disk (all entries, or one by id)
+npm start -- ingest [dir]  # file PDFs saved by a browser (default dir: downloads/) named <docId>_<lang>.pdf
 npm start -- verify       # re-hash files and report missing or modified ones
 npm start -- validate     # validate pages and the manifest
 ```
@@ -30,3 +31,7 @@ PDF). Failed entries stay in the manifest with a `note`, and `fetch` retries the
 
 Manufacturers retire superseded revisions, so a URL that works today may 404 later. Keep the downloaded files; the
 checksum in the manifest identifies exactly what a page's facts were read from.
+
+Some sites (for example Siemens Smart Information Delivery) only serve a JavaScript viewer, so `fetch` cannot download
+them. Save the PDF from the site's own Download button into `downloads/` (gitignored) and run `ingest`: it matches the
+file to a manifest entry by document id, checks it is a PDF, records its language and checksum, and files it.
